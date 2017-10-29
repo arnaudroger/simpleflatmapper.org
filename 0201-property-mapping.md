@@ -116,14 +116,14 @@ Sfm will look for a static method that return a type that will return the builde
 
 {% highlight java %}
 class MyClass {
-   public static MyClassBuilder builder {
+   public static MyClassBuilder builder() {
    ...
    }
 
    public static class MyClassBuilder {
-        MyClassBuilder value(String value) {}
+        MyClassBuilder property1(String value) {}
         MyClassBuilder index(int value) {}
-        MyClass builde() {}
+        MyClass build() {}
    }
 }
 {% endhighlight %}
@@ -133,8 +133,8 @@ It is also possible to manually specify the method/constructor to instantiate th
 {% highlight java %}
 mapperFactory.newMapper(
     mapperFactory.getClassMetaWithExtraInstantiator(
-        IClass.class, 
-        IClassBuilder.class.getConstructor()));
+        MyClass.class, 
+        MyClassBuilder.class.getConstructor()));
 {% endhighlight %}
 
 ## finals 
