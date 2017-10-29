@@ -11,7 +11,7 @@ description: SimpleFlatMapper java micro orm jdbc ResultSet mapper
 
 {% include maven_dependency.md %}
 
-## ResutlSet Mapping
+## ResultSet Mapping
 
 All you need to do is instantiate a mapper via the JdbcMapperFactory. 
 The JdbcMapper should be instantiated only once as it does a lot of reflection work on instantiation. 
@@ -63,14 +63,14 @@ JdbcMapper<MyObject> mapper =
     JdbcMapperFactory
         .newInstance()
         .addCustomGetter("id",
-            (target) -> rs.getLong("id") + 2000).newMapper(MyObject.class);
+            (rs) -> rs.getLong("id") + 2000).newMapper(MyObject.class);
 
 JdbcMapper<MyObject> staticMapper = 
     JdbcMapperFactory
         .newInstance()
         .newBuilder(MyObject.class)
         .addMapping("id", 
-            FieldMapperColumnDefinition.customGetter((target) -> rs.getLong("id") + 2000))
+            FieldMapperColumnDefinition.customGetter((rs) -> rs.getLong("id") + 2000))
         .mapper();
 
 {% endhighlight %}
@@ -170,13 +170,13 @@ see [CrudTest](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-j
 ## NamedQuery
 
 Because there are no available names from the PreparedStatement parameter metadata we can only builder a PreparedStatement mapper manually by adding the column name in order.
-The NamedQuery is there to solve that by using named parameter - ::name in place of ? -. If the ? placeholder is used then it will try to extrapolate the name, that should work fine for inserts and updates. But it's not guaranteed to work perfectly on a complex select query for which it's better to used name parameter.
+The NamedQuery is there to solve that by using named parameter - :name in place of ?. If the ? placeholder is used then it will try to extrapolate the name, that should work fine for inserts and updates. But it's not guaranteed to work perfectly on a complex select query for which it's better to use a named parameter.
 
 
 {% highlight java %}
 NamedSqlQuery // 1 => id
     .parse("select id, name, email, creation_time, type_ordinal, type_name "
-           + " from TEST_DB_OBJECT where id = ? ");
+           + " from TEST_DB_OBJECT where id = ?");
 
 NamedSqlQuery // 1 => id, 2 => name, 3 => email, 4 => creation_time, 5 => type_ordinal, 6 => typenamed
     .parse("INSERT INTO test_db_object(id, name, email, creation_time, type_ordinal, type_name) "
@@ -187,7 +187,7 @@ NamedSqlQuery // 1 => id, 2 => name, 3 => email, 4 => creation_time, 5 => type_o
 
 The QueryPreparer is created from a NamedQuery. 
 It is important to note that there now type information available when creating the preparer. For most 
-mapping, it is not an issue but for some like Enum it will matter.
+mapping it is not an issue, but for some like Enum it will matter.
 You can specify the type in the mapper factory by adding a SqlTypeColumnProperty
 {% highlight java %}
 JdbcMapperFactory
@@ -201,7 +201,7 @@ JdbcMapperFactory
 NamedSqlQuery selectQuery = 
     NamedSqlQuery
         .parse("select id, name, email, creation_time, type_ordinal, type_name "
-               + " from TEST_DB_OBJECT where id = ? ");
+               + " from TEST_DB_OBJECT where id = ?");
 
 QueryPreparer<DbObject> selectQueryPreparer =
     JdbcMapperFactory
