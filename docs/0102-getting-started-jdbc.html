@@ -262,7 +262,7 @@
     <span class="nt">&lt;classifier&gt;</span>jdk9ea<span class="nt">&lt;/classifier&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
-<h2 id="resutlset-mapping">ResutlSet Mapping</h2>
+<h2 id="resultset-mapping">ResultSet Mapping</h2>
 
 <p>All you need to do is instantiate a mapper via the JdbcMapperFactory. 
 The JdbcMapper should be instantiated only once as it does a lot of reflection work on instantiation. 
@@ -305,14 +305,14 @@ It is thread-safe and can be called from multiple threads without synchronisatio
     <span class="n">JdbcMapperFactory</span>
         <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
         <span class="o">.</span><span class="na">addCustomGetter</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span>
-            <span class="o">(</span><span class="n">target</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="o">+</span> <span class="mi">2000</span><span class="o">).</span><span class="na">newMapper</span><span class="o">(</span><span class="n">MyObject</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+            <span class="o">(</span><span class="n">rs</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="o">+</span> <span class="mi">2000</span><span class="o">).</span><span class="na">newMapper</span><span class="o">(</span><span class="n">MyObject</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 
 <span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">MyObject</span><span class="o">&gt;</span> <span class="n">staticMapper</span> <span class="o">=</span> 
     <span class="n">JdbcMapperFactory</span>
         <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
         <span class="o">.</span><span class="na">newBuilder</span><span class="o">(</span><span class="n">MyObject</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
         <span class="o">.</span><span class="na">addMapping</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> 
-            <span class="n">FieldMapperColumnDefinition</span><span class="o">.</span><span class="na">customGetter</span><span class="o">((</span><span class="n">target</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="o">+</span> <span class="mi">2000</span><span class="o">))</span>
+            <span class="n">FieldMapperColumnDefinition</span><span class="o">.</span><span class="na">customGetter</span><span class="o">((</span><span class="n">rs</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"id"</span><span class="o">)</span> <span class="o">+</span> <span class="mi">2000</span><span class="o">))</span>
         <span class="o">.</span><span class="na">mapper</span><span class="o">();</span></code></pre></figure>
 
 <h3 id="cleanup-resources">Cleanup resources</h3>
@@ -397,11 +397,11 @@ You will need to provide</p>
 <h2 id="namedquery">NamedQuery</h2>
 
 <p>Because there are no available names from the PreparedStatement parameter metadata we can only builder a PreparedStatement mapper manually by adding the column name in order.
-The NamedQuery is there to solve that by using named parameter - ::name in place of ? -. If the ? placeholder is used then it will try to extrapolate the name, that should work fine for inserts and updates. But it’s not guaranteed to work perfectly on a complex select query for which it’s better to used name parameter.</p>
+The NamedQuery is there to solve that by using named parameter - :name in place of ?. If the ? placeholder is used then it will try to extrapolate the name, that should work fine for inserts and updates. But it’s not guaranteed to work perfectly on a complex select query for which it’s better to use a named parameter.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">NamedSqlQuery</span> <span class="c1">// 1 =&gt; id</span>
     <span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"select id, name, email, creation_time, type_ordinal, type_name "</span>
-           <span class="o">+</span> <span class="s">" from TEST_DB_OBJECT where id = ? "</span><span class="o">);</span>
+           <span class="o">+</span> <span class="s">" from TEST_DB_OBJECT where id = ?"</span><span class="o">);</span>
 
 <span class="n">NamedSqlQuery</span> <span class="c1">// 1 =&gt; id, 2 =&gt; name, 3 =&gt; email, 4 =&gt; creation_time, 5 =&gt; type_ordinal, 6 =&gt; typenamed</span>
     <span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"INSERT INTO test_db_object(id, name, email, creation_time, type_ordinal, type_name) "</span>
@@ -411,7 +411,7 @@ The NamedQuery is there to solve that by using named parameter - ::name in place
 
 <p>The QueryPreparer is created from a NamedQuery. 
 It is important to note that there now type information available when creating the preparer. For most 
-mapping, it is not an issue but for some like Enum it will matter.
+mapping it is not an issue, but for some like Enum it will matter.
 You can specify the type in the mapper factory by adding a SqlTypeColumnProperty</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">JdbcMapperFactory</span>
@@ -423,7 +423,7 @@ You can specify the type in the mapper factory by adding a SqlTypeColumnProperty
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">NamedSqlQuery</span> <span class="n">selectQuery</span> <span class="o">=</span> 
     <span class="n">NamedSqlQuery</span>
         <span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"select id, name, email, creation_time, type_ordinal, type_name "</span>
-               <span class="o">+</span> <span class="s">" from TEST_DB_OBJECT where id = ? "</span><span class="o">);</span>
+               <span class="o">+</span> <span class="s">" from TEST_DB_OBJECT where id = ?"</span><span class="o">);</span>
 
 <span class="n">QueryPreparer</span><span class="o">&lt;</span><span class="n">DbObject</span><span class="o">&gt;</span> <span class="n">selectQueryPreparer</span> <span class="o">=</span>
     <span class="n">JdbcMapperFactory</span>
