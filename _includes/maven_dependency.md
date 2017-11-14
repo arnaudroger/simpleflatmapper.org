@@ -35,6 +35,6 @@ for Maven:
     <groupId>org.simpleflatmapper</groupId>
     <artifactId>sfm-{{page.module}}</artifactId>
     <version>{% include currentversion.html %}</version>
-    <classifier>jdk9ea</classifier>
+    <classifier>jdk9</classifier>
 </dependency>
 {% endhighlight %}
