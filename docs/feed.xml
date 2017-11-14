@@ -5,9 +5,28 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Nov 2017 10:39:06 +0000</pubDate>
-    <lastBuildDate>Tue, 14 Nov 2017 10:39:06 +0000</lastBuildDate>
+    <pubDate>Tue, 14 Nov 2017 21:18:35 +0000</pubDate>
+    <lastBuildDate>Tue, 14 Nov 2017 21:18:35 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.14.0</title>
+        <description>&lt;h1 id=&quot;v3140&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.14.0&quot;&gt;V3.14.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/459&quot;&gt;459&lt;/a&gt; CsvParser supports escape char different from quote char ie &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;cell \&quot;quote\&quot;&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/467&quot;&gt;467&lt;/a&gt; CsvWriter supports escape char different from quote char&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/464&quot;&gt;464&lt;/a&gt; Csv add simpler String to Object reader&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/463&quot;&gt;463&lt;/a&gt; Csv add possibility to ignore row with mandatory field missing&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2017/11/14/v3.14.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/14/v3.14.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.13.4</title>
@@ -125,7 +144,7 @@ There are no functionality change.&lt;/p&gt;
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.simpleflatmapper&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;sfm-converter-protobuf&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.13.4&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.14.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -197,23 +216,6 @@ There are no functionality change.&lt;/p&gt;
         <pubDate>Thu, 30 Mar 2017 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2017/03/30/v3.11.6.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/03/30/v3.11.6.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.11.5</title>
-        <description>&lt;h1 id=&quot;v3115&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.11.5&quot;&gt;V3.11.5&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/431&quot;&gt;427&lt;/a&gt; Collection mapping index column limit to next delimiter, so that foos_foo_bar4 maps to foos[].foo.bar4 not foos[4]&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/425&quot;&gt;425&lt;/a&gt; CsvParser uses FileChannel instead of FileInputStream&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2017/03/23/v3.11.5.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/03/23/v3.11.5.html</guid>
         
         
       </item>
