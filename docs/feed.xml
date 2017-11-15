@@ -5,9 +5,28 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Nov 2017 21:18:35 +0000</pubDate>
-    <lastBuildDate>Tue, 14 Nov 2017 21:18:35 +0000</lastBuildDate>
+    <pubDate>Wed, 15 Nov 2017 21:05:43 +0000</pubDate>
+    <lastBuildDate>Wed, 15 Nov 2017 21:05:43 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.14.0</title>
+        <description>&lt;h1 id=&quot;v3141&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.14.1&quot;&gt;V3.14.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Csv performance improvement release focusing and long no quoted string and quoted string that don’t need escaping.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/468&quot;&gt;468&lt;/a&gt; csv optimise non quoted path&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/469&quot;&gt;469&lt;/a&gt; csv avoid scanning of chars when no escaping needed&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2017/11/14/v3.14.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/14/v3.14.1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.14.0</title>
@@ -144,7 +163,7 @@ There are no functionality change.&lt;/p&gt;
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.simpleflatmapper&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;sfm-converter-protobuf&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.14.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.14.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -199,23 +218,6 @@ There are no functionality change.&lt;/p&gt;
         <pubDate>Wed, 10 May 2017 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2017/05/10/v3.11.7.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/05/10/v3.11.7.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.11.6</title>
-        <description>&lt;h1 id=&quot;v3116&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.11.6&quot;&gt;V3.11.6&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/433&quot;&gt;433&lt;/a&gt; Support for BigDecimal/BigInteger&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/432&quot;&gt;432&lt;/a&gt; Improve error message when mapping fail due to getter&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 30 Mar 2017 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2017/03/30/v3.11.6.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/03/30/v3.11.6.html</guid>
         
         
       </item>
