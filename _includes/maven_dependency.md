@@ -28,7 +28,7 @@ for Maven:
 </dependency>
 {% endhighlight %}
 
-### Java 9
+### Java 9/10
 
 {% highlight xml %}
 <dependency>
