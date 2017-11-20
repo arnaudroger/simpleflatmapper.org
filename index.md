@@ -34,7 +34,7 @@ You can also extend the type mapping by providing [converters](0202-converters.h
 
 The csv module also provides one of the [fastest java csv parsers](12-csv-performance.html).
 
-It can all run on java 6, 7, 8 and 9.
+It can all run on java 6, 7, 8, 9 and 10.
 
 Some sample code:
 
