@@ -5,9 +5,38 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Nov 2017 23:20:08 +0000</pubDate>
-    <lastBuildDate>Wed, 22 Nov 2017 23:20:08 +0000</lastBuildDate>
+    <pubDate>Tue, 28 Nov 2017 23:36:00 +0000</pubDate>
+    <lastBuildDate>Tue, 28 Nov 2017 23:36:00 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.15.0</title>
+        <description>&lt;h1 id=&quot;v3150&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.0&quot;&gt;V3.15.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/471&quot;&gt;471&lt;/a&gt; CsvParser optimised for Row to Map
+    &lt;ul&gt;
+      &lt;li&gt;add &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/csv/CsvParser.java#L441&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rowIterate&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/csv/CsvParser.java#L537&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rowStream&lt;/code&gt;&lt;/a&gt; on &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvReader&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvParser&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/424&quot;&gt;424&lt;/a&gt; Map support key,value pair from source and joins
+    &lt;ul&gt;
+      &lt;li&gt;register property with &lt;code class=&quot;highlighter-rouge&quot;&gt;MapTypeProperty.KEY_VALUE&lt;/code&gt; property see &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-map/src/test/java/org/simpleflatmapper/test/map/mapper/MapKeyValueTest.java#L83&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;builder.addMapping(&quot;map_key&quot;, MapTypeProperty.KEY_VALUE);&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;not necessary for map with complex keys.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/434&quot;&gt;434&lt;/a&gt; add String to BigXXX converter&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/452&quot;&gt;452&lt;/a&gt; Update ASM for java 9 to 6 beta&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/473&quot;&gt;473&lt;/a&gt; Pojo with List&amp;lt;Tuple2&amp;lt;Tuple2&amp;lt;String, String&amp;gt;, Tuple2&amp;lt;String, String»&amp;gt; fails on Key issue&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2017/11/22/v3.15.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/22/v3.15.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.14.2</title>
@@ -179,7 +208,7 @@ There are no functionality change.&lt;/p&gt;
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.simpleflatmapper&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;sfm-converter-protobuf&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.14.2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.15.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -202,22 +231,6 @@ There are no functionality change.&lt;/p&gt;
         <pubDate>Fri, 09 Jun 2017 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2017/06/09/v3.12.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/06/09/v3.12.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.11.8</title>
-        <description>&lt;h1 id=&quot;v3118&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.11.8&quot;&gt;V3.11.8&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/439&quot;&gt;439&lt;/a&gt; Support LazyCrud in JdbcTemplateCrudDSL&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 25 May 2017 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2017/05/25/v3.11.8.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/05/25/v3.11.8.html</guid>
         
         
       </item>
