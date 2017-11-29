@@ -191,33 +191,131 @@ The finder will try to match the start of the column to a property of the object
   <li>‘property sub property’</li>
 </ul>
 
-<h2 id="listarray">list/array</h2>
+<h2 id="listarray">List/array</h2>
 
 <p>if the type of the object is an array or a list then the finder will look for the first number in the column and use at as the index to put the element in.
 if there is a sub-property specify after the number that will be matched against the element class. If not it will look for a 1 argument constructor.</p>
 
 <ul>
-  <li>List<String> myList, 'my_list_3' -&gt; will match against the 3rd element of the list as a String.</String></li>
-  <li>List<MyObject> myList, 'my_list_3_id' -&gt; will match against property id of the 3rd element of the list.</MyObject></li>
+  <li><code class="highlighter-rouge">List&lt;String&gt;</code> myList, <code class="highlighter-rouge">"my_list_3"</code> -&gt; will match against the 3rd element of the list as a String.</li>
+  <li><code class="highlighter-rouge">List&lt;MyObject&gt;</code> myList, <code class="highlighter-rouge">"my_list_3_id"</code> -&gt; will match against property id of the 3rd element of the list.</li>
 </ul>
 
-<h2 id="tuples">Tuples</h2>
+<h3 id="tuples">Tuples</h3>
 
 <p>Tuples work in the same way as list/array but the size is limited and the types can be different depending on the element.</p>
 
-<h2 id="index-discovery">index discovery</h2>
+<h3 id="index-discovery">index discovery</h3>
 
 <p>If no index is found it will try to find an empty index where the element has not been injected the property yet.</p>
 
 <p>ie</p>
 
-<p>my_list_id, my_list_0_name, my_list_name will map to</p>
+<p><code class="highlighter-rouge">my_list_id</code>, <code class="highlighter-rouge">my_list_0_name</code>, <code class="highlighter-rouge">my_list_name</code> will map to</p>
 
 <ul>
-  <li>myList[0].id</li>
-  <li>myList[0].name</li>
-  <li>myList[1].name</li>
+  <li><code class="highlighter-rouge">myList[0].id</code></li>
+  <li><code class="highlighter-rouge">myList[0].name</code></li>
+  <li><code class="highlighter-rouge">myList[1].name</code></li>
 </ul>
+
+<h2 id="map">Map</h2>
+
+<h3 id="column-as-key">Column as key</h3>
+<p>By default <code class="highlighter-rouge">Map&lt;K, V&gt;</code> use the column name as name unless there are no converter from <code class="highlighter-rouge">String</code> to <code class="highlighter-rouge">K</code>.</p>
+
+<p>for the following <code class="highlighter-rouge">Pojo</code></p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Pojo</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="n">Pojo</span> <span class="n">pojo</span> <span class="o">=</span>
+ <span class="n">CsvParser</span>
+   <span class="o">.</span><span class="na">mapTo</span><span class="o">(</span><span class="n">Pojo</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+   <span class="o">.</span><span class="na">iterator</span><span class="o">(</span><span class="s">"id,map_col1,map_col2\n1,val1,val2"</span><span class="o">)</span>
+   <span class="o">.</span><span class="na">next</span><span class="o">();</span>
+</code></pre>
+</div>
+
+<p>pojo will be</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"map"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+    </span><span class="nt">"col1"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"val1"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nt">"col2"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"val2"</span><span class="w"> 
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+<h3 id="key-value">Key Value</h3>
+<p>From <a href="/2017/11/22/v3.15.0.html"><code class="highlighter-rouge">3.15.0</code></a> it is possible to have the key sourced from the source object - ResultSet, csv etc… -.
+To avoid changing the behaviour of already existing applications that function is enabled only when the previous mapping would not have worked - when there was no converter for the key.
+You can also enable it by adding a <code class="highlighter-rouge">MapTypeProperty.KEY_VALUE</code> on the column linked to the map - it only needs to be on the first column.</p>
+
+<p>The key is identified in the column as a <code class="highlighter-rouge">"key"</code> property and value as <code class="highlighter-rouge">"value"</code> under the map object, here <code class="highlighter-rouge">map_key</code> and <code class="highlighter-rouge">map_value</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Pojo</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span><span class="o">;</span>
+<span class="o">}</span>
+
+
+<span class="n">CsvMapper</span><span class="o">&lt;</span><span class="n">Pojo</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span> 
+    <span class="n">CsvMapperFactory</span>
+        <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">addColumnProperty</span><span class="o">(</span>
+                <span class="n">col</span> <span class="o">-&gt;</span> <span class="n">col</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">startsWith</span><span class="o">(</span><span class="s">"map_"</span><span class="o">),</span> 
+                <span class="n">MapTypeProperty</span><span class="o">.</span><span class="na">KEY_VALUE</span><span class="o">);</span>
+<span class="n">Pojo</span> <span class="n">pojo</span> <span class="o">=</span>
+ <span class="n">CsvParser</span>
+   <span class="o">.</span><span class="na">mapWith</span><span class="o">(</span><span class="n">mapper</span><span class="o">)</span>
+   <span class="o">.</span><span class="na">iterator</span><span class="o">(</span><span class="s">"id,map_key,map_value\n1,val1,val2"</span><span class="o">)</span>
+   <span class="o">.</span><span class="na">next</span><span class="o">();</span>
+</code></pre>
+</div>
+
+<p>pojo will be</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"map"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+    </span><span class="nt">"val1"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"val2"</span><span class="w"> 
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>It is also possible to have complex keys and values :</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Pojo</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">Tuple2</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;,</span> <span class="n">Tuple2</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">map</span><span class="o">;</span>
+<span class="o">}</span>
+
+
+<span class="n">CsvMapper</span><span class="o">&lt;</span><span class="n">Pojo</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span> 
+    <span class="n">CsvMapperFactory</span>
+        <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">addColumnProperty</span><span class="o">(</span><span class="n">col</span> <span class="o">-&gt;</span> <span class="n">col</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">startsWith</span><span class="o">(</span><span class="s">"map_"</span><span class="o">),</span> <span class="n">MapTypeProperty</span><span class="o">.</span><span class="na">KEY_VALUE</span><span class="o">);</span>
+<span class="n">Pojo</span> <span class="n">pojo</span> <span class="o">=</span>
+ <span class="n">CsvParser</span><span class="o">.</span><span class="na">mapWith</span><span class="o">(</span><span class="n">mapper</span><span class="o">).</span><span class="na">iterator</span><span class="o">(</span><span class="s">"id,map_key_elt0,map_key_elt1,map_value_elt0,map_value_elt1\n1,k1,k2,v1,v2"</span><span class="o">).</span><span class="na">next</span><span class="o">();</span>
+</code></pre>
+</div>
+
+<p>the result will be :</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"map"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+    </span><span class="err">{</span><span class="w"> </span><span class="nt">"element0"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"k1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"element1"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"k2"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="err">:</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"element0"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"v1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"element1"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"v2"</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></code></pre>
+</div>
+<p>Joins will also work an KeyValue Map mappers.</p>
 
 <h1 id="optional">Optional</h1>
 
