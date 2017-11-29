@@ -5,9 +5,30 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Nov 2017 15:36:18 +0000</pubDate>
-    <lastBuildDate>Wed, 29 Nov 2017 15:36:18 +0000</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2017 20:52:18 +0000</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2017 20:52:18 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.15.1</title>
+        <description>&lt;h1 id=&quot;v3151&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.1&quot;&gt;V3.15.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/471&quot;&gt;471&lt;/a&gt; CsvParser optimised for Row to Map
+    &lt;ul&gt;
+      &lt;li&gt;add &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/csv/CsvParser.java#L441&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rowIterate&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/csv/CsvParser.java#L537&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rowStream&lt;/code&gt;&lt;/a&gt; on &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvReader&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvParser&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/475&quot;&gt;475&lt;/a&gt; Fix allocation issue on headers capture&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2017/11/29/v3.15.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/29/v3.15.1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.15.0</title>
@@ -191,46 +212,6 @@ There are no functionality change.&lt;/p&gt;
         <pubDate>Thu, 22 Jun 2017 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2017/06/22/v3.12.1.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/06/22/v3.12.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.12</title>
-        <description>&lt;h1 id=&quot;v312&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.12&quot;&gt;V3.12&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Main goal of 3.12 was to support mapping of &lt;a href=&quot;https://github.com/google/protobuf&quot;&gt;Google Protocol Buffers objects&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;They were a few bug in the meta data building, and messy arbitrage between property mapping that needed to be fixed for it to work properly.&lt;/p&gt;
-
-&lt;p&gt;All you need to do now is add sfm-converter-protobuf to your dependencies, to be able to instantiate &lt;code class=&quot;highlighter-rouge&quot;&gt;com.google.protobuf.Timestamp&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.simpleflatmapper&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;sfm-converter-protobuf&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.15.0&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;see &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/tree/master/sfm-test-proto&quot;&gt;sfm-test-proto&lt;/a&gt; for running code.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/440&quot;&gt;440&lt;/a&gt; Original ticket to support protobuf&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/441&quot;&gt;441&lt;/a&gt; fix csv mapper not updating the eligible instantiator in submappers&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/442&quot;&gt;442&lt;/a&gt; fix csv mapper issue when injecting via setter/field a constructor only built object&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/443&quot;&gt;443&lt;/a&gt; detect build function on builder that returns a super type or interface of the concrete type&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/444&quot;&gt;444&lt;/a&gt; fix java 9 build issue with latest 172 version&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/445&quot;&gt;444&lt;/a&gt; when building object from builder does not call the setter when value is null&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/446&quot;&gt;446&lt;/a&gt; rename java 9 module to follow last recommendation&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/447&quot;&gt;447&lt;/a&gt; support protobuf wrappers like IntValue&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/jawhiting&quot;&gt;@jawhiting&lt;/a&gt; to raise the problem to my attention.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 09 Jun 2017 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2017/06/09/v3.12.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/06/09/v3.12.html</guid>
         
         
       </item>
