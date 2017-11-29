@@ -6,8 +6,9 @@ category: docs
 description: SimpleFlatMapper java library joins one to many mapping
 ---
 
-SimpleFlatMapper can aggregate join objects in sub-list of the root object. The CSV mapper as of 3.11.1 still has limitation and 
+SimpleFlatMapper can aggregate join objects in `List`s or `Map`s. The CSV mapper still has limitation and 
 can only handle 1 join as it relies on id changes to create new objects, with more than 1 joins the second joins id can't be ordered continuously and that will create duplicates.
+A root object is created on id change, so it is important to have the query ordered by fields of the root object and the id, otherwise you might end up with multiple instance of the same id.
 
 let's say you have the followings tables
 
