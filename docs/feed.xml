@@ -5,8 +5,8 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Nov 2017 15:07:26 +0000</pubDate>
-    <lastBuildDate>Wed, 29 Nov 2017 15:07:26 +0000</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2017 15:20:23 +0000</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2017 15:20:23 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;h1 id=&quot;v3150&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.0&quot;&gt;V3.15.0&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/471&quot;&gt;471&lt;/a&gt; CsvParser optimised for Row to Map
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/471&quot;&gt;&lt;del&gt;471&lt;/del&gt;&lt;/a&gt; &lt;del&gt;CsvParser optimised for Row to Map&lt;/del&gt; do not use until next release 3.15.1 to fix &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/475&quot;&gt;475&lt;/a&gt;.
     &lt;ul&gt;
       &lt;li&gt;add &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/csv/CsvParser.java#L441&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rowIterate&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/csv/CsvParser.java#L537&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rowStream&lt;/code&gt;&lt;/a&gt; on &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvReader&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvParser&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
