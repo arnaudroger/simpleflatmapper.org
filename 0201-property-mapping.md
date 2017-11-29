@@ -56,29 +56,127 @@ for a property property.subProperty the following will match
 * 'propertysubproperty'
 * 'property sub property'
 
-## list/array
+## List/array
 
 if the type of the object is an array or a list then the finder will look for the first number in the column and use at as the index to put the element in.
 if there is a sub-property specify after the number that will be matched against the element class. If not it will look for a 1 argument constructor.
 
-* List<String> myList, 'my_list_3' -> will match against the 3rd element of the list as a String.
-* List<MyObject> myList, 'my_list_3_id' -> will match against property id of the 3rd element of the list.
+* `List<String>` myList, `"my_list_3"` -> will match against the 3rd element of the list as a String.
+* `List<MyObject>` myList, `"my_list_3_id"` -> will match against property id of the 3rd element of the list.
 
-## Tuples
+### Tuples
 
 Tuples work in the same way as list/array but the size is limited and the types can be different depending on the element.
 
-## index discovery
+### index discovery
 
 If no index is found it will try to find an empty index where the element has not been injected the property yet.
 
 ie
 
-my_list_id, my_list_0_name, my_list_name will map to 
+`my_list_id`, `my_list_0_name`, `my_list_name` will map to 
 
-* myList[0].id
-* myList[0].name
-* myList[1].name
+* `myList[0].id`
+* `myList[0].name`
+* `myList[1].name`
+
+## Map
+
+### Column as key
+By default `Map<K, V>` use the column name as name unless there are no converter from `String` to `K`.
+
+for the following `Pojo`
+
+```java
+class Pojo {
+    int id;
+    Map<String, String> map;
+}
+
+Pojo pojo =
+ CsvParser
+   .mapTo(Pojo.class)
+   .iterator("id,map_col1,map_col2\n1,val1,val2")
+   .next();
+```
+
+pojo will be
+ 
+```json
+{
+  "id" : 1,
+  "map" : { 
+    "col1" : "val1", 
+    "col2" : "val2" 
+  }
+}
+```
+### Key Value
+From [`3.15.0`](/2017/11/22/v3.15.0.html) it is possible to have the key sourced from the source object - ResultSet, csv etc... -.
+To avoid changing the behaviour of already existing applications that function is enabled only when the previous mapping would not have worked - when there was no converter for the key.
+You can also enable it by adding a `MapTypeProperty.KEY_VALUE` on the column linked to the map - it only needs to be on the first column.
+
+The key is identified in the column as a `"key"` property and value as `"value"` under the map object, here `map_key` and `map_value`. 
+
+```java
+class Pojo {
+    int id;
+    Map<String, String> map;
+}
+
+
+CsvMapper<Pojo> mapper = 
+    CsvMapperFactory
+        .newInstance()
+        .addColumnProperty(
+                col -> col.getName().startsWith("map_"), 
+                MapTypeProperty.KEY_VALUE);
+Pojo pojo =
+ CsvParser
+   .mapWith(mapper)
+   .iterator("id,map_key,map_value\n1,val1,val2")
+   .next();
+```
+
+pojo will be
+ 
+```json
+{
+  "id" : 1,
+  "map" : { 
+    "val1" : "val2" 
+  }
+}
+```
+
+It is also possible to have complex keys and values :
+
+```java
+class Pojo {
+    int id;
+    Map<Tuple2<String, String>, Tuple2<String, String>> map;
+}
+
+
+CsvMapper<Pojo> mapper = 
+    CsvMapperFactory
+        .newInstance()
+        .addColumnProperty(col -> col.getName().startsWith("map_"), MapTypeProperty.KEY_VALUE);
+Pojo pojo =
+ CsvParser.mapWith(mapper).iterator("id,map_key_elt0,map_key_elt1,map_value_elt0,map_value_elt1\n1,k1,k2,v1,v2").next();
+```
+
+the result will be :
+
+```json
+{
+  "id" : 1,
+  "map" : { 
+    { "element0" : "k1", "element1" : "k2" } :  { "element0" : "v1", "element1" : "v2" }
+  }
+}
+```
+Joins will also work an KeyValue Map mappers.
 
 # Optional 
 
