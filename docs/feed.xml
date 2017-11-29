@@ -5,8 +5,8 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Nov 2017 21:05:53 +0000</pubDate>
-    <lastBuildDate>Wed, 29 Nov 2017 21:05:53 +0000</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2017 21:11:11 +0000</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2017 21:11:11 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -20,6 +20,20 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/475&quot;&gt;475&lt;/a&gt; Fix allocation issue on headers capture&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Carry on from &lt;a href=&quot;http://simpleflatmapper.org/2017/11/29/v3.15.0.html&quot;&gt;V3.15.0&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/424&quot;&gt;424&lt;/a&gt; Map support key,value pair from source and joins
+    &lt;ul&gt;
+      &lt;li&gt;register property with &lt;code class=&quot;highlighter-rouge&quot;&gt;MapTypeProperty.KEY_VALUE&lt;/code&gt; property see &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-map/src/test/java/org/simpleflatmapper/test/map/mapper/MapKeyValueTest.java#L83&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;builder.addMapping(&quot;map_key&quot;, MapTypeProperty.KEY_VALUE);&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;not necessary for map with complex keys.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/434&quot;&gt;434&lt;/a&gt; add String to BigXXX converter&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/452&quot;&gt;452&lt;/a&gt; Update ASM for java 9 to 6 beta&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/473&quot;&gt;473&lt;/a&gt; Pojo with List&amp;lt;Tuple2&amp;lt;Tuple2&amp;lt;String, String&amp;gt;, Tuple2&amp;lt;String, String»&amp;gt; fails on Key issue&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
