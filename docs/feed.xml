@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Nov 2017 21:11:11 +0000</pubDate>
-    <lastBuildDate>Wed, 29 Nov 2017 21:11:11 +0000</lastBuildDate>
+    <pubDate>Fri, 08 Dec 2017 21:14:03 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Dec 2017 21:14:03 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.15.1</title>
+        <description>&lt;h1 id=&quot;v3152&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.2&quot;&gt;V3.15.2&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/477&quot;&gt;477&lt;/a&gt; Object with 2 sub object with their own keys, null detection does not work on parent
+See &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-map/src/test/java/org/simpleflatmapper/test/map/mapper/Issue477Test.java#L77&quot;&gt;test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2017/12/08/v3.15.2.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2017/12/08/v3.15.2.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.15.1</title>
@@ -210,22 +226,6 @@ There are no functionality change.&lt;/p&gt;
         <pubDate>Tue, 11 Jul 2017 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2017/07/11/v3.12.2.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/07/11/v3.12.2.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.12.1</title>
-        <description>&lt;h1 id=&quot;v3121&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.12.1&quot;&gt;V3.12.1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/449&quot;&gt;449&lt;/a&gt; Add CharSequence to boolean converter&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 22 Jun 2017 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2017/06/22/v3.12.1.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/06/22/v3.12.1.html</guid>
         
         
       </item>
