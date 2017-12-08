@@ -5,12 +5,12 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Dec 2017 21:14:21 +0000</pubDate>
-    <lastBuildDate>Fri, 08 Dec 2017 21:14:21 +0000</lastBuildDate>
+    <pubDate>Fri, 08 Dec 2017 21:15:24 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Dec 2017 21:15:24 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>Release v3.15.1</title>
+        <title>Release v3.15.2</title>
         <description>&lt;h1 id=&quot;v3152&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.2&quot;&gt;V3.15.2&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
