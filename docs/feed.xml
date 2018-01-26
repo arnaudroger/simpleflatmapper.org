@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Dec 2017 21:17:47 +0000</pubDate>
-    <lastBuildDate>Fri, 29 Dec 2017 21:17:47 +0000</lastBuildDate>
+    <pubDate>Fri, 26 Jan 2018 21:52:40 +0000</pubDate>
+    <lastBuildDate>Fri, 26 Jan 2018 21:52:40 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.15.4</title>
+        <description>&lt;h1 id=&quot;v3154&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.4&quot;&gt;V3.15.4&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/482&quot;&gt;482&lt;/a&gt; Support Kotlin’s Pair and Triple&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/483&quot;&gt;483&lt;/a&gt; ignorePropertyNotFound not working for JdbcTemplateMapperFactory&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/01/26/v3.15.4.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/01/26/v3.15.4.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.15.3</title>
@@ -193,22 +209,6 @@ There are no functionality change.&lt;/p&gt;
         <pubDate>Sat, 16 Sep 2017 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2017/09/16/v3.13.2.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/09/16/v3.13.2.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.13</title>
-        <description>&lt;h1 id=&quot;v313&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.13&quot;&gt;V3.13&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/453&quot;&gt;453&lt;/a&gt; handle null value for jOOQ unsigned types&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/450&quot;&gt;450&lt;/a&gt; add option to have root types - Integer, Long etc.. - to map in order for tuples, need to add more doc for that one.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 19 Aug 2017 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2017/08/19/v3.13.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/08/19/v3.13.html</guid>
         
         
       </item>

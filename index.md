@@ -23,7 +23,7 @@ The mapper [supports](0201-property-mapping.html)
  * Constructor, Setter and Public field injection
  * [Builder Pattern](0201-property-mapping.html#builder-pattern) - like [Immutables](http://immutables.github.io/) -
  * Deep object structure
- * Tuples including [jOOL](https://github.com/jOOQ/jOOL) tuples and [Fasttuple](https://github.com/boundary/fasttuple)
+ * Tuples including [jOOL](https://github.com/jOOQ/jOOL) tuples, [Fasttuple](https://github.com/boundary/fasttuple), Kotlin's Pair and Triple, and sfm-tuples. For more create an [issue](https://github.com/arnaudroger/SimpleFlatMapper/issues/new). 
  * [`List`, `Array`](0201-property-mapping.html#listarray) and [`Map`](0201-property-mapping.html#map)
  * [Google Protocol Buffers](0204-protobuf.html)
  * [JPA @Column](0201-property-mapping.html#jpa-column-annotation) and [Datastax @Column](0201-property-mapping.html#datastax-column-annotation)
