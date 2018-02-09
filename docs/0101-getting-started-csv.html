@@ -242,12 +242,12 @@ Inner object mapping, join mapping.</p>
 
 <h1 id="getting-started-csv">Getting Started Csv</h1>
 
-<p><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-csv%7C3.15.5%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-csv.svg" alt="Maven Central" /></a>
-<a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-csv"><img src="https://img.shields.io/badge/javadoc-3.15.5-blue.svg" alt="JavaDoc" /></a></p>
+<p><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-csv%7C3.15.6%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-csv.svg" alt="Maven Central" /></a>
+<a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-csv"><img src="https://img.shields.io/badge/javadoc-3.15.6-blue.svg" alt="JavaDoc" /></a></p>
 
 <h2 id="setting-up-the-environment">Setting up the environment</h2>
 
-<p>Add the <a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-csv%7C3.15.5%7C">Dependency</a> to your build.</p>
+<p>Add the <a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-csv%7C3.15.6%7C">Dependency</a> to your build.</p>
 
 <p>for Maven:</p>
 
@@ -256,7 +256,7 @@ Inner object mapping, join mapping.</p>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>sfm-csv<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>3.15.5<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.15.6<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
 <h3 id="java-6-7">Java 6, 7</h3>
@@ -264,7 +264,7 @@ Inner object mapping, join mapping.</p>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>sfm-csv<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>3.15.5<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.15.6<span class="nt">&lt;/version&gt;</span>
     <span class="nt">&lt;classifier&gt;</span>jdk16<span class="nt">&lt;/classifier&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
@@ -273,14 +273,14 @@ Inner object mapping, join mapping.</p>
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>sfm-csv<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>3.15.5<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.15.6<span class="nt">&lt;/version&gt;</span>
     <span class="nt">&lt;classifier&gt;</span>jdk9<span class="nt">&lt;/classifier&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
 <h1 id="reading-a-csv-file">Reading a csv file</h1>
 
-<p>The <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-csv/3.15.5/index.html?org/simpleflatmapper/csv/CsvParser.html"><code class="highlighter-rouge">CsvParser</code></a> api allows you to read from a <code class="highlighter-rouge">File</code>, a <code class="highlighter-rouge">Reader</code> or a <code class="highlighter-rouge">CharSequence</code>
-via a <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-util/3.15.5/index.html?org/simpleflatmapper/util/CheckedConsumer.html"><code class="highlighter-rouge">CheckedConsumer</code></a> callback, 
+<p>The <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-csv/3.15.6/index.html?org/simpleflatmapper/csv/CsvParser.html"><code class="highlighter-rouge">CsvParser</code></a> api allows you to read from a <code class="highlighter-rouge">File</code>, a <code class="highlighter-rouge">Reader</code> or a <code class="highlighter-rouge">CharSequence</code>
+via a <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-util/3.15.6/index.html?org/simpleflatmapper/util/CheckedConsumer.html"><code class="highlighter-rouge">CheckedConsumer</code></a> callback, 
 an <code class="highlighter-rouge">Iterator</code> or a <code class="highlighter-rouge">Stream</code> of <code class="highlighter-rouge">String[]</code></p>
 
 <p><a href="https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/test/java/org/simpleflatmapper/csv/test/samples/GettingStartedCsv_csvParser.java">Source</a></p>
@@ -304,7 +304,7 @@ an <code class="highlighter-rouge">Iterator</code> or a <code class="highlighter
 <h2 id="mapping-a-csv-to-an-object">Mapping a csv to an object</h2>
 
 <p>You can also ask the row to be mapped to an object. You can then read the csv from a <code class="highlighter-rouge">File</code>, a <code class="highlighter-rouge">Reader</code> 
-or a <code class="highlighter-rouge">CharSequence</code> via a <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-util/3.15.5/index.html?org/simpleflatmapper/util/CheckedConsumer.html">CheckedConsumer</a> callback, 
+or a <code class="highlighter-rouge">CharSequence</code> via a <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-util/3.15.6/index.html?org/simpleflatmapper/util/CheckedConsumer.html">CheckedConsumer</a> callback, 
 an <code class="highlighter-rouge">Iterator</code> or a <code class="highlighter-rouge">Stream</code> of your type.
 The mapper will use the header row - the first one - to match against the property of the object. You can also specify the headers
 manually if there none or if you want to skip them.</p>
@@ -341,7 +341,7 @@ manually if there none or if you want to skip them.</p>
 
 <h2 id="writing-a-csv-from-an-object">Writing a csv from an object</h2>
 
-<p>The <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-csv/3.15.5/index.html?org/simpleflatmapper/csv/CsvWriter.html">CsvWriter</a> allows you to create append object to an <a href="https://docs.oracle.com/javase/8/docs/api/index.html?java/lang/Appendable.html">Appendable</a>.
+<p>The <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-csv/3.15.6/index.html?org/simpleflatmapper/csv/CsvWriter.html">CsvWriter</a> allows you to create append object to an <a href="https://docs.oracle.com/javase/8/docs/api/index.html?java/lang/Appendable.html">Appendable</a>.
 If no headers are specified it will generate a list of headers from the properties of the object. Though it is
 better to specify the headers manually.</p>
 

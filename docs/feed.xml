@@ -5,9 +5,24 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Feb 2018 07:21:40 +0000</pubDate>
-    <lastBuildDate>Sat, 03 Feb 2018 07:21:40 +0000</lastBuildDate>
+    <pubDate>Fri, 09 Feb 2018 22:33:39 +0000</pubDate>
+    <lastBuildDate>Fri, 09 Feb 2018 22:33:39 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.15.5</title>
+        <description>&lt;h1 id=&quot;v3156&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.6&quot;&gt;V3.15.6&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#486&quot;&gt;#486&lt;/a&gt; Cannot map resultset field to Optional&lt;Instant&gt;, when delegating a one value wrapper try find converter.&lt;/Instant&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/02/03/v3.15.6.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/03/v3.15.6.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.15.5</title>
@@ -186,24 +201,6 @@ See &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master
         <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2017/11/14/v3.14.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/14/v3.14.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.13.4</title>
-        <description>&lt;h1 id=&quot;v3134&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.13.4&quot;&gt;V3.13.4&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Skip 3.13.3 it contains a unsatisfactory fixed to bug 458&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/458&quot;&gt;458&lt;/a&gt; support deduplication and null removal with key definition on non mapped object - direct from getter from source like String, Date etc… -&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 12 Oct 2017 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2017/10/12/v3.13.4.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/10/12/v3.13.4.html</guid>
         
         
       </item>
