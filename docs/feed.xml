@@ -5,12 +5,27 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Feb 2018 22:33:39 +0000</pubDate>
-    <lastBuildDate>Fri, 09 Feb 2018 22:33:39 +0000</lastBuildDate>
+    <pubDate>Tue, 13 Feb 2018 08:35:03 +0000</pubDate>
+    <lastBuildDate>Tue, 13 Feb 2018 08:35:03 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>Release v3.15.5</title>
+        <title>Release v3.15.7</title>
+        <description>&lt;h1 id=&quot;v3157&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.7&quot;&gt;V3.15.7&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#457&quot;&gt;#457&lt;/a&gt; sbt autoreload asm issue, fix setter/getter for wrapper type&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/02/13/v3.15.7.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/13/v3.15.7.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v3.15.6</title>
         <description>&lt;h1 id=&quot;v3156&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.6&quot;&gt;V3.15.6&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -182,25 +197,6 @@ See &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master
         <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2017/11/14/v3.14.1.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/14/v3.14.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.14.0</title>
-        <description>&lt;h1 id=&quot;v3140&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.14.0&quot;&gt;V3.14.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/459&quot;&gt;459&lt;/a&gt; CsvParser supports escape char different from quote char ie &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;cell \&quot;quote\&quot;&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/467&quot;&gt;467&lt;/a&gt; CsvWriter supports escape char different from quote char&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/464&quot;&gt;464&lt;/a&gt; Csv add simpler String to Object reader&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/463&quot;&gt;463&lt;/a&gt; Csv add possibility to ignore row with mandatory field missing&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2017/11/14/v3.14.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/14/v3.14.0.html</guid>
         
         
       </item>
