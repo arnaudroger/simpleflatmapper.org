@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Feb 2018 08:35:03 +0000</pubDate>
-    <lastBuildDate>Tue, 13 Feb 2018 08:35:03 +0000</lastBuildDate>
+    <pubDate>Sat, 17 Feb 2018 10:09:59 +0000</pubDate>
+    <lastBuildDate>Sat, 17 Feb 2018 10:09:59 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.15.8</title>
+        <description>&lt;h1 id=&quot;v3158&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.8&quot;&gt;V3.15.8&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#488&quot;&gt;#488&lt;/a&gt; constructor asm param analysis fail on Tuple2&amp;lt;A, List&amp;lt;Tuple2&amp;lt;B, C»&amp;gt;, does not support covariant List&amp;lt;? extends T&amp;gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#499&quot;&gt;#489&lt;/a&gt; kotlin Pair and Tuple issue, linked to covariant support 488.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/02/17/v3.15.8.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/17/v3.15.8.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.15.7</title>
@@ -178,25 +194,6 @@ See &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master
         <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2017/11/22/v3.14.2.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/22/v3.14.2.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.14.1</title>
-        <description>&lt;h1 id=&quot;v3141&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.14.1&quot;&gt;V3.14.1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Csv performance improvement release focusing and long no quoted string and quoted string that don’t need escaping.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/468&quot;&gt;468&lt;/a&gt; csv optimise non quoted path&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/469&quot;&gt;469&lt;/a&gt; csv avoid scanning of chars when no escaping needed&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2017/11/14/v3.14.1.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/14/v3.14.1.html</guid>
         
         
       </item>
