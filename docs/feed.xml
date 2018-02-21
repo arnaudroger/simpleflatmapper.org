@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Feb 2018 10:09:59 +0000</pubDate>
-    <lastBuildDate>Sat, 17 Feb 2018 10:09:59 +0000</lastBuildDate>
+    <pubDate>Wed, 21 Feb 2018 09:32:50 +0000</pubDate>
+    <lastBuildDate>Wed, 21 Feb 2018 09:32:50 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.15.9</title>
+        <description>&lt;h1 id=&quot;v3159&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.9&quot;&gt;V3.15.9&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#490&quot;&gt;#490&lt;/a&gt; treat ‘with’ method on builder as setters&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/02/21/v3.15.9.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/21/v3.15.9.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.15.8</title>
@@ -178,22 +194,6 @@ See &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master
         <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2017/11/29/v3.15.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/29/v3.15.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.14.2</title>
-        <description>&lt;h1 id=&quot;v3142&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.14.2&quot;&gt;V3.14.2&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/472&quot;&gt;472&lt;/a&gt; Issue with resolving generic Map&amp;lt;K, V&amp;gt; in constructor&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 22 Nov 2017 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2017/11/22/v3.14.2.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/22/v3.14.2.html</guid>
         
         
       </item>
