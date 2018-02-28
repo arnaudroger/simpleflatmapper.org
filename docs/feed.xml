@@ -5,13 +5,13 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Feb 2018 19:02:23 +0000</pubDate>
-    <lastBuildDate>Wed, 28 Feb 2018 19:02:23 +0000</lastBuildDate>
+    <pubDate>Wed, 28 Feb 2018 19:02:48 +0000</pubDate>
+    <lastBuildDate>Wed, 28 Feb 2018 19:02:48 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
         <title>Release v3.15.10</title>
-        <description>&lt;h1 id=&quot;v31510&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.9&quot;&gt;V3.15.10&lt;/a&gt;&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;v31510&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.10&quot;&gt;V3.15.10&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#492&quot;&gt;#492&lt;/a&gt; setter asm generation issue with fluent setters.&lt;/li&gt;
