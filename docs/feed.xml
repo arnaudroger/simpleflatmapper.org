@@ -5,13 +5,30 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Feb 2018 19:02:48 +0000</pubDate>
-    <lastBuildDate>Wed, 28 Feb 2018 19:02:48 +0000</lastBuildDate>
+    <pubDate>Thu, 08 Mar 2018 20:39:30 +0000</pubDate>
+    <lastBuildDate>Thu, 08 Mar 2018 20:39:30 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
+        <title>Release v3.15.11</title>
+        <description>&lt;h1 id=&quot;v31511&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/145?closed=1&quot;&gt;V3.15.11&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#494&quot;&gt;#494&lt;/a&gt; Error building meta on JSONObject type for key and value are null&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#491&quot;&gt;#491&lt;/a&gt; upgrade jdbi library to 3.1&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/03/08/v3.15.11.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/03/08/v3.15.11.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Release v3.15.10</title>
-        <description>&lt;h1 id=&quot;v31510&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.10&quot;&gt;V3.15.10&lt;/a&gt;&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;v31510&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/144?closed=1&quot;&gt;V3.15.10&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#492&quot;&gt;#492&lt;/a&gt; setter asm generation issue with fluent setters.&lt;/li&gt;
@@ -146,41 +163,6 @@ See &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master
         <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2017/12/08/v3.15.2.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2017/12/08/v3.15.2.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.15.1</title>
-        <description>&lt;h1 id=&quot;v3151&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.1&quot;&gt;V3.15.1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/471&quot;&gt;471&lt;/a&gt; CsvParser optimised for Row to Map
-    &lt;ul&gt;
-      &lt;li&gt;add &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/csv/CsvParser.java#L441&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rowIterate&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/csv/CsvParser.java#L537&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rowStream&lt;/code&gt;&lt;/a&gt; on &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvReader&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvParser&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/475&quot;&gt;475&lt;/a&gt; Fix allocation issue on headers capture&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Carry on from &lt;a href=&quot;http://simpleflatmapper.org/2017/11/29/v3.15.0.html&quot;&gt;V3.15.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/424&quot;&gt;424&lt;/a&gt; Map support key,value pair from source and joins
-    &lt;ul&gt;
-      &lt;li&gt;register property with &lt;code class=&quot;highlighter-rouge&quot;&gt;MapTypeProperty.KEY_VALUE&lt;/code&gt; property see &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-map/src/test/java/org/simpleflatmapper/test/map/mapper/MapKeyValueTest.java#L83&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;builder.addMapping(&quot;map_key&quot;, MapTypeProperty.KEY_VALUE);&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;not necessary for map with complex keys.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/434&quot;&gt;434&lt;/a&gt; add String to BigXXX converter&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/452&quot;&gt;452&lt;/a&gt; Update ASM for java 9 to 6 beta&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/473&quot;&gt;473&lt;/a&gt; Pojo with List&amp;lt;Tuple2&amp;lt;Tuple2&amp;lt;String, String&amp;gt;, Tuple2&amp;lt;String, String»&amp;gt; fails on Key issue&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2017/11/29/v3.15.1.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/11/29/v3.15.1.html</guid>
         
         
       </item>
