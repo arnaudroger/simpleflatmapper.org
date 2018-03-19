@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Mar 2018 17:13:25 +0000</pubDate>
-    <lastBuildDate>Mon, 12 Mar 2018 17:13:25 +0000</lastBuildDate>
+    <pubDate>Mon, 19 Mar 2018 22:31:58 +0000</pubDate>
+    <lastBuildDate>Mon, 19 Mar 2018 22:31:58 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.16.1</title>
+        <description>&lt;h1 id=&quot;v3161&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/148?closed=1&quot;&gt;V3.16.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#497&quot;&gt;#497&lt;/a&gt; Empty update bad SQL grammar&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 19 Mar 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/03/19/v3.16.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/03/19/v3.16.1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.16.0</title>
@@ -170,22 +186,6 @@ it is still possible to force the first mapping by renaming the column in the sq
         <pubDate>Fri, 26 Jan 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/01/26/v3.15.4.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/01/26/v3.15.4.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.15.3</title>
-        <description>&lt;h1 id=&quot;v3153&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.3&quot;&gt;V3.15.3&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/480&quot;&gt;480&lt;/a&gt; ConverterService StackOverflow on findConverter&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/481&quot;&gt;481&lt;/a&gt; ConverterService should select the shortest path on equal scores&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2017/12/29/v3.15.3.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2017/12/29/v3.15.3.html</guid>
         
         
       </item>
