@@ -5,9 +5,26 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Mar 2018 21:05:26 +0100</pubDate>
-    <lastBuildDate>Wed, 28 Mar 2018 21:05:26 +0100</lastBuildDate>
+    <pubDate>Sun, 01 Apr 2018 21:53:12 +0100</pubDate>
+    <lastBuildDate>Sun, 01 Apr 2018 21:53:12 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.16.3</title>
+        <description>&lt;h1 id=&quot;v3163&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/150?closed=1&quot;&gt;V3.16.3&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#501&quot;&gt;#501&lt;/a&gt; Zoneid mapping NPE&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#502&quot;&gt;#502&lt;/a&gt; ZoneId mapping fail on asm instantiator&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 01 Apr 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/04/01/v3.16.3.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/04/01/v3.16.3.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.16.2</title>
@@ -171,21 +188,6 @@ it is still possible to force the first mapping by renaming the column in the sq
         <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/02/03/v3.15.6.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/03/v3.15.6.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.15.5</title>
-        <description>&lt;h1 id=&quot;v3155&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.5&quot;&gt;V3.15.5&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#485&quot;&gt;#485&lt;/a&gt; Support for java.time.Instant and SqlTypeColumnProperty in SqlParameterSource&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/02/03/v3.15.5.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/03/v3.15.5.html</guid>
         
         
       </item>
