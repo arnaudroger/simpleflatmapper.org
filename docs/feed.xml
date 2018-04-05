@@ -5,8 +5,8 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Apr 2018 08:17:22 +0100</pubDate>
-    <lastBuildDate>Thu, 05 Apr 2018 08:17:22 +0100</lastBuildDate>
+    <pubDate>Thu, 05 Apr 2018 08:23:40 +0100</pubDate>
+    <lastBuildDate>Thu, 05 Apr 2018 08:23:40 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -28,22 +28,22 @@
 &lt;/div&gt;
 &lt;p&gt;Only recommended for bigish files - 20 MB at least -, and if you have spare cores.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/arnaudroger/mapping-benchmark/tree/master/sfm-csv&quot;&gt;mapping-benchmark&lt;/a&gt; against Univocity 2.6.1&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/arnaudroger/mapping-benchmark/tree/master/sfm-csv&quot;&gt;mapping-benchmark&lt;/a&gt; against Univocity 2.6.1 for 1.000.000 rows.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Benchmark                                       (bufferSize)  (nbRows)  (parallel)  (parallelBuffersize)  (quotes)  (trim)  Mode  Cnt    Score   Error  Units
-SfmCsvParserBenchmark.parseCsvIterate                      4   1000000       false                  8192     false   false  avgt  200  330.402 ± 2.923  ms/op
-UnivocityCsvParserBenchmark.parseCsv                     N/A   1000000       false                  8192     false     N/A  avgt  200  330.099 ± 0.942  ms/op
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Benchmark                                       (parallel)  (quotes)    Score   Error  Units
+SfmCsvParserBenchmark.parseCsvIterate           false          false  330.402 ± 2.923  ms/op
+UnivocityCsvParserBenchmark.parseCsv            false          false  330.099 ± 0.942  ms/op
 
-SfmCsvParserBenchmark.parseCsvIterate                      4   1000000       false                  8192      true   false  avgt  200  362.980 ± 8.940  ms/op
-UnivocityCsvParserBenchmark.parseCsv                     N/A   1000000       false                  8192      true     N/A  avgt  200  386.221 ± 5.162  ms/op
+SfmCsvParserBenchmark.parseCsvIterate           false           true  362.980 ± 8.940  ms/op
+UnivocityCsvParserBenchmark.parseCsv            false           true  386.221 ± 5.162  ms/op
 
-SfmCsvParserBenchmark.parseCsvIterate                      4   1000000        true                  8192     false   false  avgt  200  195.554 ± 0.999  ms/op
-UnivocityConcurrentCsvParserBenchmark.parseCsv           N/A   1000000         N/A                   N/A     false     N/A  avgt  200  204.678 ± 0.864  ms/op
-UnivocityCsvParserBenchmark.parseCsv                     N/A   1000000        true                  8192     false     N/A  avgt  200  210.129 ± 0.646  ms/op
+SfmCsvParserBenchmark.parseCsvIterate            true          false  195.554 ± 0.999  ms/op
+UnivocityConcurrentCsvParserBenchmark.parseCsv    N/A          false  204.678 ± 0.864  ms/op
+UnivocityCsvParserBenchmark.parseCsv             true          false  210.129 ± 0.646  ms/op
 
-SfmCsvParserBenchmark.parseCsvIterate                      4   1000000        true                  8192      true   false  avgt  200  226.081 ± 2.477  ms/op
-UnivocityConcurrentCsvParserBenchmark.parseCsv           N/A   1000000         N/A                   N/A      true     N/A  avgt  200  239.410 ± 2.555  ms/op
-UnivocityCsvParserBenchmark.parseCsv                     N/A   1000000        true                  8192      true     N/A  avgt  200  250.737 ± 2.526  ms/op
+SfmCsvParserBenchmark.parseCsvIterate            true           true  226.081 ± 2.477  ms/op
+UnivocityConcurrentCsvParserBenchmark.parseCsv    N/A           true  239.410 ± 2.555  ms/op
+UnivocityCsvParserBenchmark.parseCsv             true           true  250.737 ± 2.526  ms/op
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
