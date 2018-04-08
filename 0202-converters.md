@@ -14,13 +14,25 @@ the default converter or in
 
 {% include doc-table-row.md module='converter' %}
 
-
 the joda time one in 
 
 {% include doc-table-row.md module='converter-joda-time' %}
 
+the protobuf in 
 
-you can also provide your converters easily. The converter are registered using the [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
+{% include doc-table-row.md module='converter-protobuf' %}
+
+It's also possible to supply your own Converter<I, O> for a specific field by adding a ConverterProperty.
+
+```java 
+    JdbcMapperFactory.newInstance()
+        .addColumnProperty("my_enum_column", ConverterProperty.of(MyEnum::factoryMethod))
+        .newMapper(MyClass.class);
+```
+
+This is not yet supported for csv, but should be in the next release - 3.17.2 -. The converter for csv must accept a String as input.
+
+you can also provide your converters using the [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
 
 1. Create a [`org.simpleflatmapper.converter.ConverterFactoryProducer`](http://static.javadoc.io/org.simpleflatmapper/sfm-converter/3.7/index.html?org/simpleflatmapper/converter/ConverterFactoryProducer.html)
 ```java
