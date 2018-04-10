@@ -5,9 +5,26 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Apr 2018 14:22:04 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Apr 2018 14:22:04 +0100</lastBuildDate>
+    <pubDate>Tue, 10 Apr 2018 22:49:26 +0100</pubDate>
+    <lastBuildDate>Tue, 10 Apr 2018 22:49:26 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.17.2</title>
+        <description>&lt;h1 id=&quot;v3172&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/153?closed=1&quot;&gt;V3.17.2&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#503&quot;&gt;#503&lt;/a&gt; ConverterProperty support for csv&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#507&quot;&gt;#507&lt;/a&gt; IllegalArgumentException: null when upgrading to JRE10&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 10 Apr 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/04/10/v3.17.2.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/04/10/v3.17.2.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.17.1</title>
@@ -211,22 +228,6 @@ it is still possible to force the first mapping by renaming the column in the sq
         <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/02/21/v3.15.9.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/21/v3.15.9.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.15.8</title>
-        <description>&lt;h1 id=&quot;v3158&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues?q=milestone%3A3.15.8&quot;&gt;V3.15.8&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#488&quot;&gt;#488&lt;/a&gt; constructor asm param analysis fail on Tuple2&amp;lt;A, List&amp;lt;Tuple2&amp;lt;B, C»&amp;gt;, does not support covariant List&amp;lt;? extends T&amp;gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#499&quot;&gt;#489&lt;/a&gt; kotlin Pair and Tuple issue, linked to covariant support 488.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 17 Feb 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/02/17/v3.15.8.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/17/v3.15.8.html</guid>
         
         
       </item>

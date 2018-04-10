@@ -17,7 +17,7 @@ title: SimpleFlatMapper
 email: arnaud.roger@gmail.com
 baseurl: ""
 url: "http://simpleflatmapper.org"
-libraryVersion: "3.17.1"
+libraryVersion: "3.17.2"
 
 # Build settings
 markdown: kramdown
