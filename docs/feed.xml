@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 12 Apr 2018 11:01:30 +0100</pubDate>
-    <lastBuildDate>Thu, 12 Apr 2018 11:01:30 +0100</lastBuildDate>
+    <pubDate>Fri, 13 Apr 2018 15:51:17 +0100</pubDate>
+    <lastBuildDate>Fri, 13 Apr 2018 15:51:17 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.17.4</title>
+        <description>&lt;h1 id=&quot;v3174&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/156?closed=1&quot;&gt;V3.17.4&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#509&quot;&gt;#509&lt;/a&gt; find does not prioritized String setter over ZoneId setter.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 13 Apr 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/04/13/v3.17.4.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/04/13/v3.17.4.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.17.3</title>
@@ -212,22 +228,6 @@ it is still possible to force the first mapping by renaming the column in the sq
         <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/03/08/v3.15.11.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/03/08/v3.15.11.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.15.10</title>
-        <description>&lt;h1 id=&quot;v31510&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/144?closed=1&quot;&gt;V3.15.10&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#492&quot;&gt;#492&lt;/a&gt; setter asm generation issue with fluent setters.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 28 Feb 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/02/28/v3.15.10.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/02/28/v3.15.10.html</guid>
         
         
       </item>
