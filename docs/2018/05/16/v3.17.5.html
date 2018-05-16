@@ -154,7 +154,14 @@
         <h1 id="v3175"><a href="https://github.com/arnaudroger/SimpleFlatMapper/milestone/157?closed=1">V3.17.5</a></h1>
 
 <ul>
-  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/#513">#513</a> Clean up asm by using shading in the library.</li>
+  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/#513">#513</a> Clean up asm by using shading in the library.
+    <ul>
+      <li>main build - jdk8 no classifier now uses asm 6.1.1 that work with java 9 and 10 -</li>
+      <li>add fallback behavior when byte code version is not recognised to work on java 11</li>
+      <li>now supports java 9, 10 and 11 with java 8 build</li>
+      <li>now supports java 11 on java 9 build</li>
+    </ul>
+  </li>
 </ul>
 
 

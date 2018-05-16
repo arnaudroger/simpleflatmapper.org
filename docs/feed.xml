@@ -5,8 +5,8 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 May 2018 22:19:03 +0100</pubDate>
-    <lastBuildDate>Wed, 16 May 2018 22:19:03 +0100</lastBuildDate>
+    <pubDate>Wed, 16 May 2018 22:21:55 +0100</pubDate>
+    <lastBuildDate>Wed, 16 May 2018 22:21:55 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -14,7 +14,14 @@
         <description>&lt;h1 id=&quot;v3175&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/157?closed=1&quot;&gt;V3.17.5&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#513&quot;&gt;#513&lt;/a&gt; Clean up asm by using shading in the library.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#513&quot;&gt;#513&lt;/a&gt; Clean up asm by using shading in the library.
+    &lt;ul&gt;
+      &lt;li&gt;main build - jdk8 no classifier now uses asm 6.1.1 that work with java 9 and 10 -&lt;/li&gt;
+      &lt;li&gt;add fallback behavior when byte code version is not recognised to work on java 11&lt;/li&gt;
+      &lt;li&gt;now supports java 9, 10 and 11 with java 8 build&lt;/li&gt;
+      &lt;li&gt;now supports java 11 on java 9 build&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
