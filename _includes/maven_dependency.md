@@ -8,7 +8,7 @@ Add the [Dependency](http://search.maven.org/#artifactdetails%7Corg.simpleflatma
  
 for Maven:
 
-### Java 8
+### Java 8, 9, 10 , 11 no module-info
 {% highlight xml %}
 <dependency>
     <groupId>org.simpleflatmapper</groupId>
@@ -28,7 +28,7 @@ for Maven:
 </dependency>
 {% endhighlight %}
 
-### Java 9/10
+### Java 9, 10 , 11 with module-info
 
 {% highlight xml %}
 <dependency>

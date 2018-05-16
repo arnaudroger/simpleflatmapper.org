@@ -86,6 +86,39 @@ CsvParser
         .forEach(file, System.out::println);
 {% endhighlight %}
 
+### Customizing the date format
+
+By default it will use parse the date using a `"yyyy-MM-dd HH:mm:ss"` formatter.
+That obviously won't work for everybody and it is possible to override it on a column by column basis.
+
+```java
+// overrides the default format
+CsvParser
+        .mapWith(
+                CsvMapperFactory
+			.newInstance()
+			.defaultDateFormat("yyyy-MM-dd")
+			.newMapper(MyClass.class))
+        .forEach(file, System.out::println);
+
+// overrides the format for a specific column
+CsvParser
+        .mapWith(
+                CsvMapperFactory
+                        .newInstance()
+			.addColumnProperty("my_date_col", new DateFormatProperty("yyyy-MM-dd"))
+                        .newMapper(MyClass.class))
+        .forEach(file, System.out::println);
+
+// overrides the format for any column with date in the name 
+CsvParser
+        .mapWith(
+                CsvMapperFactory
+                        .newInstance()
+                        .addColumnProperty(k -> k.getName().contains("date"), new DateFormatProperty("yyyy-MM-dd"))
+                        .newMapper(MyClass.class))
+        .forEach(file, System.out::println);
+```
 
 ## Writing a csv from an object
 

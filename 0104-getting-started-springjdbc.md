@@ -20,6 +20,8 @@ Third, it also supports SqlParameterSource, and Crud operations.
 You might also have a look at [Spring-JDBC-ROMA](http://serkan-ozal.github.io/spring-jdbc-roma/) that also creates
 RowMapper.
 
+Also sfm supports [one-to-many mapping](https://arnaudroger.github.io/blog/2017/06/13/jdbc-template-one-to-many.html) using the ResultSetExtractor or the PreparedStatementCallback.
+
 # Getting Started Spring jdbc
 
 {% include maven_dependency.md %}
