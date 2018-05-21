@@ -5,9 +5,27 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 May 2018 22:21:55 +0100</pubDate>
-    <lastBuildDate>Wed, 16 May 2018 22:21:55 +0100</lastBuildDate>
+    <pubDate>Mon, 21 May 2018 09:26:37 +0100</pubDate>
+    <lastBuildDate>Mon, 21 May 2018 09:26:37 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.18.0</title>
+        <description>&lt;h1 id=&quot;v3180&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/160?closed=1&quot;&gt;V3.18.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#515&quot;&gt;#515&lt;/a&gt; crud mysql keywords and reserved words.&lt;/li&gt;
+  &lt;li&gt;all table name and field are now protected in the generated query with ` for Mysql and “ for the rest&lt;/li&gt;
+  &lt;li&gt;we also now prefix that table name with the schema name&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 21 May 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/05/21/v3.18.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/05/21/v3.18.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.17.5</title>
@@ -195,45 +213,6 @@ UnivocityCsvParserBenchmark.parseCsv             true           true  250.737 ±
         <pubDate>Mon, 19 Mar 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/03/19/v3.16.1.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/03/19/v3.16.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.16.0</title>
-        <description>&lt;h1 id=&quot;v3160&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/147?closed=1&quot;&gt;V3.16.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Warning&lt;/strong&gt; some of the logic to resolve column to property have been changed&lt;/p&gt;
-
-&lt;p&gt;for structure like &lt;code class=&quot;highlighter-rouge&quot;&gt;List&amp;lt;Tuple2&amp;lt;Foo, Foo&amp;gt;&amp;gt;&lt;/code&gt; with the columns &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; but more complex like &lt;code class=&quot;highlighter-rouge&quot;&gt;Tuple2&amp;lt;TableA, List&amp;lt;Tuple3&amp;lt;TableB, List&amp;lt;TableC&amp;gt;, List&amp;lt;Tuple2&amp;lt;TableD, List&amp;lt;TableE&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;in 3.15.11 it could have map too&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bar -&amp;gt; [0].element0.bar
-bar -&amp;gt; [1].element0.bar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;from 3.16.0 it will always map too&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bar -&amp;gt; [0].element0.bar
-bar -&amp;gt; [0].element1.bar
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;which seems far more correct.
-it is still possible to force the first mapping by renaming the column in the sql or via an alias to&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;elt0_elt0_bar&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;elt1_elt0_bar&lt;/code&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#495&quot;&gt;#495&lt;/a&gt; column with the same name are assigned to the same object in different index instead of next object with property.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/03/12/v3.16.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/03/12/v3.16.0.html</guid>
         
         
       </item>
