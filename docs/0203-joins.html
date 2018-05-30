@@ -191,6 +191,7 @@ A root object is created on id change, so it is important to have the query orde
 <p>For the aggregation to work you will need to be sure to order by the root object - ORDER BY u.id - and also 
 tell the mapper what are the keys of the different objects. Also, it is better to specify all the keys if none is specified the mapper will assume that each row will create a different object.
 There are two ways to specify the keys the first one is on the MapperFactory, like the following with a JDBC mapper.</p>
+
 <div class="language-java highlighter-rouge"><pre class="highlight"><code>    <span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">jdbcMapper</span> <span class="o">=</span> 
             <span class="n">JdbcMapperFactory</span>
                 <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
@@ -226,6 +227,43 @@ There are two ways to specify the keys the first one is on the MapperFactory, li
 </div>
 
 <p>The join support might be limited third party framework integration if it expect one object per row, check the specific docs for more detail.</p>
+
+<h1 id="null-elimination---just-added">Null elimination - Just added</h1>
+
+<p>For a Foo { List<Bar> }. you only need to specify the id of Foo for the aggregation to work. But if you do a left join and the Bar value are null
+ sfm will not know if the object Bar is null or if it's a Bar object with null values. If you specify the bar id as a key then sfm will consider Bar to be null if the key is null.</Bar></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>bars_id</th>
+      <th>bars_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>foo</td>
+      <td>null</td>
+      <td>null</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>with</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">).</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">bar</span><span class="o">);</span>
+</code></pre>
+</div>
+<p>will return <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">1,</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">'foo',</span><span class="w"> </span><span class="err">bars</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">[</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">null,</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">:null</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="err">]</span><span class="w"> </span><span class="err">}</span></code></p>
+
+<p>but with</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"bars_id"</span><span class="o">).</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">bar</span><span class="o">);</span>
+</code></pre>
+</div>
+<p>it will return <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">id</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">1,</span><span class="w"> </span><span class="err">name</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">'foo',</span><span class="w"> </span><span class="err">bars</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">[]</span><span class="w"> </span><span class="p">}</span></code></p>
 
 
         
