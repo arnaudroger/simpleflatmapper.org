@@ -6,6 +6,7 @@ category: docs
 description: SimpleFlatMapper java library joins one to many mapping
 ---
 
+
 SimpleFlatMapper can aggregate join objects in `List`s or `Map`s. The CSV mapper still has limitation and 
 can only handle 1 join as it relies on id changes to create new objects, with more than 1 joins the second joins id can't be ordered continuously and that will create duplicates.
 A root object is created on id change, so it is important to have the query ordered by fields of the root object and the id, otherwise you might end up with multiple instance of the same id.
@@ -46,6 +47,7 @@ class User {
 For the aggregation to work you will need to be sure to order by the root object - ORDER BY u.id - and also 
 tell the mapper what are the keys of the different objects. Also, it is better to specify all the keys if none is specified the mapper will assume that each row will create a different object.
 There are two ways to specify the keys the first one is on the MapperFactory, like the following with a JDBC mapper.
+
 ```java
     JdbcMapper<Object> jdbcMapper = 
             JdbcMapperFactory
@@ -81,3 +83,27 @@ class Toy {
 ```
 
 The join support might be limited third party framework integration if it expect one object per row, check the specific docs for more detail.
+
+
+# Null elimination - Just added
+
+ For a Foo { List<Bar> }. you only need to specify the id of Foo for the aggregation to work. But if you do a left join and the Bar value are null
+ sfm will not know if the object Bar is null or if it's a Bar object with null values. If you specify the bar id as a key then sfm will consider Bar to be null if the key is null.
+ 
+ 
+ |id|name|bars_id|bars_name|
+ |----|---|---|----|
+ |1|foo|null|null|
+ 
+with
+```java
+JdbcMapperFactory.newInstance().addKeys("id").newMapper(Foo.bar);
+```
+will return `{ id : 1, name : 'foo', bars : [ { id : null, name :null } ] }`
+
+but with 
+
+```java
+JdbcMapperFactory.newInstance().addKeys("id", "bars_id").newMapper(Foo.bar);
+```
+it will return `{ id : 1, name : 'foo', bars : [] }`

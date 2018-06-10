@@ -13,6 +13,10 @@ description: SimpleFlatMapper documentation
 * [Filling the one-to-many, many-to-many jOOQ mapping gap](https://arnaudroger.github.io/blog/2017/02/27/jooq-one-to-many.html)
 * [jOOQ DTO-less one-to-many](https://arnaudroger.github.io/blog/2017/03/02/jooq-one-to-many-without-dto.html)
 
+# Community content
+* [Spring Tips : JDBC](https://spring.io/blog/2018/05/30/spring-tips-jdbc)
+* [jOOQ Tips: Implementing a Read-Only One-to-Many Relationship](https://www.petrikainulainen.net/programming/jooq/jooq-tips-implementing-a-read-only-one-to-many-relationship/)
+
 # modules
 ## Mappers
 
