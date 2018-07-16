@@ -5,9 +5,27 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 27 Jun 2018 22:15:34 +0100</pubDate>
-    <lastBuildDate>Wed, 27 Jun 2018 22:15:34 +0100</lastBuildDate>
+    <pubDate>Mon, 16 Jul 2018 07:52:19 +0100</pubDate>
+    <lastBuildDate>Mon, 16 Jul 2018 07:52:19 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v3.19.0</title>
+        <description>&lt;h1 id=&quot;v3190&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/166?closed=1&quot;&gt;V3.19.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#537&quot;&gt;#537&lt;/a&gt; add support for javax.money.MonetaryAmount mapping&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#538&quot;&gt;#538&lt;/a&gt; Kotlin default value constructor support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#539&quot;&gt;#539&lt;/a&gt; Expose CellCsvWriter and add appendRow(String[]) method&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 16 Jul 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/07/16/v3.19.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/07/16/v3.19.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v3.18.3</title>
@@ -167,51 +185,6 @@ allowing you for example to use a custom method to instantiates enum as in the f
         <pubDate>Sat, 07 Apr 2018 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2018/04/07/v3.17.1.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/04/07/v3.17.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.17.0</title>
-        <description>&lt;h1 id=&quot;v3170&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/151?closed=1&quot;&gt;V3.17.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Csv Performance release, now have consistently better perf that last univocity release.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#499&quot;&gt;#499&lt;/a&gt; ParallelReader performance improvement&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/#504&quot;&gt;#504&lt;/a&gt; CharConsumer on demand specialisation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can now use the ParallelReader directly from the DSL.&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;n&quot;&gt;CsvParser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dsl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parallelReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mycsv.csv&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Only recommended for bigish files - 20 MB at least -, and if you have spare cores.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/arnaudroger/mapping-benchmark/tree/master/sfm-csv&quot;&gt;mapping-benchmark&lt;/a&gt; against Univocity 2.6.1 for 1.000.000 rows.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Benchmark                                       (parallel)  (quotes)    Score   Error  Units
-SfmCsvParserBenchmark.parseCsvIterate           false          false  330.402 ± 2.923  ms/op
-UnivocityCsvParserBenchmark.parseCsv            false          false  330.099 ± 0.942  ms/op
-
-SfmCsvParserBenchmark.parseCsvIterate           false           true  362.980 ± 8.940  ms/op
-UnivocityCsvParserBenchmark.parseCsv            false           true  386.221 ± 5.162  ms/op
-
-SfmCsvParserBenchmark.parseCsvIterate            true          false  195.554 ± 0.999  ms/op
-UnivocityConcurrentCsvParserBenchmark.parseCsv    N/A          false  204.678 ± 0.864  ms/op
-UnivocityCsvParserBenchmark.parseCsv             true          false  210.129 ± 0.646  ms/op
-
-SfmCsvParserBenchmark.parseCsvIterate            true           true  226.081 ± 2.477  ms/op
-UnivocityConcurrentCsvParserBenchmark.parseCsv    N/A           true  239.410 ± 2.555  ms/op
-UnivocityCsvParserBenchmark.parseCsv             true           true  250.737 ± 2.526  ms/op
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Wed, 04 Apr 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/04/04/v3.17.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/04/04/v3.17.0.html</guid>
         
         
       </item>
