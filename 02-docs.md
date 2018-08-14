@@ -22,6 +22,7 @@ description: SimpleFlatMapper documentation
 
 | Module | Maven | Javadoc |
 |----|---:|---:|
+{% include doc-table-row.md module='lightning-csv' gs='01' %}
 {% include doc-table-row.md module='csv' gs='01' %}
 {% include doc-table-row.md module='jdbc' gs='02' %}
 {% include doc-table-row.md module='datastax' gs='03' %}

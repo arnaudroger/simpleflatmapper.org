@@ -7,6 +7,11 @@ module: csv
 description: SimpleFlatMapper java Csv Parser Csv Mapper
 ---
 
+# Version 4 changes
+
+the following code should still work with version 4.
+The only difference is the lightning-csv module is lighter and does not contains any mapping related code. 
+
 # Why?
 
 Are you looking for a very [performant](http://simpleflatmapper.org/12-csv-performance.html) Csv Parser, 
