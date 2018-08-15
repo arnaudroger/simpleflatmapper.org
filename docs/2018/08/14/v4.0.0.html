@@ -160,6 +160,13 @@ It’s mostly source compatible to the exception of the CsvParser package rename
 
 <p>The release target contains the following big ticket items</p>
 
+<h2 id="known-regression">Known regression</h2>
+
+<ul>
+  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/544">#544</a> List<String> bars can be map with "bars_val" but an alias to that name does not work
+  should impact you if you use alias to be able directly to the element of the list of simple object like String, Integer etc.. will be fixed in 4.0.1</String></li>
+</ul>
+
 <h2 id="support-for-eclipsecollections-lists-guava-immutable-lists-and-copy-on-collection-on-construction">Support for <a href="https://www.eclipse.org/collections/">EclipseCollections Lists</a>, <a href="https://github.com/google/guava/wiki/ImmutableCollectionsExplained">Guava Immutable Lists</a>, and copy on collection on construction</h2>
 
 <p>If you are wrapping the collection in an unmodifiableCollection like</p>

@@ -5,8 +5,8 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Aug 2018 14:33:12 +0100</pubDate>
-    <lastBuildDate>Tue, 14 Aug 2018 14:33:12 +0100</lastBuildDate>
+    <pubDate>Wed, 15 Aug 2018 11:29:48 +0100</pubDate>
+    <lastBuildDate>Wed, 15 Aug 2018 11:29:48 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -17,6 +17,13 @@
 It’s mostly source compatible to the exception of the CsvParser package rename.&lt;/p&gt;
 
 &lt;p&gt;The release target contains the following big ticket items&lt;/p&gt;
+
+&lt;h2 id=&quot;known-regression&quot;&gt;Known regression&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/544&quot;&gt;#544&lt;/a&gt; List&lt;String&gt; bars can be map with &quot;bars_val&quot; but an alias to that name does not work
+  should impact you if you use alias to be able directly to the element of the list of simple object like String, Integer etc.. will be fixed in 4.0.1&lt;/String&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;support-for-eclipsecollections-lists-guava-immutable-lists-and-copy-on-collection-on-construction&quot;&gt;Support for &lt;a href=&quot;https://www.eclipse.org/collections/&quot;&gt;EclipseCollections Lists&lt;/a&gt;, &lt;a href=&quot;https://github.com/google/guava/wiki/ImmutableCollectionsExplained&quot;&gt;Guava Immutable Lists&lt;/a&gt;, and copy on collection on construction&lt;/h2&gt;
 
