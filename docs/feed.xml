@@ -5,9 +5,59 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 21 Aug 2018 10:01:42 +0100</pubDate>
-    <lastBuildDate>Tue, 21 Aug 2018 10:01:42 +0100</lastBuildDate>
+    <pubDate>Sat, 22 Sep 2018 21:26:59 +0100</pubDate>
+    <lastBuildDate>Sat, 22 Sep 2018 21:26:59 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v5.0.1</title>
+        <description>&lt;h1 id=&quot;v501&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/169?closed=1&quot;&gt;V5.0.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/542&quot;&gt;#552&lt;/a&gt; ConvertService needs to be backward compatible api&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 22 Sep 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/09/22/v5.0.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/09/22/v5.0.1.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v5.0.0</title>
+        <description>&lt;h1 id=&quot;v500&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/168?closed=1&quot;&gt;V5.0.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;This release main changes is on the mapping implementation side. the mapper user should not see any change.
+The goal was to make the csv mapping use the same code as the other mappers to support all the new feature.
+Csv-mapper now supports all the mapper feature including :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Immutables&lt;/li&gt;
+  &lt;li&gt;multi joins&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Issues :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/545&quot;&gt;#545&lt;/a&gt; Make csv mapper use standard constant source mapper&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/412&quot;&gt;#412&lt;/a&gt; csv support multiple join queries&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/550&quot;&gt;#550&lt;/a&gt; fail to map when @column and alias present&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/548&quot;&gt;#548&lt;/a&gt; Csv Row values return null&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/549&quot;&gt;#549&lt;/a&gt; Csv Row return empty when not empty&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Known issue fixed in &lt;a href=&quot;/2018/09/22/v5.0.1.html&quot;&gt;5.0.1&lt;/a&gt; :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/542&quot;&gt;#552&lt;/a&gt; ConvertService needs to be backward compatible api&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 18 Sep 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/09/18/v5.0.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/09/18/v5.0.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v4.0.1</title>
@@ -213,38 +263,6 @@ It’s mostly source compatible to the exception of the CsvParser package rename
         <pubDate>Wed, 16 May 2018 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2018/05/16/v3.17.5.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/05/16/v3.17.5.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.17.4</title>
-        <description>&lt;h1 id=&quot;v3174&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/156?closed=1&quot;&gt;V3.17.4&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/509&quot;&gt;#509&lt;/a&gt; find does not prioritized String setter over ZoneId setter.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 13 Apr 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/04/13/v3.17.4.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/04/13/v3.17.4.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.17.3</title>
-        <description>&lt;h1 id=&quot;v3173&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/154?closed=1&quot;&gt;V3.17.3&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/508&quot;&gt;#508&lt;/a&gt; sfm-csv should work without sfm-reflect&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 12 Apr 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/04/12/v3.17.3.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/04/12/v3.17.3.html</guid>
         
         
       </item>
