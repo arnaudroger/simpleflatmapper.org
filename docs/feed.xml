@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Sep 2018 21:13:33 +0100</pubDate>
-    <lastBuildDate>Sun, 23 Sep 2018 21:13:33 +0100</lastBuildDate>
+    <pubDate>Tue, 02 Oct 2018 21:07:40 +0100</pubDate>
+    <lastBuildDate>Tue, 02 Oct 2018 21:07:40 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v5.0.2</title>
+        <description>&lt;h1 id=&quot;v502&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/170?closed=1&quot;&gt;V5.0.2&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/556&quot;&gt;#556&lt;/a&gt; Nested members can’t be extracted in Java 11&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 02 Oct 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/10/02/v5.0.2.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/02/v5.0.2.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v5.0.1</title>
@@ -240,29 +256,6 @@ It’s mostly source compatible to the exception of the CsvParser package rename
         <pubDate>Mon, 21 May 2018 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2018/05/21/v3.18.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/05/21/v3.18.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.17.5</title>
-        <description>&lt;h1 id=&quot;v3175&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/157?closed=1&quot;&gt;V3.17.5&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/513&quot;&gt;#513&lt;/a&gt; Clean up asm by using shading in the library.
-    &lt;ul&gt;
-      &lt;li&gt;main build - jdk8 no classifier now uses asm 6.1.1 that work with java 9 and 10 -&lt;/li&gt;
-      &lt;li&gt;add fallback behavior when byte code version is not recognised to work on java 11&lt;/li&gt;
-      &lt;li&gt;now supports java 9, 10 and 11 with java 8 build&lt;/li&gt;
-      &lt;li&gt;now supports java 11 on java 9 build&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 16 May 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/05/16/v3.17.5.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/05/16/v3.17.5.html</guid>
         
         
       </item>
