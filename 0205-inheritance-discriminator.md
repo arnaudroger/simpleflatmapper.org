@@ -17,10 +17,13 @@ For example
 JdbcMapper<Person> mapper =
         JdbcMapperFactoryHelper.asm()
                 .addKeys("id", "students_id")
-                .discriminator(Person.class, "person_type", ResultSet::getString, 
-                        builder -> builder
-                        .discriminatorCase("student", Student.class)
-                        .discriminatorCase("professor", Professor.class)
+                .discriminator(Person.class, 
+                            "person_type", 
+                            ResultSet::getString, 
+                            builder -> 
+                                builder
+                                    .discriminatorCase("student", Student.class)
+                                    .discriminatorCase("professor", Professor.class)
                 )
                 .newMapper(Foo.class);
 ```
@@ -33,10 +36,13 @@ It is also possible to use a Predicate instead of a value to match.
 JdbcMapper<Person> mapper =
         JdbcMapperFactoryHelper.asm()
                 .addKeys("id", "students_id")
-                .discriminator(Person.class, "person_type", ResultSet::getString, 
-                        builder -> builder
-                        .discriminatorCase(v -> "student".equals(v), Student.class)
-                        .discriminatorCase(v -> true, Professor.class)
+                .discriminator(
+                            Person.class, 
+                            "person_type", 
+                            ResultSet::getString, 
+                            builder -> builder
+                                .discriminatorCase(v -> "student".equals(v), Student.class)
+                                .discriminatorCase(v -> true, Professor.class)
                 )
                 .newMapper(Foo.class);
 ```
@@ -50,16 +56,20 @@ If you need to discriminate on more that one column you will need to use the Pre
 JdbcMapper<Person> mapper =
         JdbcMapperFactoryHelper.asm()
                 .addKeys("id", "students_id")
-                .discriminator(Person.class, 
-                        builder -> builder
-                        .discriminatorCase(rs -> {
-                            try {
-                                return "student".equals(rs.getString("person_type"));
-                            } catch (Exception e) {
-                                return ErrorHelper.rethrow(e);
-                            }
-                        }, Student.class)
-                        .discriminatorCase(rs -> true, Professor.class)
+                .discriminator(
+                        Person.class, 
+                        builder -> 
+                            builder
+                                .discriminatorCase(rs -> {
+                                    try {
+                                        return 
+                                            "student"
+                                                .equals(rs.getString("person_type"));
+                                    } catch (Exception e) {
+                                        return ErrorHelper.rethrow(e);
+                                    }
+                                }, Student.class)
+                                .discriminatorCase(rs -> true, Professor.class)
                 )
                 .newMapper(Foo.class);
 ``` 
