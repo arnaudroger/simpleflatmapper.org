@@ -7,6 +7,7 @@ description: SimpleFlatMapper documentation
 ## [Property Matching](0201-property-mapping.html)
 ## [Converters](0202-converters.html)
 ## [Joins](0203-joins.html)
+## [Inheritance via discriminator field](0205-inheritance-discriminator.html)
 ## [Google Protocol Buffers](0204-protobuf.html)
 
 # Blog entry
