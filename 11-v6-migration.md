@@ -14,7 +14,7 @@ redirect_from:
 there should not be any change needed as the api should be backward compatible, if you encounter an issue please raise a ticket
 Just make sure all the module are on the same version, as the generic type change will lead to weird errors if not.
 
-## for mapper producers, 
+## for mapper producers 
 * the mapper config now as a new parameterized type representing the source object
 * the ReflectionService is now a abstract class, you can use the static method or instantiate the DefaultReflectionService
 * PropertyMeta and ClassMeta now implements a withReflectionService method    
