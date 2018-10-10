@@ -147,11 +147,13 @@
     <div class="wrapper">
         <h1 id="migration-v5-to-v6">Migration v5 to v6</h1>
 
+<h2 id="for-the-mappers-user">for the mappers user</h2>
+<p>there should not be any change needed as the api should be backward compatible, if you encounter an issue please raise a ticket
+Just make sure all the module are on the same version, as the generic type change will lead to weird errors if not.</p>
+
+<h2 id="for-mapper-producers">for mapper producers,</h2>
 <ul>
-  <li>
-    <p>for mapper there should not be any change needed the api should be backward compatible, if you encounter an issue please raise a ticket</p>
-  </li>
-  <li>the mapper producer the mapper config now as a new parameterized type representing the source object</li>
+  <li>the mapper config now as a new parameterized type representing the source object</li>
   <li>the ReflectionService is now a abstract class, you can use the static method or instantiate the DefaultReflectionService</li>
   <li>PropertyMeta and ClassMeta now implements a withReflectionService method</li>
 </ul>
