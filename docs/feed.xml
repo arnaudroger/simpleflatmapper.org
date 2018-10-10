@@ -5,9 +5,47 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Oct 2018 21:08:22 +0100</pubDate>
-    <lastBuildDate>Tue, 02 Oct 2018 21:08:22 +0100</lastBuildDate>
+    <pubDate>Wed, 10 Oct 2018 21:30:45 +0100</pubDate>
+    <lastBuildDate>Wed, 10 Oct 2018 21:30:45 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.0.1</title>
+        <description>&lt;h1 id=&quot;v601&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/172?closed=1&quot;&gt;V6.0.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Slight improvement of inheritance via discriminator field. see &lt;a href=&quot;/0205-inheritance-discriminator.md&quot;&gt;docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/562&quot;&gt;#562&lt;/a&gt; JDBC41ResultSet throws exception on getObject(String, Class&lt;T&gt;)&lt;/T&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/564&quot;&gt;#564&lt;/a&gt; discriminator api allow to specify a BiFunction&amp;lt;S, String, V&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 10 Oct 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/10/10/v6.0.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/10/v6.0.1.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v6.0.0</title>
+        <description>&lt;h1 id=&quot;v600&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/171?closed=1&quot;&gt;V6.0.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;These release had support for inheritance via discriminator field. see &lt;a href=&quot;/0205-inheritance-discriminator.md&quot;&gt;docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/558&quot;&gt;#558&lt;/a&gt; Discriminator at any level&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/556&quot;&gt;#559&lt;/a&gt; jooq update 3.11.5, still work with previous version - java 7 build uses 3.9.5 -&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 10 Oct 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/10/10/v6.0.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/10/v6.0.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v5.0.2</title>
@@ -222,40 +260,6 @@ It’s mostly source compatible to the exception of the CsvParser package rename
         <pubDate>Mon, 25 Jun 2018 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2018/06/25/v3.18.2.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/06/25/v3.18.2.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.18.1</title>
-        <description>&lt;h1 id=&quot;v3181&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/162?closed=1&quot;&gt;V3.18.1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/522&quot;&gt;#522&lt;/a&gt; ignore @Column annotation without name&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sun, 17 Jun 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/06/17/v3.18.1.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/06/17/v3.18.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.18.0</title>
-        <description>&lt;h1 id=&quot;v3180&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/160?closed=1&quot;&gt;V3.18.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/515&quot;&gt;#515&lt;/a&gt; crud mysql keywords and reserved words.&lt;/li&gt;
-  &lt;li&gt;all table name and field are now protected in the generated query with ` for Mysql and “ for the rest&lt;/li&gt;
-  &lt;li&gt;we also now prefix that table name with the schema name&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Mon, 21 May 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/05/21/v3.18.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/05/21/v3.18.0.html</guid>
         
         
       </item>

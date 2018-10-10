@@ -1,11 +1,20 @@
 ---
 layout: default
-title: Migrating to v5.
+title: Migrating to v6.
 comments: true
 redirect_from:
   - /11-v3-migration.html
   - /11-v4-migration.html
+  - /11-v5-migration.html
 ---
+
+# Migration v5 to v6
+
+* for mapper there should not be any change needed the api should be backward compatible, if you encounter an issue please raise a ticket
+
+* the mapper producer the mapper config now as a new parameterized type representing the source object
+* the ReflectionService is now a abstract class, you can use the static method or instantiate the DefaultReflectionService
+* PropertyMeta and ClassMeta now implements a withReflectionService method    
 
 # Migration v4 to v5
 
