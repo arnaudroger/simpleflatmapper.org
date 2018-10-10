@@ -5,15 +5,15 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Oct 2018 21:31:49 +0100</pubDate>
-    <lastBuildDate>Wed, 10 Oct 2018 21:31:49 +0100</lastBuildDate>
+    <pubDate>Wed, 10 Oct 2018 21:33:49 +0100</pubDate>
+    <lastBuildDate>Wed, 10 Oct 2018 21:33:49 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
         <title>Release v6.0.1</title>
         <description>&lt;h1 id=&quot;v601&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/172?closed=1&quot;&gt;V6.0.1&lt;/a&gt;&lt;/h1&gt;
 
-&lt;p&gt;Slight improvement of inheritance via discriminator field. see &lt;a href=&quot;/0205-inheritance-discriminator.md&quot;&gt;docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Slight improvement of inheritance via discriminator field. see &lt;a href=&quot;/0205-inheritance-discriminator.html&quot;&gt;docs&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/562&quot;&gt;#562&lt;/a&gt; JDBC41ResultSet throws exception on getObject(String, Class&lt;T&gt;)&lt;/T&gt;&lt;/li&gt;
@@ -32,7 +32,7 @@
         <title>Release v6.0.0</title>
         <description>&lt;h1 id=&quot;v600&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/171?closed=1&quot;&gt;V6.0.0&lt;/a&gt;&lt;/h1&gt;
 
-&lt;p&gt;These release had support for inheritance via discriminator field. see &lt;a href=&quot;/0205-inheritance-discriminator.md&quot;&gt;docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These release had support for inheritance via discriminator field. see &lt;a href=&quot;/0205-inheritance-discriminator.html&quot;&gt;docs&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/558&quot;&gt;#558&lt;/a&gt; Discriminator at any level&lt;/li&gt;
