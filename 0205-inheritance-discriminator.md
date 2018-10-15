@@ -22,8 +22,8 @@ JdbcMapper<Person> mapper =
                             ResultSet::getString, 
                             builder -> 
                                 builder
-                                    .discriminatorCase("student", Student.class)
-                                    .discriminatorCase("professor", Professor.class)
+                                    .when("student", Student.class)
+                                    .when("professor", Professor.class)
                 )
                 .newMapper(Foo.class);
 ```
@@ -41,8 +41,8 @@ JdbcMapper<Person> mapper =
                             "person_type", 
                             ResultSet::getString, 
                             builder -> builder
-                                .discriminatorCase(v -> "student".equals(v), Student.class)
-                                .discriminatorCase(v -> true, Professor.class)
+                                .when(v -> "student".equals(v), Student.class)
+                                .when(v -> true, Professor.class)
                 )
                 .newMapper(Foo.class);
 ```
@@ -60,7 +60,7 @@ JdbcMapper<Person> mapper =
                         Person.class, 
                         builder -> 
                             builder
-                                .discriminatorCase(rs -> {
+                                .when(rs -> {
                                     try {
                                         return 
                                             "student"
@@ -69,7 +69,7 @@ JdbcMapper<Person> mapper =
                                         return ErrorHelper.rethrow(e);
                                     }
                                 }, Student.class)
-                                .discriminatorCase(rs -> true, Professor.class)
+                                .when(rs -> true, Professor.class)
                 )
                 .newMapper(Foo.class);
 ``` 

@@ -162,8 +162,8 @@
                             <span class="nl">ResultSet:</span><span class="o">:</span><span class="n">getString</span><span class="o">,</span> 
                             <span class="n">builder</span> <span class="o">-&gt;</span> 
                                 <span class="n">builder</span>
-                                    <span class="o">.</span><span class="na">discriminatorCase</span><span class="o">(</span><span class="s">"student"</span><span class="o">,</span> <span class="n">Student</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-                                    <span class="o">.</span><span class="na">discriminatorCase</span><span class="o">(</span><span class="s">"professor"</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                                    <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="s">"student"</span><span class="o">,</span> <span class="n">Student</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                                    <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="s">"professor"</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
                 <span class="o">)</span>
                 <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 </code></pre>
@@ -181,8 +181,8 @@
                             <span class="s">"person_type"</span><span class="o">,</span> 
                             <span class="nl">ResultSet:</span><span class="o">:</span><span class="n">getString</span><span class="o">,</span> 
                             <span class="n">builder</span> <span class="o">-&gt;</span> <span class="n">builder</span>
-                                <span class="o">.</span><span class="na">discriminatorCase</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="s">"student"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">v</span><span class="o">),</span> <span class="n">Student</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-                                <span class="o">.</span><span class="na">discriminatorCase</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                                <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="s">"student"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">v</span><span class="o">),</span> <span class="n">Student</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                                <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
                 <span class="o">)</span>
                 <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 </code></pre>
@@ -200,7 +200,7 @@
                         <span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> 
                         <span class="n">builder</span> <span class="o">-&gt;</span> 
                             <span class="n">builder</span>
-                                <span class="o">.</span><span class="na">discriminatorCase</span><span class="o">(</span><span class="n">rs</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                                <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="n">rs</span> <span class="o">-&gt;</span> <span class="o">{</span>
                                     <span class="k">try</span> <span class="o">{</span>
                                         <span class="k">return</span> 
                                             <span class="s">"student"</span>
@@ -209,7 +209,7 @@
                                         <span class="k">return</span> <span class="n">ErrorHelper</span><span class="o">.</span><span class="na">rethrow</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
                                     <span class="o">}</span>
                                 <span class="o">},</span> <span class="n">Student</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
-                                <span class="o">.</span><span class="na">discriminatorCase</span><span class="o">(</span><span class="n">rs</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                                <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="n">rs</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
                 <span class="o">)</span>
                 <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 </code></pre>
