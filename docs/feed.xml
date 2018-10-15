@@ -5,9 +5,30 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Oct 2018 21:50:16 +0100</pubDate>
-    <lastBuildDate>Wed, 10 Oct 2018 21:50:16 +0100</lastBuildDate>
+    <pubDate>Mon, 15 Oct 2018 09:59:27 +0100</pubDate>
+    <lastBuildDate>Mon, 15 Oct 2018 09:59:27 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.0.2</title>
+        <description>&lt;h1 id=&quot;v602&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/173?closed=1&quot;&gt;V6.0.2&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/560&quot;&gt;#560&lt;/a&gt; Fix build to run test on java 10, 11 and 12&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/561&quot;&gt;#561&lt;/a&gt; proper handling of nested keys on discriminator mismatch&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/566&quot;&gt;#566&lt;/a&gt; add when function instead of discriminatorCase&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/567&quot;&gt;#567&lt;/a&gt; Optimised discriminator with one implementation&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/569&quot;&gt;#569&lt;/a&gt; Mysql view with grouping target wrong table&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/571&quot;&gt;#571&lt;/a&gt; fail to apply discriminator on nested discriminated object&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 15 Oct 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/10/15/v6.0.2.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/15/v6.0.2.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.0.1</title>
@@ -244,22 +265,6 @@ It’s mostly source compatible to the exception of the CsvParser package rename
         <pubDate>Tue, 26 Jun 2018 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2018/06/26/v3.18.3.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/06/26/v3.18.3.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.18.2</title>
-        <description>&lt;h1 id=&quot;v3182&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/164?closed=1&quot;&gt;V3.18.2&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/530&quot;&gt;#530&lt;/a&gt; Inconsistent type for DOUBLE PRECISION column&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Mon, 25 Jun 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/06/25/v3.18.2.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/06/25/v3.18.2.html</guid>
         
         
       </item>
