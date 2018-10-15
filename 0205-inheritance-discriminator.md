@@ -15,7 +15,7 @@ For example
 
 ```java
 JdbcMapper<Person> mapper =
-        JdbcMapperFactoryHelper.asm()
+        JdbcMapperFactory.newInstance()
                 .addKeys("id", "students_id")
                 .discriminator(Person.class, 
                             "person_type", 
@@ -34,7 +34,7 @@ It is also possible to use a Predicate instead of a value to match.
 
 ```java
 JdbcMapper<Person> mapper =
-        JdbcMapperFactoryHelper.asm()
+        JdbcMapperFactory.newInstance()
                 .addKeys("id", "students_id")
                 .discriminator(
                             Person.class, 
@@ -54,7 +54,7 @@ If you need to discriminate on more that one column you will need to use the Pre
 ```java
 
 JdbcMapper<Person> mapper =
-        JdbcMapperFactoryHelper.asm()
+        JdbcMapperFactory.newInstance()
                 .addKeys("id", "students_id")
                 .discriminator(
                         Person.class, 
