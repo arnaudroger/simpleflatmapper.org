@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Oct 2018 10:30:54 +0100</pubDate>
-    <lastBuildDate>Mon, 15 Oct 2018 10:30:54 +0100</lastBuildDate>
+    <pubDate>Tue, 16 Oct 2018 09:56:08 +0100</pubDate>
+    <lastBuildDate>Tue, 16 Oct 2018 09:56:08 +0100</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.0.3</title>
+        <description>&lt;h1 id=&quot;v603&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/174?closed=1&quot;&gt;V6.0.3&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/573&quot;&gt;#573&lt;/a&gt; Discriminator type resolution failed on generic types&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 16 Oct 2018 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2018/10/16/v6.0.3.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/16/v6.0.3.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.0.2</title>
@@ -249,22 +265,6 @@ It’s mostly source compatible to the exception of the CsvParser package rename
         <pubDate>Mon, 16 Jul 2018 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2018/07/16/v3.19.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/07/16/v3.19.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.18.3</title>
-        <description>&lt;h1 id=&quot;v3183&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/165?closed=1&quot;&gt;V3.18.3&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/522&quot;&gt;#531&lt;/a&gt; crud mapping issue with boolean prop like isFoo&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 26 Jun 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/06/26/v3.18.3.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/06/26/v3.18.3.html</guid>
         
         
       </item>
