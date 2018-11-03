@@ -5,9 +5,58 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Oct 2018 09:56:08 +0100</pubDate>
-    <lastBuildDate>Tue, 16 Oct 2018 09:56:08 +0100</lastBuildDate>
+    <pubDate>Sat, 03 Nov 2018 11:03:01 +0000</pubDate>
+    <lastBuildDate>Sat, 03 Nov 2018 11:03:01 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.0.5</title>
+        <description>&lt;h1 id=&quot;v605&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/176?closed=1&quot;&gt;V6.0.5&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/578&quot;&gt;#578&lt;/a&gt; Add possibility to add a row filter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Can now easily map csv formatted like this by specifying a filter&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-csv&quot;&gt;prop1     ,prop2   
+----------,---------
+value1    ,value2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;CsvParser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dsl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trimSpaces&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mapWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;CsvMapperFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+                            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rowFilter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;containsOnly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'-'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+                            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MyObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/11/03/v6.0.5.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/03/v6.0.5.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v6.0.4</title>
+        <description>&lt;h1 id=&quot;v604&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/175?closed=1&quot;&gt;V6.0.4&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/575&quot;&gt;#575&lt;/a&gt; DefaultPropertyNameMatcher should ignore -&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/576&quot;&gt;#576&lt;/a&gt; OptionalProperty NPE&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/577&quot;&gt;#577&lt;/a&gt; ColumnName with ignorable char at the end doest not completMatch&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/11/02/v6.0.4.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/02/v6.0.4.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.0.3</title>
@@ -164,107 +213,6 @@ Csv-mapper now supports all the mapper feature including :&lt;/p&gt;
         <pubDate>Wed, 15 Aug 2018 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2018/08/15/v4.0.1.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/08/15/v4.0.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v4.0.0</title>
-        <description>&lt;h1 id=&quot;v400&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/161?closed=1&quot;&gt;V4.0.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;That release is not binary compatible to 3.x.x
-It’s mostly source compatible to the exception of the CsvParser package rename.&lt;/p&gt;
-
-&lt;p&gt;The release target contains the following big ticket items&lt;/p&gt;
-
-&lt;h2 id=&quot;known-regression&quot;&gt;Known regression&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/544&quot;&gt;#544&lt;/a&gt; List&lt;String&gt; bars can be map with &quot;bars_val&quot; but an alias to that name does not work
-  should impact you if you use alias to be able directly to the element of the list of simple object like String, Integer etc.. will be fixed in 4.0.1&lt;/String&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;support-for-eclipsecollections-lists-guava-immutable-lists-and-copy-on-collection-on-construction&quot;&gt;Support for &lt;a href=&quot;https://www.eclipse.org/collections/&quot;&gt;EclipseCollections Lists&lt;/a&gt;, &lt;a href=&quot;https://github.com/google/guava/wiki/ImmutableCollectionsExplained&quot;&gt;Guava Immutable Lists&lt;/a&gt;, and copy on collection on construction&lt;/h2&gt;
-
-&lt;p&gt;If you are wrapping the collection in an unmodifiableCollection like&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;unmodifiableSet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HashSet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;you will need to annotate your class with &lt;code class=&quot;highlighter-rouge&quot;&gt;@ModifyInjectedParams&lt;/code&gt; annotation - it is possible to had a parameter to the config but that one is not yet exposed.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/421&quot;&gt;#421&lt;/a&gt; Eclipse collections supports List/ImmutableList&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/429&quot;&gt;#429&lt;/a&gt; Immutable collection, transformed on injection&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/476&quot;&gt;#476&lt;/a&gt; Postpone object creation until break detected - needed for immutable collections&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/487&quot;&gt;#487&lt;/a&gt; Wrong result if copying set in the construction&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;lighter-csv-module-and-better-error&quot;&gt;lighter csv module and better error&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/510&quot;&gt;#510&lt;/a&gt; extract csv parser to its own module&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/518&quot;&gt;#518&lt;/a&gt; Ability to require a csv column&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;easier-error-handling&quot;&gt;easier error handling&lt;/h2&gt;
-
-&lt;p&gt;You can now create a mapper with error handling.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;		CsvMapper&amp;lt;Result&amp;lt;T517, CsvColumnKey&amp;gt;&amp;gt; mapper = 
-				CsvMapperFactory.newInstance()
-					.newErrorCollectingMapper(T517.class);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;That will return a Result will contains the mapped object and any mapping errors if any occured.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;		Iterator&amp;lt;Result&amp;lt;T517, CsvColumnKey&amp;gt;&amp;gt; iterator = mapper.iterator(new StringReader(&quot;v1,v2\n1,a\na,2&quot;));
-
-		Result&amp;lt;T517, CsvColumnKey&amp;gt; t = iterator.next();
-		
-		assertEquals(1l, t.getValue().v1.longValue());
-		assertNull(t.getValue().v2);
-		assertEquals(1, t.getErrors().size());
-		assertEquals(&quot;v2&quot;, t.getErrors().get(0).getKey().getName());
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;you can plug the mapper in the &lt;code class=&quot;highlighter-rouge&quot;&gt;CsvParser&lt;/code&gt; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;mapTo&lt;/code&gt; dsl function.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/517&quot;&gt;#517&lt;/a&gt; Better error handling on csv mapping&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;and-other-changes-&quot;&gt;And other changes :&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/529&quot;&gt;#529&lt;/a&gt; update cassandra drivers&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/461&quot;&gt;#461&lt;/a&gt; Rename property should fail fast if not found&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/466&quot;&gt;#466&lt;/a&gt; Add documentation on aliases and rename property for in/out&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 14 Aug 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/08/14/v4.0.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/08/14/v4.0.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v3.19.0</title>
-        <description>&lt;h1 id=&quot;v3190&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/166?closed=1&quot;&gt;V3.19.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/537&quot;&gt;#537&lt;/a&gt; add support for javax.money.MonetaryAmount mapping&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/538&quot;&gt;#538&lt;/a&gt; Kotlin default value constructor support&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/539&quot;&gt;#539&lt;/a&gt; Expose CellCsvWriter and add appendRow(String[]) method&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Mon, 16 Jul 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/07/16/v3.19.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/07/16/v3.19.0.html</guid>
         
         
       </item>
