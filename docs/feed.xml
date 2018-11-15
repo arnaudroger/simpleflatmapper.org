@@ -5,9 +5,76 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Nov 2018 11:03:01 +0000</pubDate>
-    <lastBuildDate>Sat, 03 Nov 2018 11:03:01 +0000</lastBuildDate>
+    <pubDate>Thu, 15 Nov 2018 21:04:19 +0000</pubDate>
+    <lastBuildDate>Thu, 15 Nov 2018 21:04:19 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.0.5</title>
+        <description>&lt;h1 id=&quot;v609&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/179?closed=1&quot;&gt;V6.0.9&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/579&quot;&gt;#579&lt;/a&gt; Finally properly fix by using the path,owner equality to reuse the key builder&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/587&quot;&gt;#587&lt;/a&gt; Fix error mapping dates from a jOOQ fetched ResultSet, sqlType for OffsetDateTime returns VARCHAR, uses columnClass to workaround it&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/11/15/v6.0.9.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/15/v6.0.9.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v6.0.8</title>
+        <description>&lt;h1 id=&quot;v608&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/178?closed=1&quot;&gt;V6.0.8&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Performance Regression &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/579&quot;&gt;#579&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/584&quot;&gt;#584&lt;/a&gt; Integrate &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/pull/583&quot;&gt;PR&lt;/a&gt; to support polymorphism on builders, Thanks to &lt;a href=&quot;https://github.com/zenios&quot;&gt;Zenios&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/580&quot;&gt;#580&lt;/a&gt; POI Mapper better handling of null rows&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/11/13/v6.0.8.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/13/v6.0.8.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v6.0.7</title>
+        <description>&lt;h1 id=&quot;v607&quot;&gt;V6.0.7&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Partial &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/578&quot;&gt;#579&lt;/a&gt; Identify issue as keys check combinatorial increase with number of discriminator cases. partial fix that work on all object with keys but not on partial keys.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/11/07/v6.0.7.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/07/v6.0.7.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v6.0.6</title>
+        <description>&lt;h1 id=&quot;v606&quot;&gt;V6.0.6&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Partial &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/578&quot;&gt;#579&lt;/a&gt; Optimised one column discriminator, but did not address underlying issue&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 06 Nov 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/11/06/v6.0.6.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/06/v6.0.6.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.0.5</title>
@@ -129,90 +196,6 @@ value1    ,value2
         <pubDate>Wed, 10 Oct 2018 00:00:00 +0100</pubDate>
         <link>http://simpleflatmapper.org/2018/10/10/v6.0.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/10/v6.0.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v5.0.2</title>
-        <description>&lt;h1 id=&quot;v502&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/170?closed=1&quot;&gt;V5.0.2&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/556&quot;&gt;#556&lt;/a&gt; Nested members can’t be extracted in Java 11&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 02 Oct 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/10/02/v5.0.2.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/02/v5.0.2.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v5.0.1</title>
-        <description>&lt;h1 id=&quot;v501&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/169?closed=1&quot;&gt;V5.0.1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/542&quot;&gt;#552&lt;/a&gt; ConvertService needs to be backward compatible api&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 22 Sep 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/09/22/v5.0.1.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/09/22/v5.0.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v5.0.0</title>
-        <description>&lt;h1 id=&quot;v500&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/168?closed=1&quot;&gt;V5.0.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;This release main changes is on the mapping implementation side. the mapper user should not see any change.
-The goal was to make the csv mapping use the same code as the other mappers to support all the new feature.
-Csv-mapper now supports all the mapper feature including :&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Immutables&lt;/li&gt;
-  &lt;li&gt;multi joins&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Issues :&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/545&quot;&gt;#545&lt;/a&gt; Make csv mapper use standard constant source mapper&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/412&quot;&gt;#412&lt;/a&gt; csv support multiple join queries&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/550&quot;&gt;#550&lt;/a&gt; fail to map when @column and alias present&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/548&quot;&gt;#548&lt;/a&gt; Csv Row values return null&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/549&quot;&gt;#549&lt;/a&gt; Csv Row return empty when not empty&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Known issue fixed in &lt;a href=&quot;/2018/09/22/v5.0.1.html&quot;&gt;5.0.1&lt;/a&gt; :&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/542&quot;&gt;#552&lt;/a&gt; ConvertService needs to be backward compatible api&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 18 Sep 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/09/18/v5.0.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/09/18/v5.0.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v4.0.1</title>
-        <description>&lt;h1 id=&quot;v401&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/167?closed=1&quot;&gt;V4.0.1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/542&quot;&gt;#542&lt;/a&gt; Allow to set the assume assumeInjectionModifiesValues via the factory&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/543&quot;&gt;#543&lt;/a&gt; better error message when map to List&lt;String&gt; foo with foo column&lt;/String&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/544&quot;&gt;#544&lt;/a&gt; List&lt;String&gt; bars can be map with &quot;bars_val&quot; but an alias to that name does not work&lt;/String&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 15 Aug 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/08/15/v4.0.1.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/08/15/v4.0.1.html</guid>
         
         
       </item>
