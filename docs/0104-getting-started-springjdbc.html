@@ -338,8 +338,8 @@ RowMapper.</p>
 If the sql type implied is not the one desired, you can specify one manually by adding a <code class="highlighter-rouge">SqlTypeColumnProperty</code>.</p>
 
 <p>For example when using a non jdbc 4.2 compliant driver with a <code class="highlighter-rouge">ZonedDateTime</code>. 
-Sfm will use a <code class="highlighter-rouge">TIMESTAMP_WITH_TIMEZONE</code> which may is notsupported by the driver.
-The following code will override the default for a <code class="highlighter-rouge">Types.TIMESTAMP</code> :</p>
+Sfm will use a <code class="highlighter-rouge">TIMESTAMP_WITH_TIMEZONE</code> which may is not supported by the driver.
+The following code will override the type with <code class="highlighter-rouge">Types.TIMESTAMP</code> :</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">MyDao</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">SqlParameterSourceFactory</span><span class="o">&lt;</span><span class="n">DbObject</span><span class="o">&gt;</span> <span class="n">parameterSourceFactory</span> <span class="o">=</span>

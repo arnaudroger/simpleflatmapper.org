@@ -71,8 +71,8 @@ Because the parameter source does not have any metadata, the `java.sql.Types` wi
 If the sql type implied is not the one desired, you can specify one manually by adding a `SqlTypeColumnProperty`.
  
 For example when using a non jdbc 4.2 compliant driver with a `ZonedDateTime`. 
-Sfm will use a `TIMESTAMP_WITH_TIMEZONE` which may is notsupported by the driver.
-The following code will override the default for a `Types.TIMESTAMP` :
+Sfm will use a `TIMESTAMP_WITH_TIMEZONE` which may is not supported by the driver.
+The following code will override the type with `Types.TIMESTAMP` :
 
 {% highlight java %}
 class MyDao {
