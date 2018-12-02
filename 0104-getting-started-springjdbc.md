@@ -79,10 +79,12 @@ class MyDao {
     private final SqlParameterSourceFactory<DbObject> parameterSourceFactory =
         JdbcTemplateMapperFactory
             .newInstance()
-            .addColumnProperty("timestamp_", SqlTypeColumnProperty.of(Types.TIMESTAMP))
+            .addColumnProperty("timestamp", SqlTypeColumnProperty.of(Types.TIMESTAMP))
             .newSqlParameterSourceFactory(DbObject.class);
 }
 {% endhighlight %}
+
+Just make sure that you are using the column name not the property name.
 
 # Crud
 

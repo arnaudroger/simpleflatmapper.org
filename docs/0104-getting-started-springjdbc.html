@@ -345,9 +345,11 @@ The following code will override the default for a <code class="highlighter-roug
     <span class="kd">private</span> <span class="kd">final</span> <span class="n">SqlParameterSourceFactory</span><span class="o">&lt;</span><span class="n">DbObject</span><span class="o">&gt;</span> <span class="n">parameterSourceFactory</span> <span class="o">=</span>
         <span class="n">JdbcTemplateMapperFactory</span>
             <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
-            <span class="o">.</span><span class="na">addColumnProperty</span><span class="o">(</span><span class="s">"timestamp_"</span><span class="o">,</span> <span class="n">SqlTypeColumnProperty</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">Types</span><span class="o">.</span><span class="na">TIMESTAMP</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">addColumnProperty</span><span class="o">(</span><span class="s">"timestamp"</span><span class="o">,</span> <span class="n">SqlTypeColumnProperty</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">Types</span><span class="o">.</span><span class="na">TIMESTAMP</span><span class="o">))</span>
             <span class="o">.</span><span class="na">newSqlParameterSourceFactory</span><span class="o">(</span><span class="n">DbObject</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 <span class="o">}</span></code></pre></figure>
+
+<p>Just make sure that you are using the column name not the property name.</p>
 
 <h1 id="crud">Crud</h1>
 
