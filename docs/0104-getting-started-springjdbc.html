@@ -332,6 +332,23 @@ RowMapper.</p>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
+<h2 id="javasqltypes">java.sql.Types</h2>
+
+<p>Because the parameter source does not have any metadata, the <code class="highlighter-rouge">java.sql.Types</code> will be extrapolated from the object property type.
+If the sql type implied is not the one desired, you can specify one manually by adding a <code class="highlighter-rouge">SqlTypeColumnProperty</code>.</p>
+
+<p>For example when using a non jdbc 4.2 compliant driver with a <code class="highlighter-rouge">ZonedDateTime</code>. 
+Sfm will use a <code class="highlighter-rouge">TIMESTAMP_WITH_TIMEZONE</code> which may is notsupported by the driver.
+The following code will override the default for a <code class="highlighter-rouge">Types.TIMESTAMP</code> :</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">MyDao</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">SqlParameterSourceFactory</span><span class="o">&lt;</span><span class="n">DbObject</span><span class="o">&gt;</span> <span class="n">parameterSourceFactory</span> <span class="o">=</span>
+        <span class="n">JdbcTemplateMapperFactory</span>
+            <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">addColumnProperty</span><span class="o">(</span><span class="s">"timestamp_"</span><span class="o">,</span> <span class="n">SqlTypeColumnProperty</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">Types</span><span class="o">.</span><span class="na">TIMESTAMP</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">newSqlParameterSourceFactory</span><span class="o">(</span><span class="n">DbObject</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
 <h1 id="crud">Crud</h1>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">MyDao</span> <span class="o">{</span>

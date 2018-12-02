@@ -65,6 +65,25 @@ class MyDao {
 }
 {% endhighlight %}
 
+## java.sql.Types
+
+Because the parameter source does not have any metadata, the `java.sql.Types` will be extrapolated from the object property type.
+If the sql type implied is not the one desired, you can specify one manually by adding a `SqlTypeColumnProperty`.
+ 
+For example when using a non jdbc 4.2 compliant driver with a `ZonedDateTime`. 
+Sfm will use a `TIMESTAMP_WITH_TIMEZONE` which may is notsupported by the driver.
+The following code will override the default for a `Types.TIMESTAMP` :
+
+{% highlight java %}
+class MyDao {
+    private final SqlParameterSourceFactory<DbObject> parameterSourceFactory =
+        JdbcTemplateMapperFactory
+            .newInstance()
+            .addColumnProperty("timestamp_", SqlTypeColumnProperty.of(Types.TIMESTAMP))
+            .newSqlParameterSourceFactory(DbObject.class);
+}
+{% endhighlight %}
+
 # Crud
 
 {% highlight java %}
