@@ -5,8 +5,8 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Dec 2018 20:40:37 +0000</pubDate>
-    <lastBuildDate>Wed, 05 Dec 2018 20:40:37 +0000</lastBuildDate>
+    <pubDate>Wed, 05 Dec 2018 20:42:43 +0000</pubDate>
+    <lastBuildDate>Wed, 05 Dec 2018 20:42:43 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -24,7 +24,7 @@
   &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/594&quot;&gt;#594&lt;/a&gt; optimise continue/break csv parsing loop&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Performance impact on some mapping benchmark is in the order of 50% speed increased, to be confirmed later.&lt;/p&gt;
+&lt;p&gt;Performance impact on some mapping benchmark is in the order of 50% speed increased - or 30% latency reduction -, to be confirmed later.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
