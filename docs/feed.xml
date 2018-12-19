@@ -5,9 +5,42 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Dec 2018 10:06:56 +0000</pubDate>
-    <lastBuildDate>Fri, 07 Dec 2018 10:06:56 +0000</lastBuildDate>
+    <pubDate>Wed, 19 Dec 2018 16:53:26 +0000</pubDate>
+    <lastBuildDate>Wed, 19 Dec 2018 16:53:26 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.0.13</title>
+        <description>&lt;h1 id=&quot;v6013&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/183?closed=1&quot;&gt;V6.0.13&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/598&quot;&gt;#598&lt;/a&gt; make it easier to defined aliases on CsvParser dsl&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/599&quot;&gt;#599&lt;/a&gt; csv mapper ignore trailing empty headers&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/12/19/v6.0.13.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/19/v6.0.13.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v6.0.11</title>
+        <description>&lt;h1 id=&quot;v6013&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/182?closed=1&quot;&gt;V6.0.13&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/597&quot;&gt;#597&lt;/a&gt; fix left over debugging statement&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/12/13/v6.0.12.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/13/v6.0.12.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.0.11</title>
@@ -162,43 +195,6 @@ value1    ,value2
         <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/11/02/v6.0.4.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/02/v6.0.4.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.3</title>
-        <description>&lt;h1 id=&quot;v603&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/174?closed=1&quot;&gt;V6.0.3&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/573&quot;&gt;#573&lt;/a&gt; Discriminator type resolution failed on generic types&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 16 Oct 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/10/16/v6.0.3.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/16/v6.0.3.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.2</title>
-        <description>&lt;h1 id=&quot;v602&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/173?closed=1&quot;&gt;V6.0.2&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/560&quot;&gt;#560&lt;/a&gt; Fix build to run test on java 10, 11 and 12&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/561&quot;&gt;#561&lt;/a&gt; proper handling of nested keys on discriminator mismatch&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/566&quot;&gt;#566&lt;/a&gt; add when function instead of discriminatorCase&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/567&quot;&gt;#567&lt;/a&gt; Optimised discriminator with one implementation&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/569&quot;&gt;#569&lt;/a&gt; Mysql view with grouping target wrong table&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/571&quot;&gt;#571&lt;/a&gt; fail to apply discriminator on nested discriminated object&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Mon, 15 Oct 2018 00:00:00 +0100</pubDate>
-        <link>http://simpleflatmapper.org/2018/10/15/v6.0.2.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/10/15/v6.0.2.html</guid>
         
         
       </item>
