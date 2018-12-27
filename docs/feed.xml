@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Dec 2018 16:53:46 +0000</pubDate>
-    <lastBuildDate>Wed, 19 Dec 2018 16:53:46 +0000</lastBuildDate>
+    <pubDate>Thu, 27 Dec 2018 22:57:04 +0000</pubDate>
+    <lastBuildDate>Thu, 27 Dec 2018 22:57:04 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.0.13</title>
+        <description>&lt;h1 id=&quot;v610&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/185?closed=1&quot;&gt;V6.1.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/572&quot;&gt;#572&lt;/a&gt; filter property on wether we can get a getter or not&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2018/12/27/v6.1.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/27/v6.1.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.0.13</title>
@@ -177,24 +193,6 @@ value1    ,value2
         <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/11/03/v6.0.5.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/03/v6.0.5.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.4</title>
-        <description>&lt;h1 id=&quot;v604&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/175?closed=1&quot;&gt;V6.0.4&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/575&quot;&gt;#575&lt;/a&gt; DefaultPropertyNameMatcher should ignore -&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/576&quot;&gt;#576&lt;/a&gt; OptionalProperty NPE&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/577&quot;&gt;#577&lt;/a&gt; ColumnName with ignorable char at the end doest not completMatch&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/11/02/v6.0.4.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/02/v6.0.4.html</guid>
         
         
       </item>
