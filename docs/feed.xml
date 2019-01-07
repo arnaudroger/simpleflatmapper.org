@@ -5,12 +5,28 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Dec 2018 22:57:04 +0000</pubDate>
-    <lastBuildDate>Thu, 27 Dec 2018 22:57:04 +0000</lastBuildDate>
+    <pubDate>Mon, 07 Jan 2019 09:44:36 +0000</pubDate>
+    <lastBuildDate>Mon, 07 Jan 2019 09:44:36 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
-        <title>Release v6.0.13</title>
+        <title>Release v6.1.1</title>
+        <description>&lt;h1 id=&quot;v611&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/186?closed=1&quot;&gt;V6.1.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/602&quot;&gt;#602&lt;/a&gt; fix behavior change in error callback&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2019/01/06/v6.1.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/01/06/v6.1.1.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v6.1.0</title>
         <description>&lt;h1 id=&quot;v610&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/185?closed=1&quot;&gt;V6.1.0&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -162,37 +178,6 @@
         <pubDate>Tue, 06 Nov 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/11/06/v6.0.6.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/06/v6.0.6.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.5</title>
-        <description>&lt;h1 id=&quot;v605&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/176?closed=1&quot;&gt;V6.0.5&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/578&quot;&gt;#578&lt;/a&gt; Add possibility to add a row filter&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Can now easily map csv formatted like this by specifying a filter&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-csv&quot;&gt;prop1     ,prop2   
-----------,---------
-value1    ,value2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;CsvParser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dsl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trimSpaces&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mapWith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;CsvMapperFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-                            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;rowFilter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;containsOnly&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sc&quot;&gt;'-'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-                            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newMapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MyObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()...&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-</description>
-        <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/11/03/v6.0.5.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/03/v6.0.5.html</guid>
         
         
       </item>

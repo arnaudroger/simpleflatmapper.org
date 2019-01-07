@@ -24,10 +24,16 @@ Sfm can be plugged into the fetchInto mapping.
 All you need to do is 
 
 {% highlight java %}
-configuration.set(new SfmRecordMapperProvider()));
+configuration.set(SfmRecordMapperProviderFactory.newInstance().newProvider()));
 {% endhighlight %}
 
 when instantiating your DSL. You will then be able to use fetchInto with a cost very close to fetching the record - see the performance section - and the flexibility that SFM offers.
+
+# map subset of select fields
+
+{% highlight java %}
+configuration.set(SfmRecordMapperProviderFactory.newInstance().ignorePropertyNotFound().newProvider()));
+{% endhighlight %}
 
 # SFM on the ResultSet
 
