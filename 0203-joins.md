@@ -56,7 +56,7 @@ There are two ways to specify the keys the first one is on the MapperFactory, li
                 .newMapper(Object.class);
 ```
 
-If you cannot order by id, or another field of the root object, you can since [6.2.0]() enable the `unorderedJoin()` feature.
+If you cannot order by id, or another field of the root object, you can since [6.2.0](/2019/01/22/v6.2.0.html) enable the `unorderedJoin()` feature.
 It is more expensive and will mean all the object will need to be prefetch.
 
 ```java
