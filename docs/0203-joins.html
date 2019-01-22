@@ -195,13 +195,25 @@ A root object is created on id change, so it is important to have the query orde
 </code></pre>
 </div>
 
-<p>For the aggregation to work you will need to be sure to order by the root object - ORDER BY u.id - and also 
+<p>By default for the aggregation to work you will need to be sure to order by the root object - ORDER BY u.id - and also 
 tell the mapper what are the keys of the different objects. Also, it is better to specify all the keys if none is specified the mapper will assume that each row will create a different object.
 There are two ways to specify the keys the first one is on the MapperFactory, like the following with a JDBC mapper.</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code>    <span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">jdbcMapper</span> <span class="o">=</span> 
             <span class="n">JdbcMapperFactory</span>
                 <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"roles_id"</span><span class="o">,</span> <span class="s">"phones_id"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Object</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre>
+</div>
+
+<p>If you cannot order by id, or another field of the root object, you can since <a href="">6.2.0</a> enable the <code class="highlighter-rouge">unorderedJoin()</code> feature.
+It is more expensive and will mean all the object will need to be prefetch.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>    <span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">jdbcMapper</span> <span class="o">=</span> 
+            <span class="n">JdbcMapperFactory</span>
+                <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">unorderedJoin</span><span class="o">()</span>
                 <span class="o">.</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"roles_id"</span><span class="o">,</span> <span class="s">"phones_id"</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Object</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 </code></pre>

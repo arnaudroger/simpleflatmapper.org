@@ -43,9 +43,10 @@ class User {
 }
 ```
 
-For the aggregation to work you will need to be sure to order by the root object - ORDER BY u.id - and also 
+By default for the aggregation to work you will need to be sure to order by the root object - ORDER BY u.id - and also 
 tell the mapper what are the keys of the different objects. Also, it is better to specify all the keys if none is specified the mapper will assume that each row will create a different object.
 There are two ways to specify the keys the first one is on the MapperFactory, like the following with a JDBC mapper.
+
 
 ```java
     JdbcMapper<Object> jdbcMapper = 
@@ -54,6 +55,20 @@ There are two ways to specify the keys the first one is on the MapperFactory, li
                 .addKeys("id", "roles_id", "phones_id")
                 .newMapper(Object.class);
 ```
+
+If you cannot order by id, or another field of the root object, you can since [6.2.0]() enable the `unorderedJoin()` feature.
+It is more expensive and will mean all the object will need to be prefetch.
+
+```java
+    JdbcMapper<Object> jdbcMapper = 
+            JdbcMapperFactory
+                .newInstance()
+                .unorderedJoin()
+                .addKeys("id", "roles_id", "phones_id")
+                .newMapper(Object.class);
+```
+
+
 
 The second way is to annotate the object with @Key on the field, the setter or the getter.
 
