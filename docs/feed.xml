@@ -5,9 +5,27 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Jan 2019 21:18:35 +0000</pubDate>
-    <lastBuildDate>Tue, 22 Jan 2019 21:18:35 +0000</lastBuildDate>
+    <pubDate>Thu, 31 Jan 2019 10:32:30 +0000</pubDate>
+    <lastBuildDate>Thu, 31 Jan 2019 10:32:30 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.2.1</title>
+        <description>&lt;h1 id=&quot;v621&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/188?closed=1&quot;&gt;V6.2.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/605&quot;&gt;#605&lt;/a&gt; poi support for unsorted one to many mapping&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/606&quot;&gt;#606&lt;/a&gt; NoSuchMethodError BiFunction.apply(Ljava/lang/Object;Lorg/simpleflatmapper/map/MappingContext;)Ljava/lang/Boolean;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/607&quot;&gt;#607&lt;/a&gt; Jdbc RS Asm instantiator creation fail on primitive type&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2019/01/24/v6.2.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/01/24/v6.2.1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.2.0</title>
@@ -307,22 +325,6 @@
         <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/11/13/v6.0.8.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/13/v6.0.8.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.7</title>
-        <description>&lt;h1 id=&quot;v607&quot;&gt;V6.0.7&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Partial &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/578&quot;&gt;#579&lt;/a&gt; Identify issue as keys check combinatorial increase with number of discriminator cases. partial fix that work on all object with keys but not on partial keys.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/11/07/v6.0.7.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/07/v6.0.7.html</guid>
         
         
       </item>
