@@ -162,21 +162,22 @@
 
 <ul>
   <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/574">#574</a> detect factory method in enclosing class, if map to ImmutableT.ImmutableTBuilder will use the method ImmutableT.builder() as an instantiator.</li>
-  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/608">#608</a> sql2o allow customisation of factory to support discriminator
-```java
-JdbcMapperFactory jdbcMapperFactory =
-  JdbcMapperFactory
-          .newInstance()
-          .discriminator(Device.class,
-                  “type”,
-                  ResultSet::getString,
-                  b -&gt;
-                          b.when(“e”, ElectricDevice.class)
-                                  .when(“s”, SolarDevice.class));</li>
+  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/608">#608</a> sql2o allow customisation of factory to support discriminator</li>
 </ul>
 
-<p>query.setResultSetHandlerFactoryBuilder(new SfmResultSetHandlerFactoryBuilder(jdbcMapperFactory));
-```</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">JdbcMapperFactory</span> <span class="n">jdbcMapperFactory</span> <span class="o">=</span>
+    <span class="n">JdbcMapperFactory</span>
+            <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">discriminator</span><span class="o">(</span><span class="n">Device</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
+                    <span class="s">"type"</span><span class="o">,</span>
+                    <span class="nl">ResultSet:</span><span class="o">:</span><span class="n">getString</span><span class="o">,</span>
+                    <span class="n">b</span> <span class="o">-&gt;</span>
+                            <span class="n">b</span><span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="s">"e"</span><span class="o">,</span> <span class="n">ElectricDevice</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                                    <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="s">"s"</span><span class="o">,</span> <span class="n">SolarDevice</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
+
+<span class="n">query</span><span class="o">.</span><span class="na">setResultSetHandlerFactoryBuilder</span><span class="o">(</span><span class="k">new</span> <span class="n">SfmResultSetHandlerFactoryBuilder</span><span class="o">(</span><span class="n">jdbcMapperFactory</span><span class="o">));</span>
+</code></pre>
+</div>
 
 
     </div>
