@@ -5,9 +5,39 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 Jan 2019 10:32:30 +0000</pubDate>
-    <lastBuildDate>Thu, 31 Jan 2019 10:32:30 +0000</lastBuildDate>
+    <pubDate>Mon, 11 Feb 2019 23:11:31 +0000</pubDate>
+    <lastBuildDate>Mon, 11 Feb 2019 23:11:31 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.3.0</title>
+        <description>&lt;h1 id=&quot;v630&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/189?closed=1&quot;&gt;V6.3.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/574&quot;&gt;#574&lt;/a&gt; detect factory method in enclosing class, if map to ImmutableT.ImmutableTBuilder will use the method ImmutableT.builder() as an instantiator.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/608&quot;&gt;#608&lt;/a&gt; sql2o allow customisation of factory to support discriminator
+```java
+JdbcMapperFactory jdbcMapperFactory =
+  JdbcMapperFactory
+          .newInstance()
+          .discriminator(Device.class,
+                  “type”,
+                  ResultSet::getString,
+                  b -&amp;gt;
+                          b.when(“e”, ElectricDevice.class)
+                                  .when(“s”, SolarDevice.class));&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;query.setResultSetHandlerFactoryBuilder(new SfmResultSetHandlerFactoryBuilder(jdbcMapperFactory));
+```&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2019/02/11/v6.3.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/02/11/v6.3.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.2.1</title>
@@ -307,24 +337,6 @@
         <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/11/15/v6.0.9.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/15/v6.0.9.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.8</title>
-        <description>&lt;h1 id=&quot;v608&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/178?closed=1&quot;&gt;V6.0.8&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Performance Regression &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/579&quot;&gt;#579&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/584&quot;&gt;#584&lt;/a&gt; Integrate &lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/pull/583&quot;&gt;PR&lt;/a&gt; to support polymorphism on builders, Thanks to &lt;a href=&quot;https://github.com/zenios&quot;&gt;Zenios&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/580&quot;&gt;#580&lt;/a&gt; POI Mapper better handling of null rows&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/11/13/v6.0.8.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/11/13/v6.0.8.html</guid>
         
         
       </item>
