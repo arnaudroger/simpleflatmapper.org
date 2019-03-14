@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Feb 2019 09:52:47 +0000</pubDate>
-    <lastBuildDate>Thu, 14 Feb 2019 09:52:47 +0000</lastBuildDate>
+    <pubDate>Thu, 14 Mar 2019 16:26:46 +0000</pubDate>
+    <lastBuildDate>Thu, 14 Mar 2019 16:26:46 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.4.1</title>
+        <description>&lt;h1 id=&quot;v641&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/191?closed=1&quot;&gt;V6.4.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/614&quot;&gt;#614&lt;/a&gt; discriminator fails on custom getter&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2019/03/13/v6.4.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/03/13/v6.4.1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.4.0</title>
@@ -312,31 +328,6 @@
         <pubDate>Thu, 06 Dec 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/12/06/v6.0.11.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/06/v6.0.11.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.10</title>
-        <description>&lt;h1 id=&quot;v6010&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/180?closed=1&quot;&gt;V6.0.10&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/591&quot;&gt;#591&lt;/a&gt; Fix NPE on SqlParameterSource with ignorePropertyNotFound when one prop is not found&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And a few performance improvement of mapping in general and csv parsing.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/592&quot;&gt;#592&lt;/a&gt; Asm mapper unfold getter/setter if possible&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/593&quot;&gt;#593&lt;/a&gt; Asm csv parser specialized on cell post processor&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/594&quot;&gt;#594&lt;/a&gt; optimise continue/break csv parsing loop&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Performance impact on some mapping benchmark is in the order of 50% speed increased - or 30% latency reduction -, to be confirmed later.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/12/05/v6.0.10.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/05/v6.0.10.html</guid>
         
         
       </item>
