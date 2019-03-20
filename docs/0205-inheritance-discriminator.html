@@ -9,7 +9,7 @@
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Inheritance via discriminator field | SimpleFlatMapper</title>
-<meta name="generator" content="Jekyll v3.4.0" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Inheritance via discriminator field" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="SimpleFlatMapper Inheritance via discriminator field" />
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"url":"http://simpleflatmapper.org/0205-inheritance-discriminator.html","headline":"Inheritance via discriminator field","description":"SimpleFlatMapper Inheritance via discriminator field","@type":"WebPage","@context":"http://schema.org"}</script>
+{"headline":"Inheritance via discriminator field","url":"http://simpleflatmapper.org/0205-inheritance-discriminator.html","description":"SimpleFlatMapper Inheritance via discriminator field","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -154,7 +154,7 @@
 
 <p>For example</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span>
         <span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
                 <span class="o">.</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"students_id"</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">discriminator</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> 
@@ -166,14 +166,13 @@
                                     <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="s">"professor"</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
                 <span class="o">)</span>
                 <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>That will create a mapper that will either create a <code class="highlighter-rouge">Student</code> object when the <code class="highlighter-rouge">person_type</code> column is equals to <code class="highlighter-rouge">"student"</code> or a <code class="highlighter-rouge">Person</code> when equals to <code class="highlighter-rouge">"professor"</code>.</p>
 
 <p>It is also possible to use a Predicate instead of a value to match.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span>
         <span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
                 <span class="o">.</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"students_id"</span><span class="o">)</span>
                 <span class="o">.</span><span class="na">discriminator</span><span class="o">(</span>
@@ -185,14 +184,13 @@
                                 <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
                 <span class="o">)</span>
                 <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>In that case it will instantiate a <code class="highlighter-rouge">Student</code> when <code class="highlighter-rouge">person_type</code> is <code class="highlighter-rouge">"student"</code> otherwise it will default to Professor.</p>
 
 <p>If you need to discriminate on more that one column you will need to use the Predicate<S>.</S></p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span>
         <span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
                 <span class="o">.</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"students_id"</span><span class="o">)</span>
@@ -212,8 +210,7 @@
                                 <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="n">rs</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
                 <span class="o">)</span>
                 <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
         

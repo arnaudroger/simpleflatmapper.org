@@ -9,7 +9,7 @@
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Release v3.12.2 | SimpleFlatMapper</title>
-<meta name="generator" content="Jekyll v3.4.0" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Release v3.12.2" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="V3.12.2" />
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2017/07/11/v3.12.2.html"},"url":"http://simpleflatmapper.org/2017/07/11/v3.12.2.html","headline":"Release v3.12.2","dateModified":"2017-07-11T00:00:00+01:00","datePublished":"2017-07-11T00:00:00+01:00","description":"V3.12.2","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"headline":"Release v3.12.2","dateModified":"2017-07-11T00:00:00+01:00","datePublished":"2017-07-11T00:00:00+01:00","url":"http://simpleflatmapper.org/2017/07/11/v3.12.2.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2017/07/11/v3.12.2.html"},"description":"V3.12.2","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -162,7 +162,7 @@
 
 <ul>
   <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/451">451</a> Speculative matching in list should not invalidate append setter.
-    <div class="language-java highlighter-rouge"><pre class="highlight"><code>      <span class="n">ClassMeta</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;&gt;</span> <span class="n">classMeta</span> <span class="o">=</span> <span class="n">ReflectionService</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">getClassMeta</span><span class="o">(</span><span class="k">new</span> <span class="n">TypeReference</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;&gt;()</span> <span class="o">{</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="n">ClassMeta</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;&gt;</span> <span class="n">classMeta</span> <span class="o">=</span> <span class="n">ReflectionService</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">getClassMeta</span><span class="o">(</span><span class="k">new</span> <span class="n">TypeReference</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;&gt;()</span> <span class="o">{</span>
       <span class="o">}.</span><span class="na">getType</span><span class="o">());</span>
 
       <span class="n">PropertyFinder</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;&gt;</span> <span class="n">finder</span> <span class="o">=</span> <span class="n">classMeta</span><span class="o">.</span><span class="na">newPropertyFinder</span><span class="o">(</span><span class="k">new</span> <span class="n">Predicate</span><span class="o">&lt;</span><span class="n">PropertyMeta</span><span class="o">&lt;?,</span> <span class="o">?&gt;&gt;()</span> <span class="o">{</span>
@@ -176,8 +176,7 @@
       <span class="n">SubPropertyMeta</span> <span class="n">n</span> <span class="o">=</span> <span class="o">(</span><span class="n">SubPropertyMeta</span><span class="o">)</span><span class="n">finder</span><span class="o">.</span><span class="na">findProperty</span><span class="o">(</span><span class="n">DefaultPropertyNameMatcher</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"b_n"</span><span class="o">));</span>
 
       <span class="n">assertEquals</span><span class="o">(</span><span class="n">AppendCollectionSetter</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">n</span><span class="o">.</span><span class="na">getOwnerProperty</span><span class="o">().</span><span class="na">getSetter</span><span class="o">().</span><span class="na">getClass</span><span class="o">());</span>
-</code></pre>
-    </div>
+</code></pre></div>    </div>
     <p>Append setter are used for joins.</p>
   </li>
 </ul>

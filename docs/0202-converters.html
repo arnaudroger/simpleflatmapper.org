@@ -9,7 +9,7 @@
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Converters | SimpleFlatMapper</title>
-<meta name="generator" content="Jekyll v3.4.0" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Converters" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="SimpleFlatMapper java library converters" />
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"url":"http://simpleflatmapper.org/0202-converters.html","headline":"Converters","description":"SimpleFlatMapper java library converters","@type":"WebPage","@context":"http://schema.org"}</script>
+{"headline":"Converters","url":"http://simpleflatmapper.org/0202-converters.html","description":"SimpleFlatMapper java library converters","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -190,11 +190,10 @@ one it will then look for a Converter that gets transform to a supported type.</
 
 <p>It’s also possible to supply your own Converter&lt;I, O&gt; for a specific field by adding a ConverterProperty.</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>    <span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
         <span class="o">.</span><span class="na">addColumnProperty</span><span class="o">(</span><span class="s">"my_enum_column"</span><span class="o">,</span> <span class="n">ConverterProperty</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="nl">MyEnum:</span><span class="o">:</span><span class="n">factoryMethod</span><span class="o">))</span>
         <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">MyClass</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This is not yet supported for csv, but should be in the next release - 3.17.2 -. The converter for csv must accept a String as input.</p>
 
@@ -202,20 +201,18 @@ one it will then look for a Converter that gets transform to a supported type.</
 
 <ol>
   <li>Create a <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-converter/3.7/index.html?org/simpleflatmapper/converter/ConverterFactoryProducer.html"><code class="highlighter-rouge">org.simpleflatmapper.converter.ConverterFactoryProducer</code></a>
-    <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyConverterFactoryProducer</span> <span class="kd">extends</span> <span class="n">AbstractConverterFactoryProducer</span> <span class="o">{</span>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyConverterFactoryProducer</span> <span class="kd">extends</span> <span class="n">AbstractConverterFactoryProducer</span> <span class="o">{</span>
 
  <span class="nd">@Override</span>
  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">produce</span><span class="o">(</span><span class="n">Consumer</span><span class="o">&lt;?</span> <span class="kd">super</span> <span class="n">ConverterFactory</span><span class="o">&lt;?,</span> <span class="o">?&gt;&gt;</span> <span class="n">consumer</span><span class="o">)</span> <span class="o">{</span>
      <span class="n">constantConverter</span><span class="o">(</span><span class="n">consumer</span><span class="o">,</span> <span class="n">Date</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">MyType</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">DateToMyTypeConverter</span><span class="o">());</span>
  <span class="o">}</span>
 <span class="o">}</span>
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>register the service in the <code class="highlighter-rouge">META-INF/services/org.simpleflatmapper.converter.ConverterFactoryProducer file</code>
-    <div class="highlighter-rouge"><pre class="highlight"><code>mypackage.MyConverterFactoryProducer
-</code></pre>
-    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mypackage.MyConverterFactoryProducer
+</code></pre></div>    </div>
   </li>
 </ol>
 

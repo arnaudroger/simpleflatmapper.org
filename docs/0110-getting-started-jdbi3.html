@@ -9,7 +9,7 @@
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Getting Started JDBI3 | SimpleFlatMapper</title>
-<meta name="generator" content="Jekyll v3.4.0" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Getting Started JDBI3" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="SimpleFlatMapper java jdbi3 ResultSetMapper mapper deep object" />
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"url":"http://simpleflatmapper.org/0110-getting-started-jdbi3.html","headline":"Getting Started JDBI3","description":"SimpleFlatMapper java jdbi3 ResultSetMapper mapper deep object","@type":"WebPage","@context":"http://schema.org"}</script>
+{"headline":"Getting Started JDBI3","url":"http://simpleflatmapper.org/0110-getting-started-jdbi3.html","description":"SimpleFlatMapper java jdbi3 ResultSetMapper mapper deep object","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -287,17 +287,15 @@
 <h2 id="init-plugin">Init plugin</h2>
 <p>You can register the SfmJdbiPlugin</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Jdbi</span> <span class="n">dbi</span> <span class="o">=</span> <span class="n">Jdbi</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">DbHelper</span><span class="o">.</span><span class="na">getHsqlDataSource</span><span class="o">());</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Jdbi</span> <span class="n">dbi</span> <span class="o">=</span> <span class="n">Jdbi</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">DbHelper</span><span class="o">.</span><span class="na">getHsqlDataSource</span><span class="o">());</span>
 <span class="n">dbi</span><span class="o">.</span><span class="na">installPlugins</span><span class="o">();</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>or</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Jdbi</span> <span class="n">dbi</span> <span class="o">=</span> <span class="n">Jdbi</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">DbHelper</span><span class="o">.</span><span class="na">getHsqlDataSource</span><span class="o">());</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Jdbi</span> <span class="n">dbi</span> <span class="o">=</span> <span class="n">Jdbi</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">DbHelper</span><span class="o">.</span><span class="na">getHsqlDataSource</span><span class="o">());</span>
 <span class="n">dbi</span><span class="o">.</span><span class="na">installPlugin</span><span class="o">(</span><span class="k">new</span> <span class="n">SfmJdbiPlugin</span><span class="o">());</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>to register the Sfm RowMapperFactory.</p>
 

@@ -9,7 +9,7 @@
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Release v4.0.0 | SimpleFlatMapper</title>
-<meta name="generator" content="Jekyll v3.4.0" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Release v4.0.0" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="V4.0.0" />
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2018/08/14/v4.0.0.html"},"url":"http://simpleflatmapper.org/2018/08/14/v4.0.0.html","headline":"Release v4.0.0","dateModified":"2018-08-14T00:00:00+01:00","datePublished":"2018-08-14T00:00:00+01:00","description":"V4.0.0","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"headline":"Release v4.0.0","dateModified":"2018-08-14T00:00:00+01:00","datePublished":"2018-08-14T00:00:00+01:00","url":"http://simpleflatmapper.org/2018/08/14/v4.0.0.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2018/08/14/v4.0.0.html"},"description":"V4.0.0","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -176,9 +176,8 @@ It’s mostly source compatible to the exception of the CsvParser package rename
 
 <p>If you are wrapping the collection in an unmodifiableCollection like</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>    <span class="kd">private</span> <span class="nf">A</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">bs</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">bs</span> <span class="o">=</span> <span class="n">Collections</span><span class="o">.</span><span class="na">unmodifiableSet</span><span class="o">(</span><span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;&gt;(</span><span class="n">bs</span><span class="o">));</span> <span class="o">}</span> 
-</code></pre>
-</div>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">private</span> <span class="nf">A</span><span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">B</span><span class="o">&gt;</span> <span class="n">bs</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">bs</span> <span class="o">=</span> <span class="n">Collections</span><span class="o">.</span><span class="na">unmodifiableSet</span><span class="o">(</span><span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;&gt;(</span><span class="n">bs</span><span class="o">));</span> <span class="o">}</span> 
+</code></pre></div></div>
 
 <p>you will need to annotate your class with <code class="highlighter-rouge">@ModifyInjectedParams</code> annotation - it is possible to had a parameter to the config but that one is not yet exposed.</p>
 
@@ -199,15 +198,14 @@ It’s mostly source compatible to the exception of the CsvParser package rename
 
 <p>You can now create a mapper with error handling.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>		CsvMapper&lt;Result&lt;T517, CsvColumnKey&gt;&gt; mapper = 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		CsvMapper&lt;Result&lt;T517, CsvColumnKey&gt;&gt; mapper = 
 				CsvMapperFactory.newInstance()
 					.newErrorCollectingMapper(T517.class);
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>That will return a Result will contains the mapped object and any mapping errors if any occured.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>		Iterator&lt;Result&lt;T517, CsvColumnKey&gt;&gt; iterator = mapper.iterator(new StringReader("v1,v2\n1,a\na,2"));
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		Iterator&lt;Result&lt;T517, CsvColumnKey&gt;&gt; iterator = mapper.iterator(new StringReader("v1,v2\n1,a\na,2"));
 
 		Result&lt;T517, CsvColumnKey&gt; t = iterator.next();
 		
@@ -215,8 +213,7 @@ It’s mostly source compatible to the exception of the CsvParser package rename
 		assertNull(t.getValue().v2);
 		assertEquals(1, t.getErrors().size());
 		assertEquals("v2", t.getErrors().get(0).getKey().getName());
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>you can plug the mapper in the <code class="highlighter-rouge">CsvParser</code> using the <code class="highlighter-rouge">mapTo</code> dsl function.</p>
 

@@ -9,7 +9,7 @@
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Release v3.16.0 | SimpleFlatMapper</title>
-<meta name="generator" content="Jekyll v3.4.0" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Release v3.16.0" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="V3.16.0" />
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2018/03/12/v3.16.0.html"},"url":"http://simpleflatmapper.org/2018/03/12/v3.16.0.html","headline":"Release v3.16.0","dateModified":"2018-03-12T00:00:00+00:00","datePublished":"2018-03-12T00:00:00+00:00","description":"V3.16.0","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"headline":"Release v3.16.0","dateModified":"2018-03-12T00:00:00+00:00","datePublished":"2018-03-12T00:00:00+00:00","url":"http://simpleflatmapper.org/2018/03/12/v3.16.0.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2018/03/12/v3.16.0.html"},"description":"V3.16.0","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -166,17 +166,15 @@
 
 <p>in 3.15.11 it could have map too</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bar -&gt; [0].element0.bar
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bar -&gt; [0].element0.bar
 bar -&gt; [1].element0.bar
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>from 3.16.0 it will always map too</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bar -&gt; [0].element0.bar
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bar -&gt; [0].element0.bar
 bar -&gt; [0].element1.bar
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>which seems far more correct.
 it is still possible to force the first mapping by renaming the column in the sql or via an alias to</p>

@@ -9,7 +9,7 @@
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Release v3.17.0 | SimpleFlatMapper</title>
-<meta name="generator" content="Jekyll v3.4.0" />
+<meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Release v3.17.0" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="V3.17.0" />
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2018/04/04/v3.17.0.html"},"url":"http://simpleflatmapper.org/2018/04/04/v3.17.0.html","headline":"Release v3.17.0","dateModified":"2018-04-04T00:00:00+01:00","datePublished":"2018-04-04T00:00:00+01:00","description":"V3.17.0","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"headline":"Release v3.17.0","dateModified":"2018-04-04T00:00:00+01:00","datePublished":"2018-04-04T00:00:00+01:00","url":"http://simpleflatmapper.org/2018/04/04/v3.17.0.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2018/04/04/v3.17.0.html"},"description":"V3.17.0","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -168,16 +168,15 @@
 </ul>
 
 <p>You can now use the ParallelReader directly from the DSL.</p>
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>    <span class="n">CsvParser</span><span class="o">.</span><span class="na">dsl</span><span class="o">()</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">CsvParser</span><span class="o">.</span><span class="na">dsl</span><span class="o">()</span>
         <span class="o">.</span><span class="na">parallelReader</span><span class="o">()</span>
         <span class="o">.</span><span class="na">iterator</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"mycsv.csv"</span><span class="o">));</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Only recommended for bigish files - 20 MB at least -, and if you have spare cores.</p>
 
 <p><a href="https://github.com/arnaudroger/mapping-benchmark/tree/master/sfm-csv">mapping-benchmark</a> against Univocity 2.6.1 for 1.000.000 rows.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Benchmark                                       (parallel)  (quotes)    Score   Error  Units
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Benchmark                                       (parallel)  (quotes)    Score   Error  Units
 SfmCsvParserBenchmark.parseCsvIterate           false          false  330.402 ± 2.923  ms/op
 UnivocityCsvParserBenchmark.parseCsv            false          false  330.099 ± 0.942  ms/op
 
@@ -191,8 +190,7 @@ UnivocityCsvParserBenchmark.parseCsv             true          false  210.129 ±
 SfmCsvParserBenchmark.parseCsvIterate            true           true  226.081 ± 2.477  ms/op
 UnivocityConcurrentCsvParserBenchmark.parseCsv    N/A           true  239.410 ± 2.555  ms/op
 UnivocityCsvParserBenchmark.parseCsv             true           true  250.737 ± 2.526  ms/op
-</code></pre>
-</div>
+</code></pre></div></div>
 
     </div>
 
