@@ -5,9 +5,31 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Mar 2019 22:51:38 +0000</pubDate>
-    <lastBuildDate>Thu, 14 Mar 2019 22:51:38 +0000</lastBuildDate>
+    <pubDate>Wed, 20 Mar 2019 10:27:06 +0000</pubDate>
+    <lastBuildDate>Wed, 20 Mar 2019 10:27:06 +0000</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Release v6.5.0</title>
+        <description>&lt;h1 id=&quot;v650&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/195?closed=1&quot;&gt;V6.5.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/619&quot;&gt;#619&lt;/a&gt; Object not injected when getter is Optional&lt;T&gt;&lt;/T&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Beware there was some api change in the PropertyFinder object, you would only care if you implement your own mapper. 
+Hence made the executive choice not to make it a major, as I guess nobody is doing that.&lt;/p&gt;
+
+&lt;p&gt;When looking in sub properties, we did not filter out parents with no injection or getters, 
+leading to the property being linked to a NullSetter parent.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 19 Mar 2019 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2019/03/19/v6.5.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/03/19/v6.5.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.4.2</title>
@@ -312,22 +334,6 @@
         <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/12/19/v6.0.13.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/19/v6.0.13.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.11</title>
-        <description>&lt;h1 id=&quot;v6013&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/182?closed=1&quot;&gt;V6.0.13&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/597&quot;&gt;#597&lt;/a&gt; fix left over debugging statement&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/12/13/v6.0.12.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/13/v6.0.12.html</guid>
         
         
       </item>
