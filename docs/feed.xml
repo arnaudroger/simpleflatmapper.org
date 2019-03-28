@@ -5,9 +5,32 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Mar 2019 10:29:25 +0000</pubDate>
-    <lastBuildDate>Wed, 20 Mar 2019 10:29:25 +0000</lastBuildDate>
+    <pubDate>Thu, 28 Mar 2019 09:48:41 +0000</pubDate>
+    <lastBuildDate>Thu, 28 Mar 2019 09:48:41 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Release v6.6.0</title>
+        <description>&lt;h1 id=&quot;v660&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/197?closed=1&quot;&gt;V6.6.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/620&quot;&gt;#620&lt;/a&gt; add ignoreColumns on XMapperFactory&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/622&quot;&gt;#622&lt;/a&gt; ConverterService when adapting contextual adapter does not return null if converter is null&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/623&quot;&gt;#623&lt;/a&gt; do not break on spring boot devtools reload when asm activated&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/618&quot;&gt;#618&lt;/a&gt; make it easier to provide your getter using the addGetterForType methods&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Beware there was some api change in the AsmFactory and ReflectionService to better handle ClassLoader and byte code generation. 
+You would only care if you implement your own mapper,&lt;br /&gt;
+Hence made the executive choice not to make it a major, as I guess nobody is doing that.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
+        <link>http://simpleflatmapper.org/2019/03/27/v6.6.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/03/27/v6.6.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.5.0</title>
@@ -312,23 +335,6 @@ leading to the property being linked to a NullSetter parent.&lt;/p&gt;
         <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2018/12/27/v6.1.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/27/v6.1.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.0.13</title>
-        <description>&lt;h1 id=&quot;v6013&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/183?closed=1&quot;&gt;V6.0.13&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/598&quot;&gt;#598&lt;/a&gt; make it easier to defined aliases on CsvParser dsl&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/599&quot;&gt;#599&lt;/a&gt; csv mapper ignore trailing empty headers&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/12/19/v6.0.13.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/19/v6.0.13.html</guid>
         
         
       </item>
