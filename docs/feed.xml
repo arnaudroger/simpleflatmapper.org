@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Mar 2019 09:48:41 +0000</pubDate>
-    <lastBuildDate>Thu, 28 Mar 2019 09:48:41 +0000</lastBuildDate>
+    <pubDate>Wed, 03 Apr 2019 10:01:33 +0100</pubDate>
+    <lastBuildDate>Wed, 03 Apr 2019 10:01:33 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Release v6.61</title>
+        <description>&lt;h1 id=&quot;v661&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/198?closed=1&quot;&gt;V6.6.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/625&quot;&gt;#625&lt;/a&gt; sfm-springjdbc: misparsed parameter name on carriage return&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 02 Apr 2019 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2019/04/02/v6.6.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/04/02/v6.6.1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.6.0</title>
@@ -319,22 +335,6 @@ leading to the property being linked to a NullSetter parent.&lt;/p&gt;
         <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2019/01/06/v6.1.1.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2019/01/06/v6.1.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.1.0</title>
-        <description>&lt;h1 id=&quot;v610&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/185?closed=1&quot;&gt;V6.1.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/572&quot;&gt;#572&lt;/a&gt; filter property on wether we can get a getter or not&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2018/12/27/v6.1.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2018/12/27/v6.1.0.html</guid>
         
         
       </item>
