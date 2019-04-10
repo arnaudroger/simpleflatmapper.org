@@ -5,12 +5,28 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Apr 2019 13:36:09 +0100</pubDate>
-    <lastBuildDate>Mon, 08 Apr 2019 13:36:09 +0100</lastBuildDate>
+    <pubDate>Wed, 10 Apr 2019 22:38:01 +0100</pubDate>
+    <lastBuildDate>Wed, 10 Apr 2019 22:38:01 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Release v6.61</title>
+        <title>Release v6.6.2</title>
+        <description>&lt;h1 id=&quot;v662&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/198?closed=1&quot;&gt;V6.6.2&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/624&quot;&gt;#624&lt;/a&gt;  IllegalStateException: Invalid state currentKey is null when mapping one to many when calling map&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 10 Apr 2019 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2019/04/10/v6.6.2.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/04/10/v6.6.2.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Release v6.6.1</title>
         <description>&lt;h1 id=&quot;v661&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/198?closed=1&quot;&gt;V6.6.1&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -319,22 +335,6 @@ leading to the property being linked to a NullSetter parent.&lt;/p&gt;
         <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2019/01/22/v6.2.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2019/01/22/v6.2.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.1.1</title>
-        <description>&lt;h1 id=&quot;v611&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/186?closed=1&quot;&gt;V6.1.1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/602&quot;&gt;#602&lt;/a&gt; fix behavior change in error callback&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2019/01/06/v6.1.1.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2019/01/06/v6.1.1.html</guid>
         
         
       </item>
