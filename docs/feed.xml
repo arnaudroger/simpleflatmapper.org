@@ -5,13 +5,13 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Apr 2019 22:38:01 +0100</pubDate>
-    <lastBuildDate>Wed, 10 Apr 2019 22:38:01 +0100</lastBuildDate>
+    <pubDate>Wed, 10 Apr 2019 22:39:03 +0100</pubDate>
+    <lastBuildDate>Wed, 10 Apr 2019 22:39:03 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Release v6.6.2</title>
-        <description>&lt;h1 id=&quot;v662&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/198?closed=1&quot;&gt;V6.6.2&lt;/a&gt;&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;v662&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/199?closed=1&quot;&gt;V6.6.2&lt;/a&gt;&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/624&quot;&gt;#624&lt;/a&gt;  IllegalStateException: Invalid state currentKey is null when mapping one to many when calling map&lt;/li&gt;
