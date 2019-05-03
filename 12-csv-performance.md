@@ -7,7 +7,9 @@ description: SimpleFlatMapper java library fast csv parser performance compariso
 Those results are from Jan 2017 and needs updating, take with caution.
 
 sfm-csv 3.5
+
 univocity 2.2.3
+
 jackson-dataformat-csv 2.8.5
  
 
