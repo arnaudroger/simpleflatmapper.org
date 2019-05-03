@@ -22,7 +22,7 @@ The score are time in ms to parse the file, the lower the better. The file is 14
 
 Why only those 3? because the other that I tested are pretty slow in compaison. If you think your csv parser is worth benchmark [Open an issue](https://github.com/arnaudroger/mapping-benchmark/issues/new).
 
-## Parsing a unescaped [Csv](http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz)
+## Parsing an unescaped [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz)
 
 | Parser        | avgt | 90th | 95th | 99th |  avgt MB/s |
 | ------------- | ----:| -----:| -----:| -----:| ----:|
@@ -32,7 +32,7 @@ Why only those 3? because the other that I tested are pretty slow in compaison. 
 
 ![Parce csv no quotes](/assets/perf/3.5/no_quotes.png)
 
-## Parsing a escaped version of [Csv](http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz)
+## Parsing an escaped version of [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz)
 
 | Parser        | avgt | 90th | 95th | 99th | avgt MB/s |
 | ------------- | ----:| -----:| -----:| -----:| ----:|
@@ -42,7 +42,7 @@ Why only those 3? because the other that I tested are pretty slow in compaison. 
 
 ![Parce csv with quotes](/assets/perf/3.5/quotes.png)
 
-## Parsing a unescaped [Csv](http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz) with [ParallelReader](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java)
+## Parsing an unescaped [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz) with [ParallelReader](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java)
 
 ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelReader.
 
@@ -55,7 +55,7 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 
 ![Parce csv, Parallel reader, no quotes](/assets/perf/3.5/par_noquotes.png)
 
-## Parsing a escaped version of [Csv](http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz) with [ParallelReader](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java)
+## Parsing a escaped version of [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz) with [ParallelReader](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java)
 
 ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelReader.
 

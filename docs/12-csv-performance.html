@@ -167,7 +167,7 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
 
 <p>Why only those 3? because the other that I tested are pretty slow in compaison. If you think your csv parser is worth benchmark <a href="https://github.com/arnaudroger/mapping-benchmark/issues/new">Open an issue</a>.</p>
 
-<h2 id="parsing-a-unescaped-csv">Parsing a unescaped <a href="http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz">Csv</a></h2>
+<h2 id="parsing-an-unescaped-csv">Parsing an unescaped <a href="https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz">Csv</a></h2>
 
 <table>
   <thead>
@@ -210,7 +210,7 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
 
 <p><img src="/assets/perf/3.5/no_quotes.png" alt="Parce csv no quotes" /></p>
 
-<h2 id="parsing-a-escaped-version-of-csv">Parsing a escaped version of <a href="http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz">Csv</a></h2>
+<h2 id="parsing-an-escaped-version-of-csv">Parsing an escaped version of <a href="https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz">Csv</a></h2>
 
 <table>
   <thead>
@@ -253,7 +253,7 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
 
 <p><img src="/assets/perf/3.5/quotes.png" alt="Parce csv with quotes" /></p>
 
-<h2 id="parsing-a-unescaped-csv-with-parallelreader">Parsing a unescaped <a href="http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz">Csv</a> with <a href="https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java">ParallelReader</a></h2>
+<h2 id="parsing-an-unescaped-csv-with-parallelreader">Parsing an unescaped <a href="https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz">Csv</a> with <a href="https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java">ParallelReader</a></h2>
 
 <p>ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelReader.</p>
 
@@ -306,7 +306,7 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
 
 <p><img src="/assets/perf/3.5/par_noquotes.png" alt="Parce csv, Parallel reader, no quotes" /></p>
 
-<h2 id="parsing-a-escaped-version-of-csv-with-parallelreader">Parsing a escaped version of <a href="http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz">Csv</a> with <a href="https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java">ParallelReader</a></h2>
+<h2 id="parsing-a-escaped-version-of-csv-with-parallelreader">Parsing a escaped version of <a href="https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz">Csv</a> with <a href="https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java">ParallelReader</a></h2>
 
 <p>ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelReader.</p>
 
