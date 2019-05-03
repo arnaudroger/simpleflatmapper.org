@@ -3,6 +3,9 @@ layout: default
 title: Performance comparison
 description: SimpleFlatMapper java library fast csv parser performance comparison jackson-csv univocity
 ---
+
+Those results is relatively old and number needs updating, take with caution. Also unfortunatly the library version was not noted at the time...
+
 [Benchmark Code](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv)
 
 The benchmarks ran on a P500 Lenovo, result might differ - and do, ran on old i5, Univocity is faster than sfm.
