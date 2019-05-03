@@ -4,7 +4,12 @@ title: Performance comparison
 description: SimpleFlatMapper java library fast csv parser performance comparison jackson-csv univocity
 ---
 
-Those results is relatively old and number needs updating, take with caution. Also unfortunatly the library version was not noted at the time...
+Those results are from Jan 2017 and needs updating, take with caution.
+
+sfm-csv 3.5
+univocity 2.2.3
+jackson-dataformat-csv 2.8.5
+ 
 
 [Benchmark Code](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv)
 
