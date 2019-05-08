@@ -321,68 +321,6 @@ If you think your csv parser is worth benchmark <a href="https://github.com/arna
   </tbody>
 </table>
 
-<h1 id="number-of-rows-effect-on-parsingmapping-no-quotes">Number of rows effect on parsing/mapping no quotes</h1>
-
-<p>Those results are from Jan 2017 and needs updating, take with caution.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Library</th>
-      <th style="text-align: right">Version</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Jackson</td>
-      <td style="text-align: right">2.8.5</td>
-    </tr>
-    <tr>
-      <td>Sfm</td>
-      <td style="text-align: right">3.5</td>
-    </tr>
-    <tr>
-      <td>Univocity</td>
-      <td style="text-align: right">2.2.3</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><a href="https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/jmh-result-3.5-rows.csv">Raw Data</a></p>
-
-<p>All chart represent the time in us taken to read a file with the specified number of rows, the lower the better.</p>
-<ul>
-  <li>Orange csv mapping</li>
-  <li>Brown csv mapping with parallel reader or concurrent univocity</li>
-  <li>blue csv parser</li>
-  <li>dark blue csv parser with parallel reader or concurrent univocity</li>
-</ul>
-
-<h2 id="1-row">1 row</h2>
-<p><img src="/assets/perf/3.5/row_1.png" alt="1 Row" /></p>
-
-<h2 id="10-rows">10 rows</h2>
-<p><img src="/assets/perf/3.5/row_10.png" alt="10 Row" /></p>
-
-<h2 id="1000-rows">1000 rows</h2>
-<p><img src="/assets/perf/3.5/row_1000.png" alt="1000 Row" /></p>
-
-<h2 id="100000-rows">100,000 rows</h2>
-<p><img src="/assets/perf/3.5/row_100000.png" alt="100,000 Row" /></p>
-
-<h2 id="15m-rows">1.5m rows</h2>
-<p><img src="/assets/perf/3.5/row_1_5m.png" alt="1.5m Row" /></p>
-
-<h2 id="summary">Summary</h2>
-
-<p>Sfm and Jackson have similar performances with small size files, Univocity has a fix cost that show on those file
-make it not very suitable for those.
-Using parallel for small size file is a bad idea.</p>
-
-<p>Jackson mapper underperform and lag behind from 1000 rows. Sfm mapper is clearly in front on most sizes from 1000.</p>
-
-<p>Also surprisingly jackson perform slower with the parallel reader that would need more investigation to 
-identify where the contention comes from.</p>
 
 
         
