@@ -163,12 +163,10 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
 
 <h1 id="csv-parsing-unescapedescaped-and-parallel">Csv Parsing Unescaped/Escaped and Parallel</h1>
 
-<p>Using</p>
-
 <table>
   <thead>
     <tr>
-      <th> </th>
+      <th>Library</th>
       <th style="text-align: right">Version</th>
     </tr>
   </thead>
@@ -188,9 +186,10 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
   </tbody>
 </table>
 
-<p>The score are time in ms to parse the file, the lower the better. The file is 145 MB uncompressed and 188MB with quotes.</p>
+<p>The <a href="https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz">csv file</a> parsed is 145 MB unescaped and 188MB with quotes.</p>
 
-<p>Why only those 3? because the other that I tested are pretty slow in compaison. If you think your csv parser is worth benchmark <a href="https://github.com/arnaudroger/mapping-benchmark/issues/new">Open an issue</a>.</p>
+<p>Why only those 3? because the other that I tested are pretty slow in comparison.
+If you think your csv parser is worth benchmark <a href="https://github.com/arnaudroger/mapping-benchmark/issues/new">Open an issue</a>.</p>
 
 <h2 id="parsing-an-unescaped-csv">Parsing an unescaped <a href="https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz">Csv</a></h2>
 
@@ -198,7 +197,7 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
   <thead>
     <tr>
       <th>Parser</th>
-      <th style="text-align: right">avgt</th>
+      <th style="text-align: right">avgt ms</th>
       <th style="text-align: right">avgt MB/s</th>
     </tr>
   </thead>
@@ -227,7 +226,7 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
   <thead>
     <tr>
       <th>Parser</th>
-      <th style="text-align: right">avgt</th>
+      <th style="text-align: right">avgt ms</th>
       <th style="text-align: right">avgt MB/s</th>
     </tr>
   </thead>
@@ -258,7 +257,7 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
   <thead>
     <tr>
       <th>Parser</th>
-      <th style="text-align: right">avgt</th>
+      <th style="text-align: right">avgt ms</th>
       <th style="text-align: right">avgt MB/s</th>
     </tr>
   </thead>
@@ -294,7 +293,7 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
   <thead>
     <tr>
       <th>Parser</th>
-      <th style="text-align: right">avgt</th>
+      <th style="text-align: right">avgt ms</th>
       <th style="text-align: right">avgt MB/s</th>
     </tr>
   </thead>
@@ -326,11 +325,28 @@ All the parallel test appart from ConcurrentUnivocity uses a <a href="https://gi
 
 <p>Those results are from Jan 2017 and needs updating, take with caution.</p>
 
-<p>sfm-csv 3.5</p>
-
-<p>univocity 2.2.3</p>
-
-<p>jackson-dataformat-csv 2.8.5</p>
+<table>
+  <thead>
+    <tr>
+      <th>Library</th>
+      <th style="text-align: right">Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jackson</td>
+      <td style="text-align: right">2.8.5</td>
+    </tr>
+    <tr>
+      <td>Sfm</td>
+      <td style="text-align: right">3.5</td>
+    </tr>
+    <tr>
+      <td>Univocity</td>
+      <td style="text-align: right">2.2.3</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><a href="https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/jmh-result-3.5-rows.csv">Raw Data</a></p>
 

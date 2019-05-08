@@ -19,24 +19,22 @@ All the parallel test appart from ConcurrentUnivocity uses a [ParallelReader](ht
 
 # Csv Parsing Unescaped/Escaped and Parallel
 
-Using
 
-
-|         | Version |
+|     Library    | Version |
 | ------------- | ----:|
 | Jackson       | 2.9.8 | 
 | Sfm           | 6.7.0 |
 | Univocity     | 2.8.1 |
 
 
+The [csv file](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz) parsed is 145 MB unescaped and 188MB with quotes.
 
-The score are time in ms to parse the file, the lower the better. The file is 145 MB uncompressed and 188MB with quotes.
-
-Why only those 3? because the other that I tested are pretty slow in compaison. If you think your csv parser is worth benchmark [Open an issue](https://github.com/arnaudroger/mapping-benchmark/issues/new).
+Why only those 3? because the other that I tested are pretty slow in comparison.
+If you think your csv parser is worth benchmark [Open an issue](https://github.com/arnaudroger/mapping-benchmark/issues/new).
 
 ## Parsing an unescaped [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz)
 
-| Parser        | avgt |  avgt MB/s |
+| Parser        | avgt ms |  avgt MB/s |
 | ------------- | ----:| -----:| 
 | Jackson       | 1593 |  90   |  
 | Sfm           | 1040 | 139   | 
@@ -44,7 +42,7 @@ Why only those 3? because the other that I tested are pretty slow in compaison. 
 
 ## Parsing an escaped version of [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz)
 
-| Parser        | avgt | avgt MB/s |
+| Parser        | avgt ms | avgt MB/s |
 | ------------- | ----:| -----:|
 | Jackson       | 1592 | 118  |
 | Sfm           | 1103 | 170  |
@@ -54,7 +52,7 @@ Why only those 3? because the other that I tested are pretty slow in compaison. 
 
 ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelReader.
 
-| Parser              | avgt | avgt MB/s |
+| Parser              | avgt ms | avgt MB/s |
 | -------------       | ----:| -----:|
 | Jackson             | 1243 | 116 |
 | Sfm                 |  740 | 195 |
@@ -66,7 +64,7 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 
 ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelReader.
 
-| Parser        | avgt | avgt MB/s |
+| Parser        | avgt ms | avgt MB/s |
 | ------------- | ----:| -----:|
 | Jackson             | 1342 | 140 |
 | Sfm                 |  812 | 231 |
@@ -78,11 +76,12 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 
 Those results are from Jan 2017 and needs updating, take with caution.
 
-sfm-csv 3.5
 
-univocity 2.2.3
-
-jackson-dataformat-csv 2.8.5
+|     Library    | Version |
+| ------------- | ----:|
+| Jackson       | 2.8.5 | 
+| Sfm           |   3.5 |
+| Univocity     | 2.2.3 |
 
 
 [Raw Data](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/jmh-result-3.5-rows.csv)
