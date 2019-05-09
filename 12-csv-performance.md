@@ -36,21 +36,21 @@ If you think your csv parser is worth benchmark [Open an issue](https://github.c
 
 | Parser        | avgt ms |  avgt MB/s |
 | ------------- | ----:| -----:| 
-| Jackson       | 1593 |  90   |  
-| Univocity     | 1256 | 115   | 
+| Sfm Raw      | 747  | 194   | 
 | Sfm Callback | 1040 | 139   | 
 | Sfm Iterate  | 1127 | 128   | 
-| Sfm Raw      | 747  | 194   | 
+| Univocity     | 1256 | 115   | 
+| Jackson       | 1593 |  90   |  
 
 ## Parsing an escaped version of [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz)
 
 | Parser        | avgt ms | avgt MB/s |
 | ------------- | ----:| -----:|
-| Jackson       | 1592 | 118  |
-| Univocity     | 1491 | 126  |
+| Sfm Raw       | 921  | 204  |
 | Sfm Callback  | 1103 | 170  |
 | Sfm Iterate   | 1140 | 164  |
-| Sfm Raw       | 921  | 204  |
+| Univocity     | 1491 | 126  |
+| Jackson       | 1592 | 118  |
 
 ## Parsing an unescaped [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz) with [ParallelReader](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java)
 
@@ -58,12 +58,12 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 
 | Parser              | avgt ms | avgt MB/s |
 | -------------       | ----:| -----:|
-| Jackson             | 1243 | 116 |
-| Univocity           |  890 | 162 |
-| ConcurrentUnivocity |  844 | 171 |
+| Sfm Raw             |  530 | 273 |
 | Sfm Callback        |  740 | 195 |
 | Sfm Iterate         |  759 | 190 |
-| Sfm Raw             |  530 | 273 |
+| ConcurrentUnivocity |  844 | 171 |
+| Univocity           |  890 | 162 |
+| Jackson             | 1243 | 116 |
 
 
 ## Parsing a escaped version of [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz) with [ParallelReader](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java)
@@ -72,9 +72,15 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 
 | Parser        | avgt ms | avgt MB/s |
 | ------------- | ----:| -----:|
-| Jackson             | 1342 | 140 |
-| Univocity           | 1105 | 170 |
-| ConcurrentUnivocity | 1054 | 178 |
+| Sfm Raw             |  610 | 307 |
 | Sfm Callback        |  812 | 231 |
 | Sfm Iterate         |  826 | 227 |
-| Sfm Raw             |  610 | 307 |
+| ConcurrentUnivocity | 1054 | 178 |
+| Univocity           | 1105 | 170 |
+| Jackson             | 1342 | 140 |
+
+
+## Notes
+
+The UTF8 decoding performance varied quite a bit depending on C2 performance. that variability is not represented here as I just display the average.
+I'm planning to investigate further and find out where it's coming from. 
