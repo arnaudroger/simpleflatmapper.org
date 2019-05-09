@@ -37,16 +37,20 @@ If you think your csv parser is worth benchmark [Open an issue](https://github.c
 | Parser        | avgt ms |  avgt MB/s |
 | ------------- | ----:| -----:| 
 | Jackson       | 1593 |  90   |  
-| Sfm           | 1040 | 139   | 
 | Univocity     | 1256 | 115   | 
+| Sfm Callback | 1040 | 139   | 
+| Sfm Iterate  | 1127 | 128   | 
+| Sfm Raw      | 747  | 194   | 
 
 ## Parsing an escaped version of [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz)
 
 | Parser        | avgt ms | avgt MB/s |
 | ------------- | ----:| -----:|
 | Jackson       | 1592 | 118  |
-| Sfm           | 1103 | 170  |
 | Univocity     | 1491 | 126  |
+| Sfm Callback  | 1103 | 170  |
+| Sfm Iterate   | 1140 | 164  |
+| Sfm Raw       | 921  | 204  |
 
 ## Parsing an unescaped [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz) with [ParallelReader](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java)
 
@@ -55,9 +59,11 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 | Parser              | avgt ms | avgt MB/s |
 | -------------       | ----:| -----:|
 | Jackson             | 1243 | 116 |
-| Sfm                 |  740 | 195 |
 | Univocity           |  890 | 162 |
 | ConcurrentUnivocity |  844 | 171 |
+| Sfm Callback        |  740 | 195 |
+| Sfm Iterate         |  759 | 190 |
+| Sfm Raw             |  530 | 273 |
 
 
 ## Parsing a escaped version of [Csv](https://github.com/arnaudroger/mapping-benchmark/raw/master/sfm-csv/src/main/resources/worldcitiespop.txt.gz) with [ParallelReader](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-util/src/main/java/org/simpleflatmapper/util/ParallelReader.java)
@@ -67,7 +73,8 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 | Parser        | avgt ms | avgt MB/s |
 | ------------- | ----:| -----:|
 | Jackson             | 1342 | 140 |
-| Sfm                 |  812 | 231 |
 | Univocity           | 1105 | 170 |
 | ConcurrentUnivocity | 1054 | 178 |
-
+| Sfm Callback        |  812 | 231 |
+| Sfm Iterate         |  826 | 227 |
+| Sfm Raw             |  610 | 307 |
