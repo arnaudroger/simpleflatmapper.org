@@ -82,5 +82,5 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 
 ## Notes
 
-The UTF8 decoding performance varied quite a bit depending on C2 performance. that variability is not represented here as I just display the average.
+The UTF8 decoding performance varied quite a bit depending on C2 optimisations. that variability is not represented here as I just display the average.
 I'm planning to investigate further and find out where it's coming from. 
