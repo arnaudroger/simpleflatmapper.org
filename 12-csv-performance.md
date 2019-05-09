@@ -36,9 +36,9 @@ If you think your csv parser is worth benchmark [Open an issue](https://github.c
 
 | Parser        | avgt ms |  avgt MB/s |
 | ------------- | ----:| -----:| 
-| Sfm Raw      | 747  | 194   | 
-| Sfm Callback | 1040 | 139   | 
-| Sfm Iterate  | 1127 | 128   | 
+| [Sfm Raw](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L61)      | 747  | 194   | 
+| [Sfm Callback](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L45) | 1040 | 139   | 
+| [Sfm Iterate](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L52)  | 1127 | 128   | 
 | Univocity     | 1256 | 115   | 
 | Jackson       | 1593 |  90   |  
 
@@ -46,9 +46,9 @@ If you think your csv parser is worth benchmark [Open an issue](https://github.c
 
 | Parser        | avgt ms | avgt MB/s |
 | ------------- | ----:| -----:|
-| Sfm Raw       | 921  | 204  |
-| Sfm Callback  | 1103 | 170  |
-| Sfm Iterate   | 1140 | 164  |
+| [Sfm Raw](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L61)       | 921  | 204  |
+| [Sfm Callback](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L45)  | 1103 | 170  |
+| [Sfm Iterate](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L52)   | 1140 | 164  |
 | Univocity     | 1491 | 126  |
 | Jackson       | 1592 | 118  |
 
@@ -58,9 +58,9 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 
 | Parser              | avgt ms | avgt MB/s |
 | -------------       | ----:| -----:|
-| Sfm Raw             |  530 | 273 |
-| Sfm Callback        |  740 | 195 |
-| Sfm Iterate         |  759 | 190 |
+| [Sfm Raw](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L61)             |  530 | 273 |
+| [Sfm Callback](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L45)        |  740 | 195 |
+| [Sfm Iterate](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L52)         |  759 | 190 |
 | ConcurrentUnivocity |  844 | 171 |
 | Univocity           |  890 | 162 |
 | Jackson             | 1243 | 116 |
@@ -72,9 +72,9 @@ ConcurrentUnivocity uses readInputOnSeparateThread set to true and no ParallelRe
 
 | Parser        | avgt ms | avgt MB/s |
 | ------------- | ----:| -----:|
-| Sfm Raw             |  610 | 307 |
-| Sfm Callback        |  812 | 231 |
-| Sfm Iterate         |  826 | 227 |
+| [Sfm Raw](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L61)             |  610 | 307 |
+| [Sfm Callback](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L45)        |  812 | 231 |
+| [Sfm Iterate](https://github.com/arnaudroger/mapping-benchmark/blob/master/sfm-csv/src/main/java/org/simpleflatmapper/SfmCsvParserBenchmark.java#L52)         |  826 | 227 |
 | ConcurrentUnivocity | 1054 | 178 |
 | Univocity           | 1105 | 170 |
 | Jackson             | 1342 | 140 |
