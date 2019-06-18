@@ -284,6 +284,20 @@
     <span class="nt">&lt;classifier&gt;</span>jdk9<span class="nt">&lt;/classifier&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
+<p>If you are using jOOQ commercial edition you will need to exclude the dependency as it’s currently scope compiled - will be corrected in next release.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>sfm-jooq<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>6.7.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;exclusions&gt;</span>
+        <span class="nt">&lt;exclusion&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>jooq<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.jooq<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;/exclusion&gt;</span>
+    <span class="nt">&lt;/exclusions&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+
 <p>There are 2 mapping strategies available in jOOQ.</p>
 
 <ul>

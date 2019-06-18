@@ -10,6 +10,24 @@ description: SimpleFlatMapper java jooq RecordMapper deep object
 
 {% include maven_dependency.md %}
 
+If you are using jOOQ commercial edition you will need to exclude the dependency as it's currently scope compiled - will be corrected in next release.
+
+{% highlight xml %}
+<dependency>
+    <groupId>org.simpleflatmapper</groupId>
+    <artifactId>sfm-{{page.module}}</artifactId>
+    <version>{% include currentversion.html %}</version>
+    <exclusions>
+        <exclusion>
+            <artifactId>jooq</artifactId>
+            <groupId>org.jooq</groupId>
+        </exclusion>
+    </exclusions>
+</dependency>
+{% endhighlight %}
+
+
+
 There are 2 mapping strategies available in jOOQ.
 
 * the generated classes from the db information. You will get a record that will have named getters matching the column names.
