@@ -5,9 +5,26 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Jun 2019 13:54:27 +0100</pubDate>
-    <lastBuildDate>Tue, 18 Jun 2019 13:54:27 +0100</lastBuildDate>
+    <pubDate>Thu, 20 Jun 2019 21:00:18 +0100</pubDate>
+    <lastBuildDate>Thu, 20 Jun 2019 21:00:18 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Release v6.7.1</title>
+        <description>&lt;h1 id=&quot;v671&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/202?closed=1&quot;&gt;V6.7.1&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/662&quot;&gt;#662&lt;/a&gt; ASMUtils: Map&amp;lt;String, byte[]&amp;gt; not supported&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/657&quot;&gt;#657&lt;/a&gt; ErrorCollectingMapper doesn’t use the specified defaultDateFormat&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 20 Jun 2019 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2019/06/20/v6.7.1.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/06/20/v6.7.1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.7.0</title>
@@ -185,24 +202,6 @@ leading to the property being linked to a NullSetter parent.&lt;/p&gt;
         <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2019/02/11/v6.3.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2019/02/11/v6.3.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.2.1</title>
-        <description>&lt;h1 id=&quot;v621&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/188?closed=1&quot;&gt;V6.2.1&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/605&quot;&gt;#605&lt;/a&gt; poi support for unsorted one to many mapping&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/606&quot;&gt;#606&lt;/a&gt; NoSuchMethodError BiFunction.apply(Ljava/lang/Object;Lorg/simpleflatmapper/map/MappingContext;)Ljava/lang/Boolean;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/607&quot;&gt;#607&lt;/a&gt; Jdbc RS Asm instantiator creation fail on primitive type&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2019/01/24/v6.2.1.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2019/01/24/v6.2.1.html</guid>
         
         
       </item>
