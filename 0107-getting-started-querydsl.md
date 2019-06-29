@@ -10,7 +10,7 @@ description: SimpleFlatMapper java querydsl projection
 
 {% include maven_dependency.md %}
 
-From [7.0.0](/11-v7-migration.md) you will need explicitly include the querydsl dependency in your pom.
+From [7.0.0](/11-v7-migration.html) you will need explicitly include the querydsl dependency in your pom.
 
 
 {% highlight java %}

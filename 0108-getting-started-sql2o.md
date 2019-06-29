@@ -19,7 +19,7 @@ Give it a try.
 
 {% include maven_dependency.md %}
 
-From [7.0.0](/11-v7-migration.md) you will need explicitly include the sql2o dependency in your pom.
+From [7.0.0](/11-v7-migration.html) you will need explicitly include the sql2o dependency in your pom.
 
 
 # SQL2o integration

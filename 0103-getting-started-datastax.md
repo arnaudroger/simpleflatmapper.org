@@ -10,7 +10,7 @@ description: SimpleFlatMapper java cassandra mapper and crud
 
 {% include maven_dependency.md %}
 
-Works with datastax 2.1.x to 3.0.x, from [7.0.0](/11-v7-migration.md) you will need explicitly include the datastax dependency in your pom.
+Works with datastax 2.1.x to 3.0.x, from [7.0.0](/11-v7-migration.html) you will need explicitly include the datastax dependency in your pom.
 
 ## What about the Datastax Mapper
 * SFM is at about 20% faster

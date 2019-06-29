@@ -11,7 +11,7 @@ description: SimpleFlatMapper java jdbi3 ResultSetMapper mapper deep object
 
 {% include maven_dependency.md %}
 
-From [7.0.0](/11-v7-migration.md) you will need explicitly include the jdbi dependency in your pom.
+From [7.0.0](/11-v7-migration.html) you will need explicitly include the jdbi dependency in your pom.
 
 ## Init plugin
 You can register the SfmJdbiPlugin
