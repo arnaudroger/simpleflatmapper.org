@@ -6,6 +6,49 @@ category: docs
 description: SimpleFlatMapper Inheritance via discriminator field
 ---
 
+From version [7.0.0](/2018/06/29/v7.0.0.html)
+
+
+To configure the inheritance you will just need to call one of the discriminator method on the [`XXXXMapperFactory`](http://static.javadoc.io/org.simpleflatmapper/sfm-map/6.0.0/org/simpleflatmapper/map/mapper/AbstractMapperFactory.html#discriminator-java.lang.Class-org.simpleflatmapper.util.Consumer-).
+
+For example
+
+```java
+JdbcMapper<Person> mapper =
+        JdbcMapperFactory.newInstance()
+                .addKeys("id", "students_id")
+                .discriminator(Person.class)
+                .onColumn("person_type", String.class)
+                .with( 
+                    builder -> 
+                        builder
+                            .when("student", Student.class)
+                            .when("professor", Professor.class)
+                )
+                .newMapper(Foo.class);
+```
+
+That will create a mapper that will either create a `Student` object when the `person_type` column is equals to `"student"` or a `Person` when equals to `"professor"`.
+
+It is also possible to use a Predicate instead of a value to match.
+
+```java
+JdbcMapper<Person> mapper =
+        JdbcMapperFactory.newInstance()
+                .addKeys("id", "students_id")
+                .discriminator(Person.class)
+                .onColumn("person_type", String.class)
+                .with( 
+                    builder -> builder
+                        .when(v -> "student".equals(v), Student.class)
+                        .when(v -> true, Professor.class)
+                )
+                .newMapper(Foo.class);
+```
+
+In that case it will instantiate a `Student` when `person_type` is `"student"` otherwise it will default to Professor.
+
+
 Since version [6.0.1](/2018/10/10/v6.0.0.html) - effectively from 6.0.0 but the following doc is for 6.0.1 - SimpleFlatMapper support inheritance via discriminator field at any level of the object tree for all mappers - csv, jdbc etc... -.
 
 

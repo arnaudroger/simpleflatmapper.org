@@ -10,6 +10,10 @@ description: SimpleFlatMapper java jooq RecordMapper deep object
 
 {% include maven_dependency.md %}
 
+From [7.0.0](/11-v7-migration.md) you will need explicitly include the jOOQ dependency in your pom.
+
+Before :
+
 If you are using jOOQ commercial edition you will need to exclude the dependency as it's currently scope compiled - will be corrected in next release.
 
 {% highlight xml %}

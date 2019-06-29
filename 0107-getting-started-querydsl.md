@@ -10,6 +10,9 @@ description: SimpleFlatMapper java querydsl projection
 
 {% include maven_dependency.md %}
 
+From [7.0.0](/11-v7-migration.md) you will need explicitly include the querydsl dependency in your pom.
+
+
 {% highlight java %}
 SQLQuery sqlquery = new SQLQuery(conn, new HSQLDBTemplates());
  List<DbObject> list = 

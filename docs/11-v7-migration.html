@@ -8,24 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Getting Started QueryDsl | SimpleFlatMapper</title>
+<title>Migrating to v7. | SimpleFlatMapper</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Getting Started QueryDsl" />
+<meta property="og:title" content="Migrating to v7." />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="SimpleFlatMapper java querydsl projection" />
-<meta property="og:description" content="SimpleFlatMapper java querydsl projection" />
-<link rel="canonical" href="http://simpleflatmapper.org/0107-getting-started-querydsl.html" />
-<meta property="og:url" content="http://simpleflatmapper.org/0107-getting-started-querydsl.html" />
+<link rel="canonical" href="http://simpleflatmapper.org/11-v7-migration.html" />
+<meta property="og:url" content="http://simpleflatmapper.org/11-v7-migration.html" />
 <meta property="og:site_name" content="SimpleFlatMapper" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"headline":"Getting Started QueryDsl","url":"http://simpleflatmapper.org/0107-getting-started-querydsl.html","description":"SimpleFlatMapper java querydsl projection","@type":"WebPage","@context":"http://schema.org"}</script>
+{"headline":"Migrating to v7.","url":"http://simpleflatmapper.org/11-v7-migration.html","@type":"WebPage","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
     <link rel="stylesheet" href="/assets/main.css">
-    <link rel="canonical" href="http://simpleflatmapper.org/0107-getting-started-querydsl.html">
+    <link rel="canonical" href="http://simpleflatmapper.org/11-v7-migration.html">
     <link rel="alternate" type="application/rss+xml" title="SimpleFlatMapper" href="/feed.xml">
 
     
@@ -145,167 +143,100 @@
 </header>
 
 
-<div class="wrapper">
-
-<nav class="site-nav" style="float:none; align:center;">
-
-    <div class="trigger" >
-        
-        
-        
-        
-        <a class="page-link" href="/0101-getting-started-csv.html">Csv</a>
-        
-        
-        
-        <a class="page-link" href="/0102-getting-started-jdbc.html">Jdbc</a>
-        
-        
-        
-        <a class="page-link" href="/0103-getting-started-datastax.html">Cassandra</a>
-        
-        
-        
-        <a class="page-link" href="/0104-getting-started-springjdbc.html">Spring Jdbc</a>
-        
-        
-        
-        <a class="page-link" href="/0105-getting-started-poi.html">Excel</a>
-        
-        
-        
-        <a class="page-link" href="/0106-getting-started-jooq.html">jOOQ</a>
-        
-        
-        
-        <a class="page-link" href="/0107-getting-started-querydsl.html">QueryDsl</a>
-        
-        
-        
-        <a class="page-link" href="/0108-getting-started-sql2o.html">Sql2o</a>
-        
-        
-        
-        <a class="page-link" href="/0109-getting-started-jdbi.html">JDBI</a>
-        
-        
-        
-        <a class="page-link" href="/0110-getting-started-jdbi3.html">JDBI3</a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </div>
-
-</nav>
-    </div>
-
 
 
 
 <main class="page-content" aria-label="Content">
     <div class="wrapper">
-        <h1 id="getting-started-querydsl">Getting Started QueryDsl</h1>
+        <h1 id="migration-v6-to-v7">Migration v6 to v7</h1>
 
-<p><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-querydsl%7C7.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-querydsl.svg" alt="Maven Central" /></a>
-<a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-querydsl"><img src="https://img.shields.io/badge/javadoc-7.0.0-blue.svg" alt="JavaDoc" /></a></p>
+<ul>
+  <li>No api change</li>
+  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/665">the speculative index property finding is disable by default</a>, you can reenable it by calling <code class="highlighter-rouge">enableSpeculativeArrayIndexResolution()</code> on the <code class="highlighter-rouge">MapperFactory</code></li>
+  <li>jOOQ, spring-jdbc, datastax, jdbi, sql2o, poi and querydsl dependency are not <a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/659">mark as provided</a> and need to be included in your pom.</li>
+</ul>
 
-<h2 id="setting-up-the-environment">Setting up the environment</h2>
+<h1 id="migration-v5-to-v6">Migration v5 to v6</h1>
 
-<p>Add the <a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-querydsl%7C7.0.0%7C">Dependency</a> to your build.</p>
+<h2 id="for-the-mappers-user">for the mappers user</h2>
+<p>there should not be any change needed as the api should be backward compatible, if you encounter an issue please raise a ticket
+Just make sure all the module are on the same version, as the generic type change will lead to weird errors if not.</p>
 
-<p>for Maven:</p>
+<h2 id="for-mapper-producers">for mapper producers</h2>
+<ul>
+  <li>the mapper config now as a new parameterized type representing the source object</li>
+  <li>the ReflectionService is now a abstract class, you can use the static method or instantiate the DefaultReflectionService</li>
+  <li>PropertyMeta and ClassMeta now implements a withReflectionService method</li>
+</ul>
 
-<h3 id="java-8-9-10--11-no-module-info">Java 8, 9, 10 , 11 no module-info</h3>
+<h1 id="migration-v4-to-v5">Migration v4 to v5</h1>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>sfm-querydsl<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>7.0.0<span class="nt">&lt;/version&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+<ul>
+  <li>for mapper there should not be any change needed the api should be backward compatible, if you encounter an issue please raise a ticket</li>
+  <li>the mapper producer the getter/setter factory have changed, but I really doubt anybody is doing that if you do drop me an email.</li>
+</ul>
 
-<h3 id="java-6-7">Java 6, 7</h3>
+<h1 id="migration-v3-to-v4">Migration v3 to v4</h1>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>sfm-querydsl<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>7.0.0<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;classifier&gt;</span>jdk16<span class="nt">&lt;/classifier&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+<ul>
+  <li>create new <code class="highlighter-rouge">lightning-csv</code> module with only the csv parser</li>
+  <li><code class="highlighter-rouge">org.simpleflatmapper.csv.parser</code> moved to <code class="highlighter-rouge">org.simpleflatmapper.lightningcsv.parser</code> in <code class="highlighter-rouge">lightning-csv</code> module</li>
+  <li>the following classes in <code class="highlighter-rouge">org.simpleflatmapper.csv</code> moved to <code class="highlighter-rouge">org.simpleflatmapper.lightningcsv</code> in <code class="highlighter-rouge">lightning-csv</code> module
+    <ul>
+      <li><code class="highlighter-rouge">CellWriter</code></li>
+      <li><code class="highlighter-rouge">CsvReader</code></li>
+      <li><code class="highlighter-rouge">CloseableCsvReader</code></li>
+      <li><code class="highlighter-rouge">Row</code></li>
+      <li><code class="highlighter-rouge">StringReader</code></li>
+    </ul>
+  </li>
+  <li>a <code class="highlighter-rouge">CsvParser</code> dsl without out the mapping part has been added to <code class="highlighter-rouge">org.simpleflatmapper.lightningcsv</code>, <code class="highlighter-rouge">there is still one in org.simpleflatmapper.csv</code>.</li>
+  <li>the mappers returned don’t exposed the <code class="highlighter-rouge">mapTo</code> method anymore to allow for <code class="highlighter-rouge">ImmutableList</code> support</li>
+</ul>
 
-<h3 id="java-9-10--11-with-module-info">Java 9, 10 , 11 with module-info</h3>
+<h1 id="migration-v2-to-v3">Migration v2 to v3</h1>
 
-<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>sfm-querydsl<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>7.0.0<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;classifier&gt;</span>jdk9<span class="nt">&lt;/classifier&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
+<h1 id="sfm-module-has-been-split-into">sfm module has been split into</h1>
 
-<p>From <a href="/11-v7-migration.md">7.0.0</a> you will need explicitly include the querydsl dependency in your pom.</p>
+<ul>
+  <li>sfm-csv for the Csv related code, CsvParser, CsvMapper, CsvWritter.</li>
+  <li>sfm-jdbc for the Jdbc related code, JdbcMapper, PreparedStatementMapper, Crud.</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">SQLQuery</span> <span class="n">sqlquery</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SQLQuery</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="k">new</span> <span class="n">HSQLDBTemplates</span><span class="o">());</span>
- <span class="n">List</span><span class="o">&lt;</span><span class="n">DbObject</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> 
-    <span class="n">sqlquery</span>
-        <span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="n">qTestDbObject</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="n">qTestDbObject</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">eq</span><span class="o">(</span><span class="mi">1</span><span class="n">l</span><span class="o">))</span>
-        <span class="o">.</span><span class="na">list</span><span class="o">(</span>
-            <span class="k">new</span> <span class="n">QueryDslMappingProjection</span><span class="o">&lt;</span><span class="n">DbObject</span><span class="o">&gt;(</span>
-                <span class="n">DbObject</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> 
-                <span class="n">qTestDbObject</span><span class="o">.</span><span class="na">id</span><span class="o">,</span>
-                <span class="n">qTestDbObject</span><span class="o">.</span><span class="na">name</span><span class="o">,</span> 
-                <span class="n">qTestDbObject</span><span class="o">.</span><span class="na">email</span><span class="o">,</span> 
-                <span class="n">qTestDbObject</span><span class="o">.</span><span class="na">creationTime</span><span class="o">,</span> 
-                <span class="n">qTestDbObject</span><span class="o">.</span><span class="na">typeName</span><span class="o">,</span> 
-                <span class="n">qTestDbObject</span><span class="o">.</span><span class="na">typeOrdinal</span><span class="o">));</span>
-     </code></pre></figure>
+<h1 id="the-packages-have-been-renamed">the packages have been renamed</h1>
 
+<ul>
+  <li>org.sfm -&gt; org.simpleflatmapper</li>
+  <li>org.sfm.utils -&gt; org.simpleflatmapper.util</li>
+</ul>
+
+<h1 id="joda-time-support">Joda time support</h1>
+
+<p>You know need to include the sfm-converter-joda-time module.</p>
+
+
+
+        
+            <div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = 'http://simpleflatmapper.org/11-v7-migration.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//arogerblog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
         
     </div>

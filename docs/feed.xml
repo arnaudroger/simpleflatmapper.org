@@ -5,9 +5,29 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Jun 2019 20:02:44 +0100</pubDate>
-    <lastBuildDate>Mon, 24 Jun 2019 20:02:44 +0100</lastBuildDate>
+    <pubDate>Sat, 29 Jun 2019 21:49:13 +0100</pubDate>
+    <lastBuildDate>Sat, 29 Jun 2019 21:49:13 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Release v7.0.0</title>
+        <description>&lt;h1 id=&quot;v700&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/201?closed=1&quot;&gt;V7.0.0&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/661&quot;&gt;#661&lt;/a&gt; Discriminator for 2 association field with same type&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/655&quot;&gt;#655&lt;/a&gt; easier to define other enum instantiation type. or any getter &lt;code class=&quot;highlighter-rouge&quot;&gt;addGetterForType(final Type type, final IndexedGetter&amp;lt;S, T&amp;gt; indexedGetter)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/664&quot;&gt;#664&lt;/a&gt; allows for non mapped key&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/661&quot;&gt;#659&lt;/a&gt; Document how to exclude the jOOQ Open Source Edition as a transitive dependency, when needed&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/661&quot;&gt;#665&lt;/a&gt; disable speculative index property finding by default&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 29 Jun 2019 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2019/06/29/v7.0.0.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/06/29/v7.0.0.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v6.7.2</title>
@@ -175,22 +195,6 @@ leading to the property being linked to a NullSetter parent.&lt;/p&gt;
         <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2019/03/13/v6.4.1.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2019/03/13/v6.4.1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.4.0</title>
-        <description>&lt;h1 id=&quot;v640&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/190?closed=1&quot;&gt;V6.4.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/609&quot;&gt;#609&lt;/a&gt; Immutables.org implementation detection, does not require the builder method to be present or awkwardly provided.&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2019/02/13/v6.4.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2019/02/13/v6.4.0.html</guid>
         
         
       </item>

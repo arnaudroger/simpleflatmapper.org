@@ -95,11 +95,13 @@
                 
                 
                 
-                <a class="page-link" href="/11-v6-migration.html">Migrating to v6.</a>
+                <a class="page-link" href="/11-v7-migration.html">Migrating to v7.</a>
                 
                 
                 
                 <a class="page-link" href="/12-csv-performance.html">Performance comparison</a>
+                
+                
                 
                 
                 
@@ -237,6 +239,8 @@
         
         
         
+        
+        
     </div>
 
 </nav>
@@ -249,12 +253,12 @@
     <div class="wrapper">
         <h1 id="getting-started-cassandra">Getting Started Cassandra</h1>
 
-<p><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-datastax%7C6.7.2%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-datastax.svg" alt="Maven Central" /></a>
-<a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-datastax"><img src="https://img.shields.io/badge/javadoc-6.7.2-blue.svg" alt="JavaDoc" /></a></p>
+<p><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-datastax%7C7.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-datastax.svg" alt="Maven Central" /></a>
+<a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-datastax"><img src="https://img.shields.io/badge/javadoc-7.0.0-blue.svg" alt="JavaDoc" /></a></p>
 
 <h2 id="setting-up-the-environment">Setting up the environment</h2>
 
-<p>Add the <a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-datastax%7C6.7.2%7C">Dependency</a> to your build.</p>
+<p>Add the <a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-datastax%7C7.0.0%7C">Dependency</a> to your build.</p>
 
 <p>for Maven:</p>
 
@@ -263,7 +267,7 @@
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>sfm-datastax<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>6.7.2<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>7.0.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
 <h3 id="java-6-7">Java 6, 7</h3>
@@ -271,7 +275,7 @@
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>sfm-datastax<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>6.7.2<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>7.0.0<span class="nt">&lt;/version&gt;</span>
     <span class="nt">&lt;classifier&gt;</span>jdk16<span class="nt">&lt;/classifier&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
@@ -280,11 +284,11 @@
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>sfm-datastax<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>6.7.2<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;version&gt;</span>7.0.0<span class="nt">&lt;/version&gt;</span>
     <span class="nt">&lt;classifier&gt;</span>jdk9<span class="nt">&lt;/classifier&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
-<p>Works with datastax 2.1.x to 3.0.x</p>
+<p>Works with datastax 2.1.x to 3.0.x, from <a href="/11-v7-migration.md">7.0.0</a> you will need explicitly include the datastax dependency in your pom.</p>
 
 <h2 id="what-about-the-datastax-mapper">What about the Datastax Mapper</h2>
 <ul>

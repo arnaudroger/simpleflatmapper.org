@@ -26,6 +26,8 @@ Also sfm supports [one-to-many mapping](https://arnaudroger.github.io/blog/2017/
 
 {% include maven_dependency.md %}
 
+From [7.0.0](/11-v7-migration.md) you will need explicitly include the spring-jdbc dependency in your pom.
+
 # RowMapper
 
 {% highlight java %}

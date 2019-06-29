@@ -95,11 +95,13 @@
                 
                 
                 
-                <a class="page-link" href="/11-v6-migration.html">Migrating to v6.</a>
+                <a class="page-link" href="/11-v7-migration.html">Migrating to v7.</a>
                 
                 
                 
                 <a class="page-link" href="/12-csv-performance.html">Performance comparison</a>
+                
+                
                 
                 
                 
@@ -148,7 +150,46 @@
 
 <main class="page-content" aria-label="Content">
     <div class="wrapper">
-        <p>Since version <a href="/2018/10/10/v6.0.0.html">6.0.1</a> - effectively from 6.0.0 but the following doc is for 6.0.1 - SimpleFlatMapper support inheritance via discriminator field at any level of the object tree for all mappers - csv, jdbc etc… -.</p>
+        <p>From version <a href="/2018/06/29/v7.0.0.html">7.0.0</a></p>
+
+<p>To configure the inheritance you will just need to call one of the discriminator method on the <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-map/6.0.0/org/simpleflatmapper/map/mapper/AbstractMapperFactory.html#discriminator-java.lang.Class-org.simpleflatmapper.util.Consumer-"><code class="highlighter-rouge">XXXXMapperFactory</code></a>.</p>
+
+<p>For example</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span>
+        <span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"students_id"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">discriminator</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">onColumn</span><span class="o">(</span><span class="s">"person_type"</span><span class="o">,</span> <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">with</span><span class="o">(</span> 
+                    <span class="n">builder</span> <span class="o">-&gt;</span> 
+                        <span class="n">builder</span>
+                            <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="s">"student"</span><span class="o">,</span> <span class="n">Student</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                            <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="s">"professor"</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">)</span>
+                <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>That will create a mapper that will either create a <code class="highlighter-rouge">Student</code> object when the <code class="highlighter-rouge">person_type</code> column is equals to <code class="highlighter-rouge">"student"</code> or a <code class="highlighter-rouge">Person</code> when equals to <code class="highlighter-rouge">"professor"</code>.</p>
+
+<p>It is also possible to use a Predicate instead of a value to match.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">JdbcMapper</span><span class="o">&lt;</span><span class="n">Person</span><span class="o">&gt;</span> <span class="n">mapper</span> <span class="o">=</span>
+        <span class="n">JdbcMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">addKeys</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"students_id"</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">discriminator</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">onColumn</span><span class="o">(</span><span class="s">"person_type"</span><span class="o">,</span> <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">with</span><span class="o">(</span> 
+                    <span class="n">builder</span> <span class="o">-&gt;</span> <span class="n">builder</span>
+                        <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="s">"student"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">v</span><span class="o">),</span> <span class="n">Student</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">when</span><span class="o">(</span><span class="n">v</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">Professor</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">)</span>
+                <span class="o">.</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>In that case it will instantiate a <code class="highlighter-rouge">Student</code> when <code class="highlighter-rouge">person_type</code> is <code class="highlighter-rouge">"student"</code> otherwise it will default to Professor.</p>
+
+<p>Since version <a href="/2018/10/10/v6.0.0.html">6.0.1</a> - effectively from 6.0.0 but the following doc is for 6.0.1 - SimpleFlatMapper support inheritance via discriminator field at any level of the object tree for all mappers - csv, jdbc etc… -.</p>
 
 <p>To configure the inheritance you will just need to call one of the discriminator method on the <a href="http://static.javadoc.io/org.simpleflatmapper/sfm-map/6.0.0/org/simpleflatmapper/map/mapper/AbstractMapperFactory.html#discriminator-java.lang.Class-org.simpleflatmapper.util.Consumer-"><code class="highlighter-rouge">XXXXMapperFactory</code></a>.</p>
 

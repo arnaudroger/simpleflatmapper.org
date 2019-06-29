@@ -1,12 +1,19 @@
 ---
 layout: default
-title: Migrating to v6.
+title: Migrating to v7.
 comments: true
 redirect_from:
   - /11-v3-migration.html
   - /11-v4-migration.html
   - /11-v5-migration.html
+  - /11-v6-migration.html
 ---
+
+# Migration v6 to v7
+
+* No api change
+* [the speculative index property finding is disable by default](https://github.com/arnaudroger/SimpleFlatMapper/issues/665), you can reenable it by calling `enableSpeculativeArrayIndexResolution()` on the `MapperFactory`
+* jOOQ, spring-jdbc, datastax, jdbi, sql2o, poi and querydsl dependency are not [mark as provided](https://github.com/arnaudroger/SimpleFlatMapper/issues/659) and need to be included in your pom. 
 
 # Migration v5 to v6
 

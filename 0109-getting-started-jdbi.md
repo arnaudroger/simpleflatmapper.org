@@ -11,6 +11,9 @@ description: SimpleFlatMapper java jdbi ResultSetMapper mapper deep object
 
 {% include maven_dependency.md %}
 
+From [7.0.0](/11-v7-migration.md) you will need explicitly include the jdbi dependency in your pom.
+
+
 ## Register SfmResultSetMapperFactory
 
 You can register sfm as a ResultSetMapperFactory, then use the mapTo - in place of map - it will 

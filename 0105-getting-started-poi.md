@@ -10,6 +10,8 @@ description: SimpleFlatMapper java excel mapper
 
 {% include maven_dependency.md %}
 
+From [7.0.0](/11-v7-migration.md) you will need explicitly include the poi dependency in your pom.
+
 ## Quick start
 
 {% highlight java %}
