@@ -45,4 +45,4 @@ JdbcMapperFactory.newInstance()
         ).newMapper(MyClass.class);
 ```
 
-Note that the generic type information on GetterFactoryProperty.forType cannot be inferred by the compiler and need to be provided manually.
+Note that the generic type information on `GetterFactoryProperty.forType` cannot be inferred by the compiler and need to be provided manually.
