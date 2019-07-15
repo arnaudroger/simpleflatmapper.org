@@ -1,51 +1,48 @@
 ---
 layout: default
-title: Converters
-short_title: Converters
+title: Custom Getters
+short_title: Custom Getters
 category: docs
-description: SimpleFlatMapper java library converters
+description: SimpleFlatMapper java library Custom Getters
 ---
 
-When mapping a property sfm will looking for a getter/setter from the object
-to the source/target flat structure - ResultSet, Csv Row, etc ...-. If it can't find 
-one it will then look for a Converter that gets transform to a supported type.
 
-the default converter or in 
+Sometime sfm will not find a way to instantiate a property from the source - ResultSet, Row ... - to the property type, or you might want to override the default strategy - for example for enums that don't use the enum name or the ordinal value.
 
-{% include doc-table-row.md module='converter' %}
+when that happens you can specify a custom getter for a type.
 
-the joda time one in 
-
-{% include doc-table-row.md module='converter-joda-time' %}
-
-the protobuf in 
-
-{% include doc-table-row.md module='converter-protobuf' %}
-
-It's also possible to supply your own Converter<I, O> for a specific field by adding a ConverterProperty.
 
 ```java 
-    JdbcMapperFactory.newInstance()
-        .addColumnProperty("my_enum_column", ConverterProperty.of(MyEnum::factoryMethod))
-        .newMapper(MyClass.class);
+JdbcMapperFactory.newInstance()
+    .addGetterForType(
+        MyEnum.class, 
+        (rs, i) -> {
+            String val = rs.getString(i);
+            if (val != null) 
+                switch (val) {
+                    case "enum1": return MyEnum.VALUE_1;
+                }
+            return null;
+        }
+    ).newMapper(MyClass.class);
+
 ```
 
-you can also provide your converters using the [`ServiceLoader`](https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html)
+if you want the getter override to only apply to a specific set of field, for example to trim a string only for some column.
 
-1. Create a [`org.simpleflatmapper.converter.ConverterFactoryProducer`](http://static.javadoc.io/org.simpleflatmapper/sfm-converter/3.7/index.html?org/simpleflatmapper/converter/ConverterFactoryProducer.html)
-```java
-public class MyConverterFactoryProducer extends AbstractConverterFactoryProducer {
+```java 
+JdbcMapperFactory.newInstance()
+        .addColumnProperty(
+            "trimmed",
+            GetterFactoryProperty.<ResultSet, String>forType(
+                String.class, 
+                (rs, i) -> {
+                    String val = rs.getString(i);
+                    if (val != null) return val.trim();
+                    return null;
+                }
+            )
+        ).newMapper(MyClass.class);
+```
 
-    @Override
-    public void produce(Consumer<? super ConverterFactory<?, ?>> consumer) {
-        constantConverter(consumer, Date.class, MyType.class, new DateToMyTypeConverter());
-    }
-}
-```
-2. register the service in the `META-INF/services/org.simpleflatmapper.converter.ConverterFactoryProducer file`
-```
-mypackage.MyConverterFactoryProducer
-```
-
-Note that providing a Converter does not guarantee it will be the one being used. The ConverterService will elect one according to path length and type matching.
-I you want to predictably changed the way a property is instantiated you will need to set a [custom getter for that type](0206-custom-getters.html) 
+Note that the generic type information on GetterFactoryProperty.forType cannot be inferred by the compiler and need to be provided manually.
