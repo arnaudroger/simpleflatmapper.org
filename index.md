@@ -57,7 +57,7 @@ public void findAll(Consumer<MyObject> consumer) throws SQLException {
         PreparedStatement ps = 
             conn.prepareStatement("select * from my_table");
         ResultSet rs = ps.executeQuery();) {
-        return mapper.forEach(rs, consumer);
+        mapper.forEach(rs, consumer);
     }
 }
 {% endhighlight %}
