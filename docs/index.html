@@ -210,7 +210,7 @@ You can also extend the type mapping by providing <a href="0202-converters.html"
         <span class="n">PreparedStatement</span> <span class="n">ps</span> <span class="o">=</span> 
             <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="s">"select * from my_table"</span><span class="o">);</span>
         <span class="n">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="n">ps</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">();)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">mapper</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">rs</span><span class="o">,</span> <span class="n">consumer</span><span class="o">);</span>
+        <span class="n">mapper</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">rs</span><span class="o">,</span> <span class="n">consumer</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span></code></pre></figure>
 
