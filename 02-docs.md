@@ -24,6 +24,8 @@ description: SimpleFlatMapper documentation
  check [https://github.com/arnaudroger/SimpleFlatMapper/issues/673](Issue 673), there is a setting the vm used by the maven importer and it need to match the project vm.
  there is a bug open at intellij [https://youtrack.jetbrains.com/issue/IDEA-203432](There is no "Use Project JDK" option for "JDK for Importer") to make that easier. 
 
+PS: if you know a better way to deal with multiple java versions than using a profile trigger by java version please get in touch
+
 
 # modules
 ## Mappers
