@@ -5,9 +5,25 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Aug 2019 09:50:02 +0100</pubDate>
-    <lastBuildDate>Fri, 09 Aug 2019 09:50:02 +0100</lastBuildDate>
+    <pubDate>Wed, 21 Aug 2019 10:44:43 +0100</pubDate>
+    <lastBuildDate>Wed, 21 Aug 2019 10:44:43 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Release v7.0.3</title>
+        <description>&lt;h1 id=&quot;v703&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/206?closed=1&quot;&gt;V7.0.3&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/675&quot;&gt;#675&lt;/a&gt; How to add custom mapping for SqlParameterSourceFactory&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 19 Aug 2019 00:00:00 +0100</pubDate>
+        <link>http://simpleflatmapper.org/2019/08/19/v7.0.3.html</link>
+        <guid isPermaLink="true">http://simpleflatmapper.org/2019/08/19/v7.0.3.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Release v7.0.2</title>
@@ -173,28 +189,6 @@ Hence made the executive choice not to make it a major, as I guess nobody is doi
         <pubDate>Wed, 27 Mar 2019 00:00:00 +0000</pubDate>
         <link>http://simpleflatmapper.org/2019/03/27/v6.6.0.html</link>
         <guid isPermaLink="true">http://simpleflatmapper.org/2019/03/27/v6.6.0.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Release v6.5.0</title>
-        <description>&lt;h1 id=&quot;v650&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/195?closed=1&quot;&gt;V6.5.0&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/619&quot;&gt;#619&lt;/a&gt; Object not injected when getter is Optional&lt;T&gt;&lt;/T&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Beware there was some api change in the PropertyFinder object, you would only care if you implement your own mapper. 
-Hence made the executive choice not to make it a major, as I guess nobody is doing that.&lt;/p&gt;
-
-&lt;p&gt;When looking in sub properties, we did not filter out parents with no injection or getters, 
-leading to the property being linked to a NullSetter parent.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 19 Mar 2019 00:00:00 +0000</pubDate>
-        <link>http://simpleflatmapper.org/2019/03/19/v6.5.0.html</link>
-        <guid isPermaLink="true">http://simpleflatmapper.org/2019/03/19/v6.5.0.html</guid>
         
         
       </item>
