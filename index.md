@@ -62,6 +62,9 @@ public void findAll(Consumer<MyObject> consumer) throws SQLException {
 }
 {% endhighlight %}
 
+# Intellij IDEA UnsupportedClassVersionError import with wrong classifier
+Check [https://github.com/arnaudroger/SimpleFlatMapper/issues/673](Issue 673), there is a setting the vm used by the maven importer and it need to match the project vm.
+there is a bug open at intellij [https://youtrack.jetbrains.com/issue/IDEA-203432](There is no "Use Project JDK" option for "JDK for Importer") to make that easier. 
 
 
 
