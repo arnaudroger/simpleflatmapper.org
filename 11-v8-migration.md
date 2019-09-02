@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Migrating to v7.
+title: Migrating to v8.
 comments: true
 redirect_from:
   - /11-v3-migration.html
@@ -9,6 +9,39 @@ redirect_from:
   - /11-v6-migration.html
   - /11-v7-migration.html
 ---
+# Migration v7 to [v8](/2019/09/01/v8.0.0.html)
+* It does not use the classifier anymore. The artifactId is different for each jre version using -jre6 or -jre9 suffix.
+
+### Java 8, 9, 10 , 11 no module-info
+{% highlight xml %}
+<dependency>
+    <groupId>org.simpleflatmapper</groupId>
+    <artifactId>sfm-jdbc</artifactId>
+    <version>8.0.0</version>
+</dependency>
+{% endhighlight %}
+
+### Java 6, 7
+
+{% highlight xml %}
+<dependency>
+    <groupId>org.simpleflatmapper</groupId>
+    <artifactId>sfm-jdbc-jre6</artifactId>
+    <version>8.0.0</version>
+</dependency>
+{% endhighlight %}
+
+### Java 9, 10 , 11 with module-info 
+
+{% highlight xml %}
+<dependency>
+    <groupId>org.simpleflatmapper</groupId>
+    <artifactId>sfm-jdbc-jre9</artifactId>
+    <version>8.0.0</version>
+</dependency>
+{% endhighlight %}
+
+* No api change
 
 # Migration v6 to v7
 

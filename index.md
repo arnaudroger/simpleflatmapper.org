@@ -7,6 +7,8 @@ description: SimpleFlatMapper java library fast and simple mapping, micro orm, c
 {% assign post = site.posts.first %}
 SimpleFlatMapper [V{{ site.libraryVersion }}]({{ post.url }}) provides a very fast and easy to use mapper for
 
+**[Version 8](/2019/09/01/v8.0.0.html) does not use the classifier anymore for jre 6 or jre 9 artifacts see [Migration to V8](/11-v8-migration.html)**
+
  * [Jdbc, aka micro ORM](0102-getting-started-jdbc.html) from ResultSet to PreparedStatement
  * [Csv Mapper](0101-getting-started-csv.html#mapping-a-csv-to-an-object) with its own [Csv Parser](0101-getting-started-csv.html#reading-a-csv-file) 
  * [Excel spreadsheet](0105-getting-started-poi.html)
@@ -63,10 +65,10 @@ public void findAll(Consumer<MyObject> consumer) throws SQLException {
 {% endhighlight %}
 
 # Intellij IDEA UnsupportedClassVersionError import with wrong classifier
-Check [https://github.com/arnaudroger/SimpleFlatMapper/issues/673](Issue 673), there is a setting the vm used by the maven importer and it need to match the project vm.
-there is a bug open at intellij [https://youtrack.jetbrains.com/issue/IDEA-203432](There is no "Use Project JDK" option for "JDK for Importer") to make that easier. 
+Update: this is now sorted by [Release 8.0.0](/2019/09/01/v8.0.0.html)
 
-PS: if you know a better way to deal with multiple java versions than using a profile trigger by java version please get in touch
+<s>Check [https://github.com/arnaudroger/SimpleFlatMapper/issues/673](Issue 673), there is a setting the vm used by the maven importer and it need to match the project vm.
+there is a bug open at intellij [https://youtrack.jetbrains.com/issue/IDEA-203432](There is no "Use Project JDK" option for "JDK for Importer") to make that easier.</s> 
 
 
 

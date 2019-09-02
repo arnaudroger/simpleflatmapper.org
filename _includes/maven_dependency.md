@@ -22,19 +22,17 @@ for Maven:
 {% highlight xml %}
 <dependency>
     <groupId>org.simpleflatmapper</groupId>
-    <artifactId>sfm-{{page.module}}</artifactId>
+    <artifactId>sfm-{{page.module}}-jre6</artifactId>
     <version>{% include currentversion.html %}</version>
-    <classifier>jdk16</classifier>
 </dependency>
 {% endhighlight %}
 
-### Java 9, 10 , 11 with module-info
+### Java 9, 10 , 11 with module-info 
 
 {% highlight xml %}
 <dependency>
     <groupId>org.simpleflatmapper</groupId>
-    <artifactId>sfm-{{page.module}}</artifactId>
+    <artifactId>sfm-{{page.module}}-jre9</artifactId>
     <version>{% include currentversion.html %}</version>
-    <classifier>jdk9</classifier>
 </dependency>
 {% endhighlight %}
