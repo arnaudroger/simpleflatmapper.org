@@ -97,11 +97,13 @@
                 
                 
                 
-                <a class="page-link" href="/11-v7-migration.html">Migrating to v7.</a>
+                <a class="page-link" href="/11-v8-migration.html">Migrating to v8.</a>
                 
                 
                 
                 <a class="page-link" href="/12-csv-performance.html">Performance comparison</a>
+                
+                
                 
                 
                 
@@ -173,10 +175,10 @@
 </ul>
 
 <h1 id="intellij-idea-unsupportedclassversionerror-import-with-wrong-classifier">Intellij IDEA UnsupportedClassVersionError import with wrong classifier</h1>
-<p>check <a href="Issue 673">https://github.com/arnaudroger/SimpleFlatMapper/issues/673</a>, there is a setting the vm used by the maven importer and it need to match the project vm.
- there is a bug open at intellij <a href="There is no" title="Use Project JDK&quot; option for &quot;JDK for Importer">https://youtrack.jetbrains.com/issue/IDEA-203432</a> to make that easier.</p>
+<p>Update: this is now sorted by <a href="/2019/09/01/v8.0.0.html">Release 8.0.0</a></p>
 
-<p>PS: if you know a better way to deal with multiple java versions than using a profile trigger by java version please get in touch</p>
+<s>check [https://github.com/arnaudroger/SimpleFlatMapper/issues/673](Issue 673), there is a setting the vm used by the maven importer and it need to match the project vm.
+ there is a bug open at intellij [https://youtrack.jetbrains.com/issue/IDEA-203432](There is no "Use Project JDK" option for "JDK for Importer") to make that easier.</s>
 
 <h1 id="modules">modules</h1>
 <h2 id="mappers">Mappers</h2>
@@ -192,58 +194,58 @@
   <tbody>
     <tr>
       <td><a href="0101-getting-started-lightning-csv.html">sfm-lightning-csv</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-lightning-csv%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-lightning-csv.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-lightning-csv/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-lightning-csv%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-lightning-csv.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-lightning-csv/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0101-getting-started-csv.html">sfm-csv</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-csv%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-csv.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-csv/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-csv%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-csv.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-csv/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0102-getting-started-jdbc.html">sfm-jdbc</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-jdbc%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-jdbc.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-jdbc/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-jdbc%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-jdbc.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-jdbc/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0103-getting-started-datastax.html">sfm-datastax</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-datastax%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-datastax.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-datastax/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-datastax%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-datastax.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-datastax/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0106-getting-started-jooq.html">sfm-jooq</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-jooq%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-jooq.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-jooq/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-jooq%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-jooq.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-jooq/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0104-getting-started-springjdbc.html">sfm-springjdbc</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-springjdbc%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-springjdbc.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-springjdbc/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-springjdbc%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-springjdbc.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-springjdbc/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0105-getting-started-poi.html">sfm-poi</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-poi%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-poi.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-poi/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-poi%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-poi.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-poi/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0107-getting-started-querydsl.html">sfm-querydsl</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-querydsl%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-querydsl.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-querydsl/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-querydsl%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-querydsl.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-querydsl/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0108-getting-started-sql2o.html">sfm-sql2o</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-sql2o%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-sql2o.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-sql2o/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-sql2o%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-sql2o.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-sql2o/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0109-getting-started-jdbi.html">sfm-jdbi</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-jdbi%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-jdbi.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-jdbi/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-jdbi%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-jdbi.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-jdbi/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td><a href="0110-getting-started-jdbi3.html">sfm-jdbi3</a></td>
-      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-jdbi3%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-jdbi3.svg" alt="Maven Central" /></a></td>
-      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-jdbi3/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td style="text-align: right"><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-jdbi3%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-jdbi3.svg" alt="Maven Central" /></a></td>
+      <td style="text-align: right"><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-jdbi3/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
   </tbody>
 </table>
@@ -261,28 +263,28 @@
   <tbody>
     <tr>
       <td>sfm-converter</td>
-      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-converter%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-converter.svg" alt="Maven Central" /></a></td>
-      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-converter/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-converter%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-converter.svg" alt="Maven Central" /></a></td>
+      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-converter/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td>sfm-map</td>
-      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-map%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-map.svg" alt="Maven Central" /></a></td>
-      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-map/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-map%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-map.svg" alt="Maven Central" /></a></td>
+      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-map/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td>sfm-reflect</td>
-      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-reflect%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-reflect.svg" alt="Maven Central" /></a></td>
-      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-reflect/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-reflect%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-reflect.svg" alt="Maven Central" /></a></td>
+      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-reflect/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td>sfm-util</td>
-      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-util%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-util.svg" alt="Maven Central" /></a></td>
-      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-util/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-util%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-util.svg" alt="Maven Central" /></a></td>
+      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-util/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
     <tr>
       <td>sfm-converter-joda-time</td>
-      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-converter-joda-time%7C7.0.3%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-converter-joda-time.svg" alt="Maven Central" /></a></td>
-      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-converter-joda-time/7.0.3"><img src="https://img.shields.io/badge/javadoc-7.0.3-blue.svg" alt="JavaDoc" /></a></td>
+      <td><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-converter-joda-time%7C8.0.0%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-converter-joda-time.svg" alt="Maven Central" /></a></td>
+      <td><a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-converter-joda-time/8.0.0"><img src="https://img.shields.io/badge/javadoc-8.0.0-blue.svg" alt="JavaDoc" /></a></td>
     </tr>
   </tbody>
 </table>

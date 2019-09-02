@@ -97,11 +97,13 @@
                 
                 
                 
-                <a class="page-link" href="/11-v7-migration.html">Migrating to v7.</a>
+                <a class="page-link" href="/11-v8-migration.html">Migrating to v8.</a>
                 
                 
                 
                 <a class="page-link" href="/12-csv-performance.html">Performance comparison</a>
+                
+                
                 
                 
                 
@@ -153,7 +155,9 @@
 <main class="page-content" aria-label="Content">
     <div class="wrapper">
         
-<p>SimpleFlatMapper <a href="/2019/08/19/v7.0.3.html">V7.0.3</a> provides a very fast and easy to use mapper for</p>
+<p>SimpleFlatMapper <a href="/2019/09/01/v8.0.0.html">V8.0.0</a> provides a very fast and easy to use mapper for</p>
+
+<p><strong><a href="/2019/09/01/v8.0.0.html">Version 8</a> does not use the classifier anymore for jre 6 or jre 9 artifacts see <a href="/11-v8-migration.html">Migration to V8</a></strong></p>
 
 <ul>
   <li><a href="0102-getting-started-jdbc.html">Jdbc, aka micro ORM</a> from ResultSet to PreparedStatement</li>
@@ -215,10 +219,10 @@ You can also extend the type mapping by providing <a href="0202-converters.html"
 <span class="o">}</span></code></pre></figure>
 
 <h1 id="intellij-idea-unsupportedclassversionerror-import-with-wrong-classifier">Intellij IDEA UnsupportedClassVersionError import with wrong classifier</h1>
-<p>Check <a href="Issue 673">https://github.com/arnaudroger/SimpleFlatMapper/issues/673</a>, there is a setting the vm used by the maven importer and it need to match the project vm.
-there is a bug open at intellij <a href="There is no" title="Use Project JDK&quot; option for &quot;JDK for Importer">https://youtrack.jetbrains.com/issue/IDEA-203432</a> to make that easier.</p>
+<p>Update: this is now sorted by <a href="/2019/09/01/v8.0.0.html">Release 8.0.0</a></p>
 
-<p>PS: if you know a better way to deal with multiple java versions than using a profile trigger by java version please get in touch</p>
+<s>Check [https://github.com/arnaudroger/SimpleFlatMapper/issues/673](Issue 673), there is a setting the vm used by the maven importer and it need to match the project vm.
+there is a bug open at intellij [https://youtrack.jetbrains.com/issue/IDEA-203432](There is no "Use Project JDK" option for "JDK for Importer") to make that easier.</s>
 
 
 

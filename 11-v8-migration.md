@@ -7,6 +7,7 @@ redirect_from:
   - /11-v4-migration.html
   - /11-v5-migration.html
   - /11-v6-migration.html
+  - /11-v7-migration.html
 ---
 
 # Migration v6 to v7
