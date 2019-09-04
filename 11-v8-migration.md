@@ -17,7 +17,7 @@ redirect_from:
 <dependency>
     <groupId>org.simpleflatmapper</groupId>
     <artifactId>sfm-jdbc</artifactId>
-    <version>8.0.0</version>
+    <version>{% include currentversion.html %}</version>
 </dependency>
 {% endhighlight %}
 
@@ -27,7 +27,7 @@ redirect_from:
 <dependency>
     <groupId>org.simpleflatmapper</groupId>
     <artifactId>sfm-jdbc-jre6</artifactId>
-    <version>8.0.0</version>
+    <version>{% include currentversion.html %}</version>
 </dependency>
 {% endhighlight %}
 
@@ -37,7 +37,7 @@ redirect_from:
 <dependency>
     <groupId>org.simpleflatmapper</groupId>
     <artifactId>sfm-jdbc-jre9</artifactId>
-    <version>8.0.0</version>
+    <version>{% include currentversion.html %}</version>
 </dependency>
 {% endhighlight %}
 
