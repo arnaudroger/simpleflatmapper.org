@@ -5,12 +5,12 @@
     <description></description>
     <link>http://simpleflatmapper.org/</link>
     <atom:link href="http://simpleflatmapper.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 10 Sep 2019 21:17:11 +0100</pubDate>
-    <lastBuildDate>Tue, 10 Sep 2019 21:17:11 +0100</lastBuildDate>
+    <pubDate>Wed, 11 Sep 2019 13:55:04 +0100</pubDate>
+    <lastBuildDate>Wed, 11 Sep 2019 13:55:04 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Release v8.0.1</title>
+        <title>Release v8.0.2</title>
         <description>&lt;h1 id=&quot;v802&quot;&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/milestone/210?closed=1&quot;&gt;V8.0.2&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/arnaudroger/SimpleFlatMapper/issues/682&quot;&gt;#682&lt;/a&gt;new prefix matcher map to the wrong name in list #682&lt;/p&gt;
