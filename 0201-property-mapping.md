@@ -58,11 +58,20 @@ for a property property.subProperty the following will match
 
 ## List/array
 
-if the type of the object is an array or a list then the finder will look for the first number in the column and use at as the index to put the element in.
+if the type of the object is an array or a list then the finder will look for the first number in the column and use at as the index starting at 0 to put the element in.
 if there is a sub-property specify after the number that will be matched against the element class. If not it will look for a 1 argument constructor.
 
-* `List<String>` myList, `"my_list_3"` -> will match against the 3rd element of the list as a String.
-* `List<MyObject>` myList, `"my_list_3_id"` -> will match against property id of the 3rd element of the list.
+* `List<String>` myList, `"my_list_3"` -> will match against the 4th element - index 3 - of the list as a String.
+* `List<MyObject>` myList, `"my_list_3_id"` -> will match against property id of the 4th - index 3 - element of the list.
+
+It is possible to change the index behavior to have element 3 mapped to the 3rd element or index 2 by adding the `ArrayIndexStartAtProperty.ONE`.
+
+```java
+// applies to all column
+mapperFactory.addColumnProperty(k -> true, ArrayIndexStartAtProperty.ONE);
+// applies only to my list
+mapperFactory.addColumnProperty(k -> k.getName().startsWith("my_list"), ArrayIndexStartAtProperty.ONE);
+```
 
 ### Tuples
 

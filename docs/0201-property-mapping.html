@@ -207,13 +207,21 @@ The finder will try to match the start of the column to a property of the object
 
 <h2 id="listarray">List/array</h2>
 
-<p>if the type of the object is an array or a list then the finder will look for the first number in the column and use at as the index to put the element in.
+<p>if the type of the object is an array or a list then the finder will look for the first number in the column and use at as the index starting at 0 to put the element in.
 if there is a sub-property specify after the number that will be matched against the element class. If not it will look for a 1 argument constructor.</p>
 
 <ul>
-  <li><code class="highlighter-rouge">List&lt;String&gt;</code> myList, <code class="highlighter-rouge">"my_list_3"</code> -&gt; will match against the 3rd element of the list as a String.</li>
-  <li><code class="highlighter-rouge">List&lt;MyObject&gt;</code> myList, <code class="highlighter-rouge">"my_list_3_id"</code> -&gt; will match against property id of the 3rd element of the list.</li>
+  <li><code class="highlighter-rouge">List&lt;String&gt;</code> myList, <code class="highlighter-rouge">"my_list_3"</code> -&gt; will match against the 4th element - index 3 - of the list as a String.</li>
+  <li><code class="highlighter-rouge">List&lt;MyObject&gt;</code> myList, <code class="highlighter-rouge">"my_list_3_id"</code> -&gt; will match against property id of the 4th - index 3 - element of the list.</li>
 </ul>
+
+<p>It is possible to change the index behavior to have element 3 mapped to the 3rd element or index 2 by adding the <code class="highlighter-rouge">ArrayIndexStartAtProperty.ONE</code>.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// applies to all column</span>
+<span class="n">mapperFactory</span><span class="o">.</span><span class="na">addColumnProperty</span><span class="o">(</span><span class="n">k</span> <span class="o">-&gt;</span> <span class="kc">true</span><span class="o">,</span> <span class="n">ArrayIndexStartAtProperty</span><span class="o">.</span><span class="na">ONE</span><span class="o">);</span>
+<span class="c1">// applies only to my list</span>
+<span class="n">mapperFactory</span><span class="o">.</span><span class="na">addColumnProperty</span><span class="o">(</span><span class="n">k</span> <span class="o">-&gt;</span> <span class="n">k</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">startsWith</span><span class="o">(</span><span class="s">"my_list"</span><span class="o">),</span> <span class="n">ArrayIndexStartAtProperty</span><span class="o">.</span><span class="na">ONE</span><span class="o">);</span>
+</code></pre></div></div>
 
 <h3 id="tuples">Tuples</h3>
 
