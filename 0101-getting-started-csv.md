@@ -131,7 +131,6 @@ The [CsvWriter](http://static.javadoc.io/org.simpleflatmapper/sfm-csv/{% include
 If no headers are specified it will generate a list of headers from the properties of the object. Though it is
 better to specify the headers manually.
 
-[Source](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/sfm-csv/src/test/java/org/simpleflatmapper/csv/test/samples/GettingStartedCsv_csvWriter.java)
 {% highlight java%}
 // better to cache the dsl with the from 
 // to avoid recomputing the object metadata
