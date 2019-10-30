@@ -52,6 +52,23 @@ try (Stream<String[]> stream = CsvParser.stream(file)) {
 }
 {% endhighlight %}
 
+## Writing a csv file
+
+Since 8.1.0 the [`org.simpleflatmapper.lightningcsv.CsvWriter`]() provides a simple api to Writer csv rows and cells to a `File` or an `Appendable`.
+
+ ```java
+ try(ClosableCsvWriter writer = CsvWriter.dsl().to(file)) {
+   writer
+     .appendRow("hello", "world!\nnew line")
+     .appendRow("something");
+ }
+ ```
+ 
+ The default encoding will be `UTF-8`, it is possible to specify and different `Charset` in the `to` method.
+ 
+ [See unit test](https://github.com/arnaudroger/SimpleFlatMapper/blob/master/lightningcsv/src/test/java/org/simpleflatmapper/lightningcsv/test/CsvWriterTest.java) for more example.
+
+
 ## Mapping a csv to an object
 
 You can also ask the row to be mapped to an object. You can then read the csv from a `File`, a `Reader` 
