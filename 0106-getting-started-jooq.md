@@ -46,7 +46,7 @@ Sfm can be plugged into the fetchInto mapping.
 All you need to do is 
 
 {% highlight java %}
-configuration.set(SfmRecordMapperProviderFactory.newInstance().newProvider()));
+configuration.set(JooqMapperFactory.newInstance().ignorePropertyNotFound().newRecordMapperProvider()));
 {% endhighlight %}
 
 when instantiating your DSL. You will then be able to use fetchInto with a cost very close to fetching the record - see the performance section - and the flexibility that SFM offers.
@@ -54,8 +54,34 @@ when instantiating your DSL. You will then be able to use fetchInto with a cost 
 # map subset of select fields
 
 {% highlight java %}
-configuration.set(SfmRecordMapperProviderFactory.newInstance().ignorePropertyNotFound().newProvider()));
+configuration.set(JooqMapperFactory.newInstance().ignorePropertyNotFound().newRecordMapperProvider()));
 {% endhighlight %}
+
+
+#SFM as a RecordUnmapperProvider
+
+From [8.2.0](https://simpleflatmapper.org/2019/11/12/v8.2.0.html) we now have a RecordUnmapper available from the JooqMapperFactory.
+
+```java
+		cfg.set(JooqMapperFactory.newInstance().newRecordUnmapperProvider(cfg));
+```
+
+### SelectQueryMapper
+In [8.2.0](https://simpleflatmapper.org/2019/11/12/v8.2.0.html) we also introduced the SelectQueryMapper that can deals 
+with join with minimum of effort. It will uses the jOOQ model to determined which field is a key, and also activate the
+speculative object mapping removing the need for aliasing. The following will now just work out of the box: 
+
+```java 
+SelectQueryMapper<Author> authorMapper = SelectQueryMapperFactory.newInstance().newMapper(Author.class);
+
+List<Author> authors = authorMapper.asList(DSL.using(connection)
+        .select(AUTHOR.ID, AUTHOR.FIRST_NAME, AUTHOR.LAST_NAME, AUTHOR.DATE_OF_BIRTH,
+                BOOK.ID, BOOK.TITLE)
+        .from(AUTHOR).leftJoin(BOOK).on(BOOK.AUTHOR_ID.eq(AUTHOR.ID))
+        .orderBy(AUTHOR.ID));
+```
+
+no need for key definitions or aliasing anymore.
 
 # SFM on the ResultSet
 

@@ -327,13 +327,36 @@
 
 <p>All you need to do is</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">configuration</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">SfmRecordMapperProviderFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">newProvider</span><span class="o">()));</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">configuration</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">JooqMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">ignorePropertyNotFound</span><span class="o">().</span><span class="na">newRecordMapperProvider</span><span class="o">()));</span></code></pre></figure>
 
 <p>when instantiating your DSL. You will then be able to use fetchInto with a cost very close to fetching the record - see the performance section - and the flexibility that SFM offers.</p>
 
 <h1 id="map-subset-of-select-fields">map subset of select fields</h1>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">configuration</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">SfmRecordMapperProviderFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">ignorePropertyNotFound</span><span class="o">().</span><span class="na">newProvider</span><span class="o">()));</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">configuration</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">JooqMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">ignorePropertyNotFound</span><span class="o">().</span><span class="na">newRecordMapperProvider</span><span class="o">()));</span></code></pre></figure>
+
+<p>#SFM as a RecordUnmapperProvider</p>
+
+<p>From <a href="https://simpleflatmapper.org/2019/11/12/v8.2.0.html">8.2.0</a> we now have a RecordUnmapper available from the JooqMapperFactory.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		<span class="n">cfg</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">JooqMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">newRecordUnmapperProvider</span><span class="o">(</span><span class="n">cfg</span><span class="o">));</span>
+</code></pre></div></div>
+
+<h3 id="selectquerymapper">SelectQueryMapper</h3>
+<p>In <a href="https://simpleflatmapper.org/2019/11/12/v8.2.0.html">8.2.0</a> we also introduced the SelectQueryMapper that can deals 
+with join with minimum of effort. It will uses the jOOQ model to determined which field is a key, and also activate the
+speculative object mapping removing the need for aliasing. The following will now just work out of the box:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SelectQueryMapper</span><span class="o">&lt;</span><span class="n">Author</span><span class="o">&gt;</span> <span class="n">authorMapper</span> <span class="o">=</span> <span class="n">SelectQueryMapperFactory</span><span class="o">.</span><span class="na">newInstance</span><span class="o">().</span><span class="na">newMapper</span><span class="o">(</span><span class="n">Author</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Author</span><span class="o">&gt;</span> <span class="n">authors</span> <span class="o">=</span> <span class="n">authorMapper</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">DSL</span><span class="o">.</span><span class="na">using</span><span class="o">(</span><span class="n">connection</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="n">AUTHOR</span><span class="o">.</span><span class="na">ID</span><span class="o">,</span> <span class="n">AUTHOR</span><span class="o">.</span><span class="na">FIRST_NAME</span><span class="o">,</span> <span class="n">AUTHOR</span><span class="o">.</span><span class="na">LAST_NAME</span><span class="o">,</span> <span class="n">AUTHOR</span><span class="o">.</span><span class="na">DATE_OF_BIRTH</span><span class="o">,</span>
+                <span class="n">BOOK</span><span class="o">.</span><span class="na">ID</span><span class="o">,</span> <span class="n">BOOK</span><span class="o">.</span><span class="na">TITLE</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="n">AUTHOR</span><span class="o">).</span><span class="na">leftJoin</span><span class="o">(</span><span class="n">BOOK</span><span class="o">).</span><span class="na">on</span><span class="o">(</span><span class="n">BOOK</span><span class="o">.</span><span class="na">AUTHOR_ID</span><span class="o">.</span><span class="na">eq</span><span class="o">(</span><span class="n">AUTHOR</span><span class="o">.</span><span class="na">ID</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">orderBy</span><span class="o">(</span><span class="n">AUTHOR</span><span class="o">.</span><span class="na">ID</span><span class="o">));</span>
+</code></pre></div></div>
+
+<p>no need for key definitions or aliasing anymore.</p>
 
 <h1 id="sfm-on-the-resultset">SFM on the ResultSet</h1>
 
