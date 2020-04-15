@@ -8,24 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Getting Started Sql2o | SimpleFlatMapper</title>
+<title>Release v8.2.2 | SimpleFlatMapper</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Getting Started Sql2o" />
+<meta property="og:title" content="Release v8.2.2" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="SimpleFlatMapper java sql2 ResultSetHandler mapper deep object" />
-<meta property="og:description" content="SimpleFlatMapper java sql2 ResultSetHandler mapper deep object" />
-<link rel="canonical" href="http://simpleflatmapper.org/0108-getting-started-sql2o.html" />
-<meta property="og:url" content="http://simpleflatmapper.org/0108-getting-started-sql2o.html" />
+<meta name="description" content="V8.2.2 #716 call next on an exhausted result set #712 How to customize the property name separator JdbcMapperFactory .newInstance() .propertyNameMatcherFactory(DefaultPropertyNameMatcherFactory.DEFAULT.addSeparators(&#39;/&#39;)) #710 SelectQueryMapper should support LocalDate" />
+<meta property="og:description" content="V8.2.2 #716 call next on an exhausted result set #712 How to customize the property name separator JdbcMapperFactory .newInstance() .propertyNameMatcherFactory(DefaultPropertyNameMatcherFactory.DEFAULT.addSeparators(&#39;/&#39;)) #710 SelectQueryMapper should support LocalDate" />
+<link rel="canonical" href="http://simpleflatmapper.org/2020/04/14/v8.2.2.html" />
+<meta property="og:url" content="http://simpleflatmapper.org/2020/04/14/v8.2.2.html" />
 <meta property="og:site_name" content="SimpleFlatMapper" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-14T00:00:00+01:00" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@arnaudroger" />
 <script type="application/ld+json">
-{"headline":"Getting Started Sql2o","url":"http://simpleflatmapper.org/0108-getting-started-sql2o.html","description":"SimpleFlatMapper java sql2 ResultSetHandler mapper deep object","@type":"WebPage","@context":"http://schema.org"}</script>
+{"headline":"Release v8.2.2","dateModified":"2020-04-14T00:00:00+01:00","datePublished":"2020-04-14T00:00:00+01:00","url":"http://simpleflatmapper.org/2020/04/14/v8.2.2.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://simpleflatmapper.org/2020/04/14/v8.2.2.html"},"description":"V8.2.2 #716 call next on an exhausted result set #712 How to customize the property name separator JdbcMapperFactory .newInstance() .propertyNameMatcherFactory(DefaultPropertyNameMatcherFactory.DEFAULT.addSeparators(&#39;/&#39;)) #710 SelectQueryMapper should support LocalDate","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
     <link rel="stylesheet" href="/assets/main.css">
-    <link rel="canonical" href="http://simpleflatmapper.org/0108-getting-started-sql2o.html">
+    <link rel="canonical" href="http://simpleflatmapper.org/2020/04/14/v8.2.2.html">
     <link rel="alternate" type="application/rss+xml" title="SimpleFlatMapper" href="/feed.xml">
 
     
@@ -149,141 +151,45 @@
 </header>
 
 
-<div class="wrapper">
-
-<nav class="site-nav" style="float:none; align:center;">
-
-    <div class="trigger" >
-        
-        
-        
-        
-        <a class="page-link" href="/0101-getting-started-csv.html">Csv</a>
-        
-        
-        
-        <a class="page-link" href="/0102-getting-started-jdbc.html">Jdbc</a>
-        
-        
-        
-        <a class="page-link" href="/0103-getting-started-datastax.html">Cassandra</a>
-        
-        
-        
-        <a class="page-link" href="/0104-getting-started-springjdbc.html">Spring Jdbc</a>
-        
-        
-        
-        <a class="page-link" href="/0105-getting-started-poi.html">Excel</a>
-        
-        
-        
-        <a class="page-link" href="/0106-getting-started-jooq.html">jOOQ</a>
-        
-        
-        
-        <a class="page-link" href="/0107-getting-started-querydsl.html">QueryDsl</a>
-        
-        
-        
-        <a class="page-link" href="/0108-getting-started-sql2o.html">Sql2o</a>
-        
-        
-        
-        <a class="page-link" href="/0109-getting-started-jdbi.html">JDBI</a>
-        
-        
-        
-        <a class="page-link" href="/0110-getting-started-jdbi3.html">JDBI3</a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </div>
-
-</nav>
-    </div>
-
 
 
 
 <main class="page-content" aria-label="Content">
     <div class="wrapper">
-        <h1 id="why">Why?</h1>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p>Although Sql2o provides a <a href="http://www.sql2o.org/docs/fetching-data/">mapping</a> implementation. It does not support inner objects, factory methods, or joins…</p>
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Release v8.2.2</h1>
+        <p class="post-meta"><time datetime="2020-04-14T00:00:00+01:00" itemprop="datePublished">Apr 14, 2020</time></p>
+    </header>
 
-<p>By adding just a 2 lines of code to your queries, you will gain the <a href="0201-property-mapping.html">mapping power</a> and
-the <a href="https://github.com/arnaudroger/SimpleFlatMapper/wiki/Jdbc-Performance-Local-Mysql">performance</a> of SimpleFlatMapper.</p>
+    <div class="post-content" itemprop="articleBody">
+        <h1 id="v822"><a href="https://github.com/arnaudroger/SimpleFlatMapper/milestone/216?closed=1">V8.2.2</a></h1>
+<ul>
+  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/716">#716</a> call next on an exhausted result set</li>
+  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/712">#712</a> How to customize the property name separator
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">JdbcMapperFactory</span>
+ <span class="o">.</span><span class="na">newInstance</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">propertyNameMatcherFactory</span><span class="o">(</span><span class="n">DefaultPropertyNameMatcherFactory</span><span class="o">.</span><span class="na">DEFAULT</span><span class="o">.</span><span class="na">addSeparators</span><span class="o">(</span><span class="sc">'/'</span><span class="o">))</span>
+</code></pre></div>    </div>
+  </li>
+  <li><a href="https://github.com/arnaudroger/SimpleFlatMapper/issues/710">#710</a> SelectQueryMapper should support LocalDate</li>
+</ul>
 
-<p>Give it a try.</p>
+<h1 id="reminder-from-800">Reminder from 8.0.0</h1>
+<ul>
+  <li>Intellij use wrong classifier
+Rewrote the release process to remove the classifier as a way to deal with different jre version.
+Instead change the artifactId for jre6 and jre9 so that the full chain is set by the root import.</li>
+</ul>
 
-<h1 id="getting-started-sql2o">Getting Started Sql2o</h1>
-
-<p><a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-sql2o%7C8.2.2%7C"><img src="https://img.shields.io/maven-central/v/org.simpleflatmapper/sfm-sql2o.svg" alt="Maven Central" /></a>
-<a href="http://www.javadoc.io/doc/org.simpleflatmapper/sfm-sql2o"><img src="https://img.shields.io/badge/javadoc-8.2.2-blue.svg" alt="JavaDoc" /></a></p>
-
-<h2 id="setting-up-the-environment">Setting up the environment</h2>
-
-<p>Add the <a href="http://search.maven.org/#artifactdetails%7Corg.simpleflatmapper%7Csfm-sql2o%7C8.2.2%7C">Dependency</a> to your build.</p>
-
-<p>for Maven:</p>
+<p>The dependencies are now included with the following :</p>
 
 <h3 id="java-8-9-10--11-no-module-info">Java 8, 9, 10 , 11 no module-info</h3>
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>sfm-sql2o<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>sfm-jdbc<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>8.2.2<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
@@ -291,7 +197,7 @@ the <a href="https://github.com/arnaudroger/SimpleFlatMapper/wiki/Jdbc-Performan
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>sfm-sql2o-jre6<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>sfm-jdbc-jre6<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>8.2.2<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
@@ -299,19 +205,41 @@ the <a href="https://github.com/arnaudroger/SimpleFlatMapper/wiki/Jdbc-Performan
 
 <figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.simpleflatmapper<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>sfm-sql2o-jre9<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>sfm-jdbc-jre9<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>8.2.2<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span></code></pre></figure>
 
-<p>From <a href="/11-v7-migration.html">7.0.0</a> you will need explicitly include the sql2o dependency in your pom.</p>
+    </div>
 
-<h1 id="sql2o-integration">SQL2o integration</h1>
+    <div class="PageNavigation">
+        
+        <a class="prev" href="/2019/11/14/v8.2.1.html">&laquo; Release v8.2.1</a>
+        
+        
+    </div>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Query</span> <span class="n">query</span> <span class="o">=</span> <span class="n">sql2o</span><span class="o">.</span><span class="na">open</span><span class="o">().</span><span class="na">createQuery</span><span class="o">(</span><span class="s">"select * from table"</span><span class="o">);</span>
-<span class="n">query</span><span class="o">.</span><span class="na">setAutoDeriveColumnNames</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-<span class="n">query</span><span class="o">.</span><span class="na">setResultSetHandlerFactoryBuilder</span><span class="o">(</span><span class="k">new</span> <span class="n">SfmResultSetHandlerFactoryBuilder</span><span class="o">());</span>
+    <div id="disqus_thread"></div>
+<script>
 
-<span class="n">List</span><span class="o">&lt;</span><span class="n">DbObject</span><span class="o">&gt;</span> <span class="n">dbObjects</span> <span class="o">=</span> <span class="n">query</span><span class="o">.</span><span class="na">executeAndFetch</span><span class="o">(</span><span class="n">DbObject</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre></figure>
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = 'http://simpleflatmapper.org/2020/04/14/v8.2.2.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/2020/04/14/v8.2.2'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//arogerblog.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</article>
 
 
         
